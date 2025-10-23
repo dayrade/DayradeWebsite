@@ -18,7 +18,31 @@ const useRelume = () => {
   };
 };
 
-export function Header83() {
+interface Header83Props {
+  headlineParts?: string[];
+  headlineWidths?: number[];
+  headlineWeights?: number[];
+  subheadline?: string;
+  primaryCta?: string;
+  secondaryCta?: string;
+}
+
+export function Header83({ 
+  headlineParts = ["Trade Like a", "Pro.", "Compete Like an", "Athlete."],
+  headlineWidths,
+  headlineWeights,
+  subheadline = "A skill-based arena where traders battle with precision and strategy. Build your trading persona and rise through the ranks.",
+  primaryCta = "Sign Up",
+  secondaryCta = "Watch"
+}: Header83Props = {}) {
+  // Ensure arrays match length - use default if not provided
+  const partsCount = headlineParts.length;
+  const finalWidths = headlineWidths && headlineWidths.length === partsCount 
+    ? headlineWidths 
+    : Array(partsCount).fill(50).map((_, i) => i % 2 === 0 ? 50 : 125);
+  const finalWeights = headlineWeights && headlineWeights.length === partsCount
+    ? headlineWeights
+    : Array(partsCount).fill(700).map((_, i) => i % 2 === 0 ? 700 : 900);
   const useActive = useRelume();
   return (
     <section className="relative h-[300vh]">
@@ -32,18 +56,17 @@ export function Header83() {
               <AnimatedVariableHeading
                 level="h1"
                 className="mb-5 text-white md:mb-6"
-                parts={["Trade Like a", "Pro.", "Compete Like an", "Athlete."]}
-                widths={[50, 125, 50, 125]}
-                weights={[700, 900, 700, 900]}
+                parts={headlineParts}
+                widths={finalWidths}
+                weights={finalWeights}
               />
               <p className="text-medium text-white">
-                A skill-based arena where traders battle with precision and
-                strategy. Build your trading persona and rise through the ranks.
+                {subheadline}
               </p>
               <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-                <Button title="Sign Up">Sign Up</Button>
-                <Button title="Watch" variant="secondary-alt">
-                  Watch
+                <Button title={primaryCta}>{primaryCta}</Button>
+                <Button title={secondaryCta} variant="secondary-alt">
+                  {secondaryCta}
                 </Button>
               </div>
             </div>

@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import { MdSchool, MdAttachMoney, MdEmojiEvents, MdTrendingUp } from "react-icons/md";
 
 export function Layout504() {
   return (
@@ -12,50 +13,51 @@ export function Layout504() {
       <div className="container">
         <div className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
-            <p className="mb-3 font-semibold md:mb-4">Tagline</p>
-            <h1 className="heading-h2 mb-5 font-bold md:mb-6">How you earn</h1>
+            <p className="mb-3 font-semibold md:mb-4">Three Divisions</p>
+            <h1 className="heading-h2 mb-5 font-bold md:mb-6">Find Your Division</h1>
             <p className="text-medium">
-              Your performance drives your potential. Compete, learn, and
-              transform your trading journey into a path of continuous growth.
+              Choose the division that matches your skill level. Start in Elevator to learn, move to Crusader to compete, and reach Raider for elite prizes.
             </p>
             <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-              <Button title="Button" variant="secondary">
-                Button
+              <Button title="View All Divisions" variant="secondary">
+                View All Divisions
               </Button>
               <Button
-                title="Button"
+                title="How It Works"
                 variant="link"
                 size="link"
                 iconRight={<RxChevronRight />}
               >
-                Button
+                How It Works
               </Button>
             </div>
           </div>
         </div>
-        <Tabs defaultValue="tab-one" className="flex flex-col items-center">
+        <Tabs defaultValue="elevator" className="flex flex-col items-center">
           <TabsList className="relative mb-12 no-scrollbar flex w-screen flex-nowrap items-center gap-x-6 overflow-auto px-[5vw] md:mb-16 md:w-auto md:max-w-full md:px-0">
             <TabsTrigger
-              value="tab-one"
+              value="elevator"
               className="rounded-none border-0 border-b bg-transparent px-0 py-2 data-[state=active]:bg-transparent data-[state=inactive]:border-transparent"
             >
-              Tab One
+              Elevator
             </TabsTrigger>
             <TabsTrigger
-              value="tab-two"
+              value="crusader"
               className="rounded-none border-0 border-b bg-transparent px-0 py-2 data-[state=active]:bg-transparent data-[state=inactive]:border-transparent"
             >
-              Tab Two
+              Crusader
             </TabsTrigger>
             <TabsTrigger
-              value="tab-three"
+              value="raider"
               className="rounded-none border-0 border-b bg-transparent px-0 py-2 data-[state=active]:bg-transparent data-[state=inactive]:border-transparent"
             >
-              Tab Three
+              Raider
             </TabsTrigger>
           </TabsList>
+          
+          {/* Elevator Division */}
           <TabsContent
-            value="tab-one"
+            value="elevator"
             className="data-[state=active]:animate-tabs"
           >
             <Card className="grid grid-cols-1 md:grid-cols-2 md:items-center">
@@ -63,36 +65,67 @@ export function Layout504() {
                 <img
                   src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
                   className="w-full object-cover"
-                  alt="Relume placeholder image 1"
+                  alt="Elevator Division - Beginner trading arena"
                 />
               </div>
               <div className="p-6 md:p-8 lg:p-12">
-                <p className="mb-3 font-semibold md:mb-4">Tagline</p>
+                <p className="mb-3 font-semibold md:mb-4">Beginner Division</p>
                 <h2 className="heading-h3 mb-5 font-bold md:mb-6">
-                  Tournament winnings
+                  Start Here. Rise Everywhere.
                 </h2>
-                <p>
-                  Top performers claim real cash prizes. Withdraw your earnings
-                  or reinvest in your trading strategy.
+                <p className="mb-6">
+                  Perfect for beginners. Learn the fundamentals, practice your strategy, and earn free tickets to higher divisions. No risk. All reward.
                 </p>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-start gap-2">
+                    <MdSchool className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Free Entry</p>
+                      <p className="text-xs text-muted-foreground">No cost to join</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <MdTrendingUp className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Daily Lessons</p>
+                      <p className="text-xs text-muted-foreground">Learn & grow</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <MdEmojiEvents className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Real Competition</p>
+                      <p className="text-xs text-muted-foreground">Virtual capital</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <MdAttachMoney className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Reward Points</p>
+                      <p className="text-xs text-muted-foreground">Earn free tickets</p>
+                    </div>
+                  </div>
+                </div>
                 <div className="mt-6 flex items-center gap-x-4 md:mt-8">
-                  <Button title="Button" variant="secondary">
-                    Button
+                  <Button title="Enter Elevator Division" variant="secondary">
+                    Enter Elevator Division
                   </Button>
                   <Button
-                    title="Button"
+                    title="Learn More"
                     variant="link"
                     size="link"
                     iconRight={<RxChevronRight />}
                   >
-                    Button
+                    Learn More
                   </Button>
                 </div>
               </div>
             </Card>
           </TabsContent>
+          
+          {/* Crusader Division */}
           <TabsContent
-            value="tab-two"
+            value="crusader"
             className="data-[state=active]:animate-tabs"
           >
             <Card className="grid grid-cols-1 md:grid-cols-2 md:items-center">
@@ -100,36 +133,67 @@ export function Layout504() {
                 <img
                   src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
                   className="w-full object-cover"
-                  alt="Relume placeholder image 2"
+                  alt="Crusader Division - Intermediate trading competition"
                 />
               </div>
               <div className="p-6 md:p-8 lg:p-12">
-                <p className="mb-3 font-semibold md:mb-4">Tagline</p>
+                <p className="mb-3 font-semibold md:mb-4">Intermediate Division</p>
                 <h2 className="heading-h3 mb-5 font-bold md:mb-6">
-                  Tournament winnings
+                  Prove Your Skill. Earn Real Rewards.
                 </h2>
-                <p>
-                  Top performers claim real cash prizes. Withdraw your earnings
-                  or reinvest in your trading strategy.
+                <p className="mb-6">
+                  For traders with a solid foundation. Compete for cash prizes up to $1,000 and prove your consistency.
                 </p>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-start gap-2">
+                    <MdAttachMoney className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Low-Cost Entry</p>
+                      <p className="text-xs text-muted-foreground">Affordable tickets</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <MdEmojiEvents className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">$1K Prizes</p>
+                      <p className="text-xs text-muted-foreground">Real cash rewards</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <MdTrendingUp className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Performance Analytics</p>
+                      <p className="text-xs text-muted-foreground">Track your progress</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <MdSchool className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Leaderboard</p>
+                      <p className="text-xs text-muted-foreground">Earn recognition</p>
+                    </div>
+                  </div>
+                </div>
                 <div className="mt-6 flex items-center gap-x-4 md:mt-8">
-                  <Button title="Button" variant="secondary">
-                    Button
+                  <Button title="Enter Crusader Division" variant="secondary">
+                    Enter Crusader Division
                   </Button>
                   <Button
-                    title="Button"
+                    title="View Tournaments"
                     variant="link"
                     size="link"
                     iconRight={<RxChevronRight />}
                   >
-                    Button
+                    View Tournaments
                   </Button>
                 </div>
               </div>
             </Card>
           </TabsContent>
+          
+          {/* Raider Division */}
           <TabsContent
-            value="tab-three"
+            value="raider"
             className="data-[state=active]:animate-tabs"
           >
             <Card className="grid grid-cols-1 md:grid-cols-2 md:items-center">
@@ -137,29 +201,58 @@ export function Layout504() {
                 <img
                   src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
                   className="w-full object-cover"
-                  alt="Relume placeholder image 3"
+                  alt="Raider Division - Elite trading competition"
                 />
               </div>
               <div className="p-6 md:p-8 lg:p-12">
-                <p className="mb-3 font-semibold md:mb-4">Tagline</p>
+                <p className="mb-3 font-semibold md:mb-4">Elite Division</p>
                 <h2 className="heading-h3 mb-5 font-bold md:mb-6">
-                  Tournament winnings
+                  Elite Traders. Elite Prizes.
                 </h2>
-                <p>
-                  Top performers claim real cash prizes. Withdraw your earnings
-                  or reinvest in your trading strategy.
+                <p className="mb-6">
+                  The highest stakes, the biggest prizes, and the most intense trading environment. Prize pools reach $10,000.
                 </p>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-start gap-2">
+                    <MdEmojiEvents className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Premium Tournaments</p>
+                      <p className="text-xs text-muted-foreground">Higher entry costs</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <MdAttachMoney className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">$10K Prizes</p>
+                      <p className="text-xs text-muted-foreground">Life-changing cash</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <MdTrendingUp className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Elite Leaderboard</p>
+                      <p className="text-xs text-muted-foreground">Mark of true skill</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <MdSchool className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Exclusive Community</p>
+                      <p className="text-xs text-muted-foreground">Best traders</p>
+                    </div>
+                  </div>
+                </div>
                 <div className="mt-6 flex items-center gap-x-4 md:mt-8">
-                  <Button title="Button" variant="secondary">
-                    Button
+                  <Button title="Enter Raider Division" variant="secondary">
+                    Enter Raider Division
                   </Button>
                   <Button
-                    title="Button"
+                    title="Prove You Belong"
                     variant="link"
                     size="link"
                     iconRight={<RxChevronRight />}
                   >
-                    Button
+                    Prove You Belong
                   </Button>
                 </div>
               </div>

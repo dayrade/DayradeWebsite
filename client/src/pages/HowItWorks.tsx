@@ -15,7 +15,14 @@ export default function HowItWorks() {
   return (
     <div>
       <Navbar6 />
-      <Header83 />
+      <Header83 
+        headlineParts={["Your Journey to", "Legend Status", "Begins Now"]}
+        headlineWidths={[50, 125, 50]}
+        headlineWeights={[400, 700, 400]}
+        subheadline="Create your unique trading persona and join the arena. The path is simple, fast, and secure."
+        primaryCta="Start the Journey"
+        secondaryCta="Learn More"
+      />
       <Layout141 />
       <Layout149 />
       <Header80 />

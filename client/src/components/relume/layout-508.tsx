@@ -5,63 +5,59 @@ import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import { MdHowToReg, MdPlayArrow, MdLeaderboard, MdEmojiEvents, MdAttachMoney } from "react-icons/md";
 
 export function Layout508() {
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <p className="mb-3 font-semibold md:mb-4">Compete</p>
+          <p className="mb-3 font-semibold md:mb-4">Fair. Transparent. Thrilling.</p>
           <h1 className="heading-h2 mb-5 font-bold md:mb-6">
-            How tournaments work
+            How Tournaments Work
           </h1>
           <p className="text-medium">
-            Experience a transparent, skill-driven competition where every trade
-            counts.
+            A transparent, five-step process ensures every tournament is fair, exciting, and rewarding.
           </p>
         </div>
         <Card className="relative grid auto-cols-fr grid-cols-1 gap-x-12 lg:gap-x-0">
-          <Tabs defaultValue="tab-1" className="grid">
+          <Tabs defaultValue="registration" className="grid">
             <TabsList className="order-2 flex-col md:order-1 md:flex-row">
               <TabsTrigger
-                value="tab-1"
+                value="registration"
                 className="heading-h6 w-full items-start justify-start gap-4 rounded-none border-0 border-b p-6 font-bold whitespace-normal data-[state=inactive]:border-scheme-border data-[state=inactive]:bg-scheme-background md:items-center md:justify-center md:border-r md:px-8 md:py-6 md:last-of-type:border-r-0"
               >
-                Registration
+                1. Registration
               </TabsTrigger>
               <TabsTrigger
-                value="tab-2"
+                value="tournament-begins"
                 className="heading-h6 w-full items-start justify-start gap-4 rounded-none border-0 border-b p-6 font-bold whitespace-normal data-[state=inactive]:border-scheme-border data-[state=inactive]:bg-scheme-background md:items-center md:justify-center md:border-r md:px-8 md:py-6 md:last-of-type:border-r-0"
               >
-                Tournament start
+                2. Tournament Begins
               </TabsTrigger>
               <TabsTrigger
-                value="tab-3"
+                value="live-leaderboard"
                 className="heading-h6 w-full items-start justify-start gap-4 rounded-none border-0 border-b p-6 font-bold whitespace-normal data-[state=inactive]:border-scheme-border data-[state=inactive]:bg-scheme-background md:items-center md:justify-center md:border-r md:px-8 md:py-6 md:last-of-type:border-r-0"
               >
-                Live tracking
+                3. Live Leaderboard
               </TabsTrigger>
               <TabsTrigger
-                value="tab-4"
+                value="tournament-ends"
                 className="heading-h6 w-full items-start justify-start gap-4 rounded-none border-0 border-b p-6 font-bold whitespace-normal data-[state=inactive]:border-scheme-border data-[state=inactive]:bg-scheme-background md:items-center md:justify-center md:border-r md:px-8 md:py-6 md:last-of-type:border-r-0"
               >
-                Tournament end
+                4. Tournament Ends
               </TabsTrigger>
               <TabsTrigger
-                value="tab-5"
+                value="prizes"
                 className="heading-h6 w-full items-start justify-start gap-4 rounded-none border-0 border-b p-6 font-bold whitespace-normal data-[state=inactive]:border-scheme-border data-[state=inactive]:bg-scheme-background md:items-center md:justify-center md:border-r md:px-8 md:py-6 md:last-of-type:border-r-0"
               >
-                Prizes
-              </TabsTrigger>
-              <TabsTrigger
-                value="tab-6"
-                className="heading-h6 w-full items-start justify-start gap-4 rounded-none border-0 border-b p-6 font-bold whitespace-normal data-[state=inactive]:border-scheme-border data-[state=inactive]:bg-scheme-background md:items-center md:justify-center md:border-r md:px-8 md:py-6 md:last-of-type:border-r-0"
-              >
-                Prepare
+                5. Prizes
               </TabsTrigger>
             </TabsList>
+            
+            {/* Step 1: Registration Opens */}
             <TabsContent
-              value="tab-1"
+              value="registration"
               className="order-1 data-[state=active]:animate-tabs md:order-2"
             >
               <div className="grid grid-cols-1 gap-y-12 p-6 md:grid-cols-2 md:items-center md:gap-x-12 md:p-8 lg:gap-x-20 lg:p-12">
@@ -69,36 +65,54 @@ export function Layout508() {
                   <img
                     src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
                     className="w-full rounded-image object-cover"
-                    alt="Relume placeholder image"
+                    alt="Tournament registration interface"
                   />
                 </div>
                 <div>
-                  <p className="mb-3 font-semibold md:mb-4">
-                    Browse upcoming tournaments
-                  </p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <MdHowToReg className="w-8 h-8 text-primary" />
+                    <p className="font-semibold text-lg">Step 1: Registration Opens</p>
+                  </div>
                   <h2 className="heading-h3 mb-5 font-bold md:mb-6">
-                    Select tournaments matching your skill level and trading
-                    style.
+                    Choose Your Tournament
                   </h2>
-                  <p>Register</p>
+                  <p className="mb-4">
+                    Browse upcoming tournaments and register with a ticket. See the rules, prize pool, and start time before you commit.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>View all tournament details and requirements</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Check prize pools and division requirements</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Register with a ticket or reward points</span>
+                    </li>
+                  </ul>
                   <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                    <Button title="Details" variant="secondary">
-                      Details
+                    <Button title="View Schedule" variant="secondary">
+                      View Schedule
                     </Button>
                     <Button
-                      title="Launch"
+                      title="How Tickets Work"
                       variant="link"
                       size="link"
                       iconRight={<RxChevronRight />}
                     >
-                      Launch
+                      How Tickets Work
                     </Button>
                   </div>
                 </div>
               </div>
             </TabsContent>
+            
+            {/* Step 2: Tournament Begins */}
             <TabsContent
-              value="tab-2"
+              value="tournament-begins"
               className="order-1 data-[state=active]:animate-tabs md:order-2"
             >
               <div className="grid grid-cols-1 gap-y-12 p-6 md:grid-cols-2 md:items-center md:gap-x-12 md:p-8 lg:gap-x-20 lg:p-12">
@@ -106,36 +120,54 @@ export function Layout508() {
                   <img
                     src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
                     className="w-full rounded-image object-cover"
-                    alt="Relume placeholder image"
+                    alt="Tournament trading interface"
                   />
                 </div>
                 <div>
-                  <p className="mb-3 font-semibold md:mb-4">
-                    Browse upcoming tournaments
-                  </p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <MdPlayArrow className="w-8 h-8 text-primary" />
+                    <p className="font-semibold text-lg">Step 2: Tournament Begins</p>
+                  </div>
                   <h2 className="heading-h3 mb-5 font-bold md:mb-6">
-                    Select tournaments matching your skill level and trading
-                    style.
+                    Everyone Starts Equal
                   </h2>
-                  <p>Register</p>
+                  <p className="mb-4">
+                    All participants receive the same starting capital in a dedicated tournament account. Trade your strategy and compete on skill alone.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Same virtual capital for all competitors</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Access tournament-only trading account</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Execute your trading strategy in real-time</span>
+                    </li>
+                  </ul>
                   <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                    <Button title="Details" variant="secondary">
-                      Details
+                    <Button title="Enter Tournament" variant="secondary">
+                      Enter Tournament
                     </Button>
                     <Button
-                      title="Launch"
+                      title="Trading Basics"
                       variant="link"
                       size="link"
                       iconRight={<RxChevronRight />}
                     >
-                      Launch
+                      Trading Basics
                     </Button>
                   </div>
                 </div>
               </div>
             </TabsContent>
+            
+            {/* Step 3: Live Leaderboard */}
             <TabsContent
-              value="tab-3"
+              value="live-leaderboard"
               className="order-1 data-[state=active]:animate-tabs md:order-2"
             >
               <div className="grid grid-cols-1 gap-y-12 p-6 md:grid-cols-2 md:items-center md:gap-x-12 md:p-8 lg:gap-x-20 lg:p-12">
@@ -143,36 +175,54 @@ export function Layout508() {
                   <img
                     src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
                     className="w-full rounded-image object-cover"
-                    alt="Relume placeholder image"
+                    alt="Live tournament leaderboard"
                   />
                 </div>
                 <div>
-                  <p className="mb-3 font-semibold md:mb-4">
-                    Browse upcoming tournaments
-                  </p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <MdLeaderboard className="w-8 h-8 text-primary" />
+                    <p className="font-semibold text-lg">Step 3: Live Leaderboard</p>
+                  </div>
                   <h2 className="heading-h3 mb-5 font-bold md:mb-6">
-                    Select tournaments matching your skill level and trading
-                    style.
+                    Watch Your Rank in Real-Time
                   </h2>
-                  <p>Register</p>
+                  <p className="mb-4">
+                    See your rank update live as you trade. Watch who's climbing and who's falling. The competition is intense and transparent.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Real-time leaderboard updates every second</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Track your position against all competitors</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Adjust your strategy based on performance</span>
+                    </li>
+                  </ul>
                   <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                    <Button title="Details" variant="secondary">
-                      Details
+                    <Button title="View Leaderboard" variant="secondary">
+                      View Leaderboard
                     </Button>
                     <Button
-                      title="Launch"
+                      title="Scoring System"
                       variant="link"
                       size="link"
                       iconRight={<RxChevronRight />}
                     >
-                      Launch
+                      Scoring System
                     </Button>
                   </div>
                 </div>
               </div>
             </TabsContent>
+            
+            {/* Step 4: Tournament Ends */}
             <TabsContent
-              value="tab-4"
+              value="tournament-ends"
               className="order-1 data-[state=active]:animate-tabs md:order-2"
             >
               <div className="grid grid-cols-1 gap-y-12 p-6 md:grid-cols-2 md:items-center md:gap-x-12 md:p-8 lg:gap-x-20 lg:p-12">
@@ -180,36 +230,54 @@ export function Layout508() {
                   <img
                     src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
                     className="w-full rounded-image object-cover"
-                    alt="Relume placeholder image"
+                    alt="Tournament results"
                   />
                 </div>
                 <div>
-                  <p className="mb-3 font-semibold md:mb-4">
-                    Browse upcoming tournaments
-                  </p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <MdEmojiEvents className="w-8 h-8 text-primary" />
+                    <p className="font-semibold text-lg">Step 4: Tournament Ends</p>
+                  </div>
                   <h2 className="heading-h3 mb-5 font-bold md:mb-6">
-                    Select tournaments matching your skill level and trading
-                    style.
+                    Final Rankings Calculated
                   </h2>
-                  <p>Register</p>
+                  <p className="mb-4">
+                    Trading closes at the scheduled end time. Final rankings are calculated automatically and winners are announced immediately.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Automatic trade closure at end time</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Instant calculation of final positions</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Winners announced and leaderboard finalized</span>
+                    </li>
+                  </ul>
                   <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                    <Button title="Details" variant="secondary">
-                      Details
+                    <Button title="Past Results" variant="secondary">
+                      Past Results
                     </Button>
                     <Button
-                      title="Launch"
+                      title="Tournament Rules"
                       variant="link"
                       size="link"
                       iconRight={<RxChevronRight />}
                     >
-                      Launch
+                      Tournament Rules
                     </Button>
                   </div>
                 </div>
               </div>
             </TabsContent>
+            
+            {/* Step 5: Prizes Distributed */}
             <TabsContent
-              value="tab-5"
+              value="prizes"
               className="order-1 data-[state=active]:animate-tabs md:order-2"
             >
               <div className="grid grid-cols-1 gap-y-12 p-6 md:grid-cols-2 md:items-center md:gap-x-12 md:p-8 lg:gap-x-20 lg:p-12">
@@ -217,66 +285,45 @@ export function Layout508() {
                   <img
                     src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
                     className="w-full rounded-image object-cover"
-                    alt="Relume placeholder image"
+                    alt="Prize distribution"
                   />
                 </div>
                 <div>
-                  <p className="mb-3 font-semibold md:mb-4">
-                    Browse upcoming tournaments
-                  </p>
-                  <h2 className="heading-h3 mb-5 font-bold md:mb-6">
-                    Select tournaments matching your skill level and trading
-                    style.
-                  </h2>
-                  <p>Register</p>
-                  <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                    <Button title="Details" variant="secondary">
-                      Details
-                    </Button>
-                    <Button
-                      title="Launch"
-                      variant="link"
-                      size="link"
-                      iconRight={<RxChevronRight />}
-                    >
-                      Launch
-                    </Button>
+                  <div className="flex items-center gap-3 mb-4">
+                    <MdAttachMoney className="w-8 h-8 text-primary" />
+                    <p className="font-semibold text-lg">Step 5: Prizes Distributed</p>
                   </div>
-                </div>
-              </div>
-            </TabsContent>
-            <TabsContent
-              value="tab-6"
-              className="order-1 data-[state=active]:animate-tabs md:order-2"
-            >
-              <div className="grid grid-cols-1 gap-y-12 p-6 md:grid-cols-2 md:items-center md:gap-x-12 md:p-8 lg:gap-x-20 lg:p-12">
-                <div>
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                    className="w-full rounded-image object-cover"
-                    alt="Relume placeholder image"
-                  />
-                </div>
-                <div>
-                  <p className="mb-3 font-semibold md:mb-4">
-                    Browse upcoming tournaments
-                  </p>
                   <h2 className="heading-h3 mb-5 font-bold md:mb-6">
-                    Select tournaments matching your skill level and trading
-                    style.
+                    Get Rewarded Within 24 Hours
                   </h2>
-                  <p>Register</p>
+                  <p className="mb-4">
+                    Top performers receive cash prizes or reward points, credited to their accounts within 24 hours. No delays, no excuses.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Cash prizes up to $10,000 in Raider Division</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Reward points for Elevator Division winners</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Automatic credit to your account within 24 hours</span>
+                    </li>
+                  </ul>
                   <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                    <Button title="Details" variant="secondary">
-                      Details
+                    <Button title="Prize Pools" variant="secondary">
+                      Prize Pools
                     </Button>
                     <Button
-                      title="Launch"
+                      title="Withdraw Winnings"
                       variant="link"
                       size="link"
                       iconRight={<RxChevronRight />}
                     >
-                      Launch
+                      Withdraw Winnings
                     </Button>
                   </div>
                 </div>

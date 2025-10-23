@@ -11,7 +11,14 @@ export default function Tournaments() {
   return (
     <div>
       <Navbar6 />
-      <Header83 />
+      <Header83 
+        headlineParts={["Compete.", "Prove Your", "Skill."]}
+        headlineWidths={[125, 50, 125]}
+        headlineWeights={[700, 400, 700]}
+        subheadline="DAYRADE tournaments are time-bound competitions where everyone starts equal. Trade with virtual capital. Climb the leaderboard. Win real prizes."
+        primaryCta="View Schedule"
+        secondaryCta="How It Works"
+      />
       <Layout357 />
       <Layout419 />
       <Layout514 />

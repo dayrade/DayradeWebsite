@@ -10,7 +10,14 @@ export default function Learn() {
   return (
     <div>
       <Navbar6 />
-      <Header83 />
+      <Header83 
+        headlineParts={["Master Money.", "Master", "Markets."]}
+        headlineWidths={[125, 50, 125]}
+        headlineWeights={[700, 400, 700]}
+        subheadline="DAYRADE isn't just competition—it's education. Learn trading psychology, risk management, technical analysis, and market fundamentals. Free, accessible, actionable."
+        primaryCta="Start Learning"
+        secondaryCta="Daily Lessons"
+      />
       <Layout141 />
       <Layout356 />
       <Layout210 />

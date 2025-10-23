@@ -13,7 +13,14 @@ export default function Raider() {
   return (
     <div>
       <Navbar6 />
-      <Header83 />
+      <Header83 
+        headlineParts={["Elite Traders.", "Elite", "Prizes."]}
+        headlineWidths={[50, 50, 125]}
+        headlineWeights={[700, 400, 700]}
+        subheadline="The Raider Division is the pinnacle of DAYRADE competition. Only the most skilled and disciplined traders compete here. Prize pools reach $10,000."
+        primaryCta="Enter Raider Division"
+        secondaryCta="Prove You Belong"
+      />
       <Layout141 />
       <Layout149 />
       <Cta31 />

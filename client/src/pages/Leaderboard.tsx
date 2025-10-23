@@ -9,7 +9,14 @@ export default function Leaderboard() {
   return (
     <div>
       <Navbar6 />
-      <Header83 />
+      <Header83 
+        headlineParts={["The Climb is Real.", "This is where", "legends are made."]}
+        headlineWidths={[125, 50, 125]}
+        headlineWeights={[700, 400, 700]}
+        subheadline="Track the top performers across all divisions. Filter by global rank, division, or follow your friends to see who has the ultimate edge."
+        primaryCta="View Rankings"
+        secondaryCta="Enter Tournament"
+      />
       <Layout149 />
       <Cta31 />
       <Footer3 />

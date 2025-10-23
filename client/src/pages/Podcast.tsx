@@ -10,7 +10,14 @@ export default function Podcast() {
   return (
     <div>
       <Navbar6 />
-      <Header83 />
+      <Header83 
+        headlineParts={["The Dayrade Down-Low:", "The Official", "Podcast."]}
+        headlineWidths={[125, 50, 125]}
+        headlineWeights={[700, 400, 700]}
+        subheadline="Tune in for weekly insights, pro trader interviews, tournament recaps, and deep dives into the psychology of winning. Your weekly dose of market wisdom and community stories."
+        primaryCta="Listen Now"
+        secondaryCta="View Episodes"
+      />
       <Layout514 />
       <Layout514_1 />
       <Layout163 />

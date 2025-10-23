@@ -12,7 +12,14 @@ export default function Elevator() {
   return (
     <div>
       <Navbar6 />
-      <Header83 />
+      <Header83 
+        headlineParts={["Start Here.", "Rise", "Everywhere."]}
+        headlineWidths={[125, 50, 125]}
+        headlineWeights={[700, 400, 700]}
+        subheadline="The Elevator Division is designed for beginners. Learn the fundamentals of day trading in a safe, supportive environment. No risk. All reward."
+        primaryCta="Enter Elevator Division"
+        secondaryCta="Learn More"
+      />
       <Layout491 />
       <Layout491_1 />
       <Layout503 />

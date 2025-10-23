@@ -12,7 +12,14 @@ export default function About() {
   return (
     <div>
       <Navbar6 />
-      <Header83 />
+      <Header83 
+        headlineParts={["Trading Should Be", "a", "Sport."]}
+        headlineWidths={[50, 50, 125]}
+        headlineWeights={[700, 400, 700]}
+        subheadline="We're building the arena where skill wins, education empowers, and community thrives. Fair. Transparent. For everyone."
+        primaryCta="Read Our Story"
+        secondaryCta="Contact Us"
+      />
       <Layout22 />
       <Layout13 />
       <Team22 />

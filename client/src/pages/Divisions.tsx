@@ -11,7 +11,14 @@ export default function Divisions() {
   return (
     <div>
       <Navbar6 />
-      <Header83 />
+      <Header83 
+        headlineParts={["The Arena", "Where", "Skill Wins."]}
+        headlineWidths={[50, 50, 125]}
+        headlineWeights={[700, 400, 700]}
+        subheadline="DAYRADE tournaments are time-bound, skill-based competitions where every trader starts with the same virtual capital. Your performance determines your rank. Top performers win real prizes."
+        primaryCta="Enter a Tournament"
+        secondaryCta="View Divisions"
+      />
       <Layout504 />
       <Layout508 />
       <Layout514 />

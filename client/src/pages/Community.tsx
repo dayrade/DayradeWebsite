@@ -10,7 +10,14 @@ export default function Community() {
   return (
     <div>
       <Navbar6 />
-      <Header83 />
+      <Header83 
+        headlineParts={["Trade Alone.", "Win", "Together."]}
+        headlineWidths={[125, 50, 125]}
+        headlineWeights={[700, 400, 700]}
+        subheadline="DAYRADE is more than a platform—it's a community. Learn from pros, share strategies, celebrate wins, and grow with traders worldwide."
+        primaryCta="Join Discord"
+        secondaryCta="Explore Content"
+      />
       <Layout16 />
       <Layout1 />
       <Layout192 />
