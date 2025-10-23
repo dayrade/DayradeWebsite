@@ -13,16 +13,26 @@ import {
   FaLinkedin,
   FaYoutube,
 } from "react-icons/fa6";
+import { useTheme } from "@/contexts/ThemeContext";
+import lightLogo from "@assets/Dayrade®-light-mode_1761254119070.png";
+import darkLogo from "@assets/Dayrade®-dark-mode_1761254119070.png";
 
 export function Footer3() {
+  const { theme } = useTheme();
+  
   return (
     <footer className="px-[5%] py-12 md:py-18 lg:py-20 bg-background dark:bg-gray-900">
       <div className="container">
         <div className="grid grid-cols-1 gap-x-[4vw] gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:grid-cols-[1fr_0.5fr] lg:gap-y-4 lg:pb-20">
           <div>
             <div className="mb-6 md:mb-8">
-              <a href="/" className="text-2xl font-bold text-[#C8FF00]">
-                DAYRADE<sup className="text-xs">®</sup>
+              <a href="/" className="flex items-center">
+                <img
+                  src={theme === "dark" ? darkLogo : lightLogo}
+                  alt="Dayrade"
+                  className="h-8 w-auto"
+                  data-testid="img-footer-logo"
+                />
               </a>
             </div>
             <div className="mb-6 md:mb-8">
@@ -45,19 +55,19 @@ export function Footer3() {
               </a>
             </div>
             <div className="grid grid-flow-col grid-cols-[max-content] items-start justify-start gap-x-3">
-              <a href="https://facebook.com/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#00BFA5] transition-colors" aria-label="Follow DAYRADE on Facebook">
+              <a href="https://facebook.com/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#C6FF00] transition-colors" aria-label="Follow DAYRADE on Facebook">
                 <MdFacebook className="size-6" />
               </a>
-              <a href="https://instagram.com/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#00BFA5] transition-colors" aria-label="Follow DAYRADE on Instagram">
+              <a href="https://instagram.com/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#C6FF00] transition-colors" aria-label="Follow DAYRADE on Instagram">
                 <FaInstagram className="size-6" />
               </a>
-              <a href="https://twitter.com/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#00BFA5] transition-colors" aria-label="Follow DAYRADE on Twitter">
+              <a href="https://twitter.com/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#C6FF00] transition-colors" aria-label="Follow DAYRADE on Twitter">
                 <FaXTwitter className="size-6" />
               </a>
-              <a href="https://linkedin.com/company/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#00BFA5] transition-colors" aria-label="Follow DAYRADE on LinkedIn">
+              <a href="https://linkedin.com/company/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#C6FF00] transition-colors" aria-label="Follow DAYRADE on LinkedIn">
                 <FaLinkedin className="size-6" />
               </a>
-              <a href="https://youtube.com/@dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#00BFA5] transition-colors" aria-label="Subscribe to DAYRADE on YouTube">
+              <a href="https://youtube.com/@dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#C6FF00] transition-colors" aria-label="Subscribe to DAYRADE on YouTube">
                 <FaYoutube className="size-6" />
               </a>
             </div>
@@ -65,33 +75,33 @@ export function Footer3() {
           <div className="grid grid-cols-1 items-start gap-x-6 gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-4">
             <ul>
               <li className="text-small py-2 font-semibold">
-                <a href="/tournaments" className="text-foreground hover:text-[#00BFA5] transition-colors">Tournaments</a>
+                <a href="/tournaments" className="text-foreground hover:text-[#C6FF00] transition-colors">Tournaments</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="/divisions" className="text-foreground hover:text-[#00BFA5] transition-colors">Divisions</a>
+                <a href="/divisions" className="text-foreground hover:text-[#C6FF00] transition-colors">Divisions</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="/learn" className="text-foreground hover:text-[#00BFA5] transition-colors">Learn</a>
+                <a href="/learn" className="text-foreground hover:text-[#C6FF00] transition-colors">Learn</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="/community" className="text-foreground hover:text-[#00BFA5] transition-colors">Community</a>
+                <a href="/community" className="text-foreground hover:text-[#C6FF00] transition-colors">Community</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="/about" className="text-foreground hover:text-[#00BFA5] transition-colors">About</a>
+                <a href="/about" className="text-foreground hover:text-[#C6FF00] transition-colors">About</a>
               </li>
             </ul>
             <ul>
               <li className="text-small py-2 font-semibold">
-                <a href="/podcast" className="text-foreground hover:text-[#00BFA5] transition-colors">Podcast</a>
+                <a href="/podcast" className="text-foreground hover:text-[#C6FF00] transition-colors">Podcast</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="/blog" className="text-foreground hover:text-[#00BFA5] transition-colors">Blog</a>
+                <a href="/blog" className="text-foreground hover:text-[#C6FF00] transition-colors">Blog</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="/faq" className="text-foreground hover:text-[#00BFA5] transition-colors">FAQ</a>
+                <a href="/faq" className="text-foreground hover:text-[#C6FF00] transition-colors">FAQ</a>
               </li>
               <li className="text-small py-2 font-semibold">
-                <a href="/contact" className="text-foreground hover:text-[#00BFA5] transition-colors">Contact</a>
+                <a href="/contact" className="text-foreground hover:text-[#C6FF00] transition-colors">Contact</a>
               </li>
             </ul>
           </div>

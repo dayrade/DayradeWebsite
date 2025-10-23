@@ -31,6 +31,9 @@ import {
 } from "react-icons/md";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageDropdown } from "@/components/LanguageDropdown";
+import { useTheme } from "@/contexts/ThemeContext";
+import lightLogo from "@assets/Dayrade®-light-mode_1761254119070.png";
+import darkLogo from "@assets/Dayrade®-dark-mode_1761254119070.png";
 
 type MegaMenuLink = {
   title: string;
@@ -374,6 +377,7 @@ export function Navbar6() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const isMobile = useMediaQuery("(max-width: 991px)");
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (!isMobile) {
@@ -388,8 +392,13 @@ export function Navbar6() {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link href="/">
-              <a className="text-2xl font-bold text-[#C8FF00]">
-                Dayrade<sup className="text-xs">®</sup>
+              <a className="flex items-center">
+                <img
+                  src={theme === "dark" ? darkLogo : lightLogo}
+                  alt="Dayrade"
+                  className="h-8 w-auto"
+                  data-testid="img-logo"
+                />
               </a>
             </Link>
 
@@ -404,7 +413,7 @@ export function Navbar6() {
                       onMouseEnter={() => setActiveDropdown(item.title)}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
-                      <button className="flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-gray-100 hover:text-[#00BFA5] transition-colors">
+                      <button className="flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-gray-100 hover:text-[#C6FF00] transition-colors">
                         {item.title}
                         <MdKeyboardArrowDown
                           className={`w-4 h-4 transition-transform ${
@@ -412,7 +421,7 @@ export function Navbar6() {
                           }`}
                         />
                         {activeDropdown === item.title && (
-                          <span className="absolute -top-1 -right-2 w-2 h-2 bg-[#00BFA5] rounded-full"></span>
+                          <span className="absolute -top-1 -right-2 w-2 h-2 bg-[#C6FF00] rounded-full"></span>
                         )}
                       </button>
                     </div>
@@ -461,7 +470,7 @@ export function Navbar6() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="mx-auto mt-2 w-[var(--mega-menu-width)] max-w-[var(--mega-menu-max-width)] bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-xl p-6"
+                      className="mx-auto mt-2 w-[var(--mega-menu-width)] max-w-[var(--mega-menu-max-width)] backdrop-blur-md bg-white/90 dark:bg-black/80 border border-gray-200/50 dark:border-gray-800/50 rounded-lg shadow-xl p-6"
                       style={{
                         maxWidth: 'min(var(--mega-menu-width), var(--mega-menu-max-width))'
                       }}
@@ -476,12 +485,12 @@ export function Navbar6() {
                               {column.links.map((link, linkIndex) => (
                                 <Link key={linkIndex} href={link.url}>
                                   <a className="block group">
-                                    <div className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-                                      <div className="text-gray-400 group-hover:text-[#00BFA5] transition-colors mt-0.5 flex-shrink-0">
+                                    <div className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                                      <div className="text-gray-400 group-hover:text-[#C6FF00] transition-colors mt-0.5 flex-shrink-0">
                                         {link.icon}
                                       </div>
                                       <div className="min-w-0">
-                                        <div className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[#00BFA5] transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
+                                        <div className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[#C6FF00] transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
                                           {link.title}
                                         </div>
                                         <div className="text-xs text-gray-600 dark:text-gray-400 whitespace-nowrap overflow-hidden text-ellipsis">
@@ -500,8 +509,8 @@ export function Navbar6() {
                           <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3 whitespace-nowrap">
                             Trending content
                           </h3>
-                          <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg h-48 flex items-center justify-center">
-                            <MdPodcasts className="w-12 h-12 text-white" />
+                          <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg h-48 flex items-center justify-center">
+                            <MdPodcasts className="w-12 h-12 text-gray-400 dark:text-gray-600" />
                           </div>
                         </div>
                       </div>
