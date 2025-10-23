@@ -102,20 +102,39 @@ shared/
 ## Custom Components
 
 ### AnimatedVariableHeading
-Variable font animation component using Framer Motion to animate between different font weights and widths.
+Variable font animation component using Framer Motion to animate between different font weights, widths, and italic variations. Now supports:
+- Width axis (wdth): 25-151
+- Weight axis (wght): 100-1000
+- Italic axis (ital): 0-1
+- Custom fontSize and lineHeight props
+- Theme-aware rendering
+
+### VarText
+HTML parser component for rendering CSV content with variable font styling. Parses `<span class="weight-XXX italic">` patterns and renders text with appropriate font variations. Includes helper components:
+- `VarH1`, `VarH2`, `VarH3`, `VarH4`, `VarH5`, `VarH6` - Heading variants with animation
+- `VarP` - Paragraph variant without animation
+- Supports optional fade-in animations for headings
 
 ### MegaMenu
-Complex dropdown navigation with:
-- Trading paths column
-- Featured insights column
-- Quick access column
-- Featured content cards
+Complex dropdown navigation with centered positioning:
+- Uses CSS variables `--mega-menu-width` and `--mega-menu-max-width` for perfect centering
+- All dropdown menus align from browser center (not relative to parent button)
+- Single-line text with ellipsis overflow
+- Trading paths, featured insights, and quick access columns
+- Full dark/light mode support
 
 ### ErrorBoundary
 React error boundary with styled error display and reload functionality.
 
 ## Recent Changes
-- **2025-10-23 (Latest):** ✅ **Migration Complete**
+- **2025-10-23 (Current Session):** ✅ **Content System & Animation Enhancements**
+  - Enhanced AnimatedVariableHeading with italic axis, fontSize/lineHeight props
+  - Created VarText component system for parsing CSV HTML content
+  - Added perfect MegaMenu centering with CSS variables
+  - Updated Footer with DAYRADE branding and © 2025 copyright
+  - Full dark mode support across navbar and footer
+
+- **2025-10-23 (Earlier):** ✅ **Migration Complete**
   - Fixed all routing inconsistencies
   - Created placeholder pages for Login, Signup, Blog, Contact
   - Verified complete navigation matrix (all links → valid routes)

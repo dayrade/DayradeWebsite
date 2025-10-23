@@ -1,32 +1,26 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { motion, useInView, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
 interface AnimatedVariableHeadingProps {
   level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   parts: string[];
-  widths: number[]; // Font width values: 25-151 for Roboto Flex wdth axis
-  weights?: number[]; // Optional font weights: 100-1000
+  widths: number[];
+  weights?: number[];
+  italics?: number[];
+  fontSize?: string;
+  lineHeight?: string;
   className?: string;
   debug?: boolean;
 }
 
-/**
- * AnimatedVariableHeading - Animated typography using Roboto Flex variable font
- * 
- * Uses font-variation-settings with "wdth" and "wght" axes directly.
- * Animates smoothly using Framer Motion's useMotionValue and useSpring.
- * 
- * Roboto Flex axes:
- * - wdth: 25-151 (width)
- * - wght: 100-1000 (weight)
- * 
- * Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings
- */
 export default function AnimatedVariableHeading({ 
   level, 
   parts,
   widths,
   weights = parts.map(() => 700),
+  italics = parts.map(() => 0),
+  fontSize,
+  lineHeight,
   className = '',
   debug = false
 }: AnimatedVariableHeadingProps) {
@@ -38,40 +32,42 @@ export default function AnimatedVariableHeading({
     amount: 0.3
   });
   
+  const combinedClassName = `${headingClass} ${className}`;
+  const style: React.CSSProperties = {};
+  if (fontSize) style.fontSize = fontSize;
+  if (lineHeight) style.lineHeight = lineHeight;
+  
   return (
-    <Tag ref={ref} className={`${headingClass} ${className}`}>
+    <Tag ref={ref} className={combinedClassName} style={style}>
       {parts.map((part, index) => {
         const targetWidth = widths[index] || 100;
         const targetWeight = weights[index] || 700;
+        const targetItalic = italics[index] || 0;
         
         return (
-          <React.Fragment key={index}>
+          <span key={index}>
             {index > 0 && ' '}
             <AnimatedWord
               text={part}
               targetWidth={targetWidth}
               targetWeight={targetWeight}
+              targetItalic={targetItalic}
               isInView={isInView}
               delay={index * 0.15}
               debug={debug}
             />
-          </React.Fragment>
+          </span>
         );
       })}
     </Tag>
   );
 }
 
-/**
- * AnimatedWord - Individual word with width/weight animation using Framer Motion
- * 
- * Uses useMotionValue and useSpring for smooth, physics-based animations.
- * The motion values are transformed into font-variation-settings strings.
- */
 function AnimatedWord({ 
   text, 
   targetWidth, 
   targetWeight, 
+  targetItalic,
   isInView,
   delay,
   debug = false
@@ -79,15 +75,15 @@ function AnimatedWord({
   text: string; 
   targetWidth: number; 
   targetWeight: number; 
+  targetItalic: number;
   isInView: boolean;
   delay: number;
   debug?: boolean;
 }) {
-  // Motion values for smooth animation
   const wdth = useMotionValue(100);
   const wght = useMotionValue(400);
+  const ital = useMotionValue(0);
   
-  // Spring animation for smooth, natural motion
   const wdthSpring = useSpring(wdth, {
     stiffness: 50,
     damping: 20,
@@ -100,23 +96,28 @@ function AnimatedWord({
     mass: 1
   });
   
-  // Transform motion values to font-variation-settings string
+  const italSpring = useSpring(ital, {
+    stiffness: 50,
+    damping: 20,
+    mass: 1
+  });
+  
   const fontVariationSettings = useTransform(
-    [wdthSpring, wghtSpring],
-    ([w, wg]) => `"wdth" ${Math.round(w as number)}, "wght" ${Math.round(wg as number)}`
+    [wdthSpring, wghtSpring, italSpring],
+    ([w, wg, it]) => `"wdth" ${Math.round(w as number)}, "wght" ${Math.round(wg as number)}, "ital" ${(it as number).toFixed(2)}`
   );
   
-  // Animate when in view
   useEffect(() => {
     if (isInView) {
       const timer = setTimeout(() => {
         wdth.set(targetWidth);
         wght.set(targetWeight);
+        ital.set(targetItalic);
       }, delay * 1000);
       
       return () => clearTimeout(timer);
     }
-  }, [isInView, targetWidth, targetWeight, delay, wdth, wght]);
+  }, [isInView, targetWidth, targetWeight, targetItalic, delay, wdth, wght, ital]);
 
   return (
     <motion.span
@@ -143,8 +144,8 @@ function AnimatedWord({
           }}
         >
           {useTransform(
-            [wdthSpring, wghtSpring],
-            ([w, wg]) => `wdth:${Math.round(w as number)} wght:${Math.round(wg as number)}`
+            [wdthSpring, wghtSpring, italSpring],
+            ([w, wg, it]) => `wdth:${Math.round(w as number)} wght:${Math.round(wg as number)} ital:${(it as number).toFixed(1)}`
           )}
         </motion.span>
       )}
@@ -152,9 +153,6 @@ function AnimatedWord({
   );
 }
 
-/**
- * Preset heading components for common DAYRADE headers
- */
 export const DayradeAnimatedHeadings = {
   Hero: () => (
     <AnimatedVariableHeading
@@ -210,4 +208,3 @@ export const DayradeAnimatedHeadings = {
     />
   ),
 };
-
