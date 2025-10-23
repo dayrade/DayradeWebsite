@@ -6,12 +6,10 @@ import React from "react";
 
 const useRelume = () => {
   const { scrollYProgress } = useScroll();
-  const opacityContent = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const opacityOverlay = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [3.2, 1]);
 
   return {
-    opacityContent,
     opacityOverlay,
     scale,
   };
@@ -41,10 +39,7 @@ export function Header83({
   return (
     <section className="relative h-[300vh]">
       <div className="sticky top-0 h-screen overflow-hidden">
-        <motion.div
-          className="flex h-full items-center justify-center"
-          style={{ opacity: useActive.opacityContent }}
-        >
+        <div className="flex h-full items-center justify-center">
           <div className="px-[5%] py-16 md:py-24 lg:py-28">
             <div className="relative z-10 mx-auto max-w-lg text-center">
               <h1 className="heading-h1 mb-5 text-white md:mb-6">
@@ -61,7 +56,7 @@ export function Header83({
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
         <div className="absolute inset-0 z-0">
           <motion.div
             className="absolute inset-0 z-10 bg-neutral-darkest/50"
