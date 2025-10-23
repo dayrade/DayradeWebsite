@@ -162,12 +162,105 @@ React error boundary with styled error display and reload functionality.
 - Mobile-responsive accordion menu
 - All routes verified and functional
 
+## Content Management System
+
+### Overview
+The site uses a CSV-based content management system with variable font styling. Content is stored in `attached_assets/DAYRADE_1761224192248.csv` and can be systematically applied to pages using the content parser and VarText components.
+
+### Content Parser (`client/src/lib/contentParser.ts`)
+Utilities for extracting content from the CSV:
+
+```typescript
+import { getSectionContent, parseHeroContent } from '@/lib/contentParser';
+
+// Get raw content for a page section
+const content = getSectionContent('Home', 'Hero Header Section');
+
+// Parse hero section
+const hero = parseHeroContent(content);
+// Returns: { headline: "...", subheadline: "...", cta: "..." }
+
+// Parse feature section
+const feature = parseFeatureContent(content);
+// Returns: { headline: "...", body: "...", features: [...], cta: "..." }
+
+// Parse CTA section
+const cta = parseCTAContent(content);
+// Returns: { headline: "...", cta: "..." }
+```
+
+### VarText Components
+For rendering CSV HTML content with variable font styling:
+
+```typescript
+import { VarH1, VarH2, VarP } from '@/components/VarText';
+
+// CSV content with variable weight/italic:
+// "<span class='weight-700'>Bold</span> <span class='weight-400'>Normal</span> <span class='weight-700 italic'>Bold Italic</span>"
+
+<VarH1 html={heroContent.headline} className="mb-6" />
+<VarH2 html={featureContent.headline} className="mb-4" />
+<VarP html={featureContent.body} />
+```
+
+**Available Components:**
+- `VarH1` through `VarH6` - Headings with fade-in animations
+- `VarP` - Paragraphs without animation
+- `VarText` - Base component with custom tag support
+
+**Styling Patterns in CSV:**
+- `<span class='weight-700'>Bold Text</span>` - Sets font weight to 700
+- `<span class='weight-400'>Normal Text</span>` - Sets font weight to 400
+- `<span class='weight-700 italic'>Bold Italic</span>` - Sets weight 700 and italic axis to 1
+
+### Example Components (`client/src/components/CSVContentExample.tsx`)
+Pre-built components for common content patterns:
+
+```typescript
+import { HeroSectionFromCSV, FeatureSectionFromCSV, CTASectionFromCSV } from '@/components/CSVContentExample';
+
+// Use in pages
+<HeroSectionFromCSV page="Home" section="Hero Header Section" />
+<FeatureSectionFromCSV page="Home" section="Feature Section" />
+<CTASectionFromCSV page="Home" section="CTA Section" />
+```
+
+### Updating Pages with CSV Content
+
+**Step 1:** Find content in CSV
+```bash
+# View all sections for a page
+grep "^\"Home\"" attached_assets/DAYRADE_1761224192248.csv
+```
+
+**Step 2:** Import required components
+```typescript
+import { getSectionContent, parseHeroContent } from '@/lib/contentParser';
+import { VarH1, VarP } from '@/components/VarText';
+```
+
+**Step 3:** Parse and render content
+```typescript
+const heroContent = getSectionContent('Home', 'Hero Header Section');
+const parsed = parseHeroContent(heroContent);
+
+<VarH1 html={parsed.headline} />
+<p>{parsed.subheadline}</p>
+<Button>{parsed.cta}</Button>
+```
+
+### CSV Structure
+- **Page** - Page name (e.g., "Home", "Divisions", "Tournaments")
+- **Section** - Section type (e.g., "Hero Header Section", "Feature Section")
+- **Section Description** - Raw content with formatting markers (H1:, H2:, Subhead:, CTA:, Body:, Feature 1:, etc.)
+
 ## Known Issues
 - Minor React warnings in copied Relume components (invalid props on Fragment, duplicate keys)
   - Non-critical, does not affect functionality
   - Can be addressed in future refinement
 
 ## Future Enhancements
+- Systematically update all 20+ pages with CSV content using the content management system
 - Replace Login/Signup/Blog placeholders with actual functionality
 - Add backend authentication when needed
 - Implement blog CMS integration
