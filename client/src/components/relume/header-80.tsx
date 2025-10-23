@@ -49,7 +49,7 @@ export function Header80() {
             className="flex flex-col gap-[26vw] pt-[70vh]"
             style={{ y: useActive.yFirst }}
           >
-            <div className="relative w-[30vw] md:w-[28vw] lg:w-[22vw]">
+            <div className="relative w-[22vw] md:w-[20vw] lg:w-[16vw]">
               <DayradeCard
                 avatarImage="/assets/toro-profile.png"
                 avatarVideo="/assets/toro-profile-video.mp4"
@@ -70,7 +70,7 @@ export function Header80() {
                 onFollowClick={handleFollow}
               />
             </div>
-            <div className="relative w-[30vw] md:w-[28vw] lg:w-[22vw] left-[52vw] mt-[-46vw] lg:left-[58vw]">
+            <div className="relative w-[22vw] md:w-[20vw] lg:w-[16vw] left-[52vw] mt-[-46vw] lg:left-[58vw]">
               <DayradeCard
                 avatarImage="/assets/toro-profile.png"
                 avatarVideo="/assets/toro-profile-video.mp4"
@@ -91,7 +91,7 @@ export function Header80() {
                 onFollowClick={handleFollow}
               />
             </div>
-            <div className="relative w-[28vw] md:w-[26vw] lg:w-[20vw] left-[4vw] mt-[-5vw]">
+            <div className="relative w-[20vw] md:w-[18vw] lg:w-[14vw] left-[4vw] mt-[-5vw]">
               <DayradeCard
                 avatarImage="/assets/toro-profile.png"
                 avatarVideo="/assets/toro-profile-video.mp4"
@@ -112,7 +112,7 @@ export function Header80() {
                 onFollowClick={handleFollow}
               />
             </div>
-            <div className="relative w-[26vw] md:w-[24vw] lg:w-[18vw] left-[64vw] mt-[-45vw]">
+            <div className="relative w-[18vw] md:w-[16vw] lg:w-[12vw] left-[64vw] mt-[-45vw]">
               <DayradeCard
                 avatarImage="/assets/toro-profile.png"
                 avatarVideo="/assets/toro-profile-video.mp4"
@@ -140,18 +140,46 @@ export function Header80() {
           style={{ y: useActive.ySecond }}
         >
           <div className="flex flex-col gap-[26vw] pt-[70vh]">
-            <div className="relative h-[35vw] pt-[120%] opacity-75 sm:h-auto w-[28vw] md:w-[26vw] lg:w-[20vw]">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                className="absolute inset-0 size-full rounded-image object-cover"
-                alt="Relume placeholder image 5"
+            <div className="relative w-[20vw] md:w-[18vw] lg:w-[14vw]">
+              <DayradeCard
+                avatarImage="/assets/toro-profile.png"
+                avatarVideo="/assets/toro-profile-video.mp4"
+                username="Toro"
+                bio="Badass trader focused on Cash money!"
+                rank={7}
+                pnl={67357}
+                followers={312}
+                following={312}
+                views={312}
+                verificationIcon="/assets/icons/Verification_Icon_Container.svg"
+                rankIcon="/assets/icons/Rank.svg"
+                pnlIcon="/assets/icons/PNL.svg"
+                followersIcon="/assets/icons/Followers.svg"
+                followingIcon="/assets/icons/Following.svg"
+                eyeIcon="/assets/icons/Eye.svg"
+                onDashboardClick={handleDashboard}
+                onFollowClick={handleFollow}
               />
             </div>
-            <div className="relative h-[35vw] pt-[120%] opacity-75 sm:h-auto right-[50vw] mt-[-44vw] w-[26vw] md:w-[24vw] lg:right-[54vw] lg:w-[18vw]">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                className="absolute inset-0 size-full rounded-image object-cover"
-                alt="Relume placeholder image 6"
+            <div className="relative w-[18vw] md:w-[16vw] lg:w-[12vw] right-[50vw] mt-[-44vw] lg:right-[54vw]">
+              <DayradeCard
+                avatarImage="/assets/toro-profile.png"
+                avatarVideo="/assets/toro-profile-video.mp4"
+                username="Toro"
+                bio="Badass trader focused on Cash money!"
+                rank={7}
+                pnl={67357}
+                followers={312}
+                following={312}
+                views={312}
+                verificationIcon="/assets/icons/Verification_Icon_Container.svg"
+                rankIcon="/assets/icons/Rank.svg"
+                pnlIcon="/assets/icons/PNL.svg"
+                followersIcon="/assets/icons/Followers.svg"
+                followingIcon="/assets/icons/Following.svg"
+                eyeIcon="/assets/icons/Eye.svg"
+                onDashboardClick={handleDashboard}
+                onFollowClick={handleFollow}
               />
             </div>
           </div>
