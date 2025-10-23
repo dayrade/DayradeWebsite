@@ -29,6 +29,8 @@ import {
   MdMenu,
   MdClose,
 } from "react-icons/md";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { LanguageDropdown } from "@/components/LanguageDropdown";
 
 type MegaMenuLink = {
   title: string;
@@ -419,16 +421,24 @@ export function Navbar6() {
 
                 {/* CTA Buttons */}
                 <div className="flex items-center gap-3">
+                  <Link href="/login">
+                    <button
+                      className="flex items-center h-9 px-4 rounded-lg border border-scheme-border bg-transparent hover-elevate active-elevate-2 transition-colors text-sm font-medium text-foreground"
+                      data-testid="button-login"
+                    >
+                      Login
+                    </button>
+                  </Link>
                   <Link href="/signup">
-                    <Button variant="outline" size="sm">
-                      Sign up
-                    </Button>
+                    <button
+                      className="flex items-center h-9 px-4 rounded-lg bg-primary text-primary-foreground hover-elevate active-elevate-2 transition-colors text-sm font-medium"
+                      data-testid="button-register"
+                    >
+                      Register
+                    </button>
                   </Link>
-                  <Link href="/learn">
-                    <Button variant="default" size="sm">
-                      Learn
-                    </Button>
-                  </Link>
+                  <LanguageDropdown />
+                  <ThemeToggle />
                 </div>
               </>
             )}
@@ -600,17 +610,29 @@ export function Navbar6() {
                     </AnimatePresence>
                   </div>
                 ))}
-                <div className="flex flex-col gap-2 pt-2">
+                <div className="flex flex-col gap-3 pt-2">
+                  <Link href="/login">
+                    <button
+                      className="w-full flex items-center justify-center h-10 px-4 rounded-lg border border-scheme-border bg-transparent hover-elevate active-elevate-2 transition-colors text-sm font-medium text-foreground"
+                      data-testid="button-login-mobile"
+                    >
+                      Login
+                    </button>
+                  </Link>
                   <Link href="/signup">
-                    <Button variant="outline" className="w-full">
-                      Sign up
-                    </Button>
+                    <button
+                      className="w-full flex items-center justify-center h-10 px-4 rounded-lg bg-primary text-primary-foreground hover-elevate active-elevate-2 transition-colors text-sm font-medium"
+                      data-testid="button-register-mobile"
+                    >
+                      Register
+                    </button>
                   </Link>
-                  <Link href="/learn">
-                    <Button variant="default" className="w-full">
-                      Learn
-                    </Button>
-                  </Link>
+                  <div className="flex items-center gap-3">
+                    <div className="flex-1">
+                      <LanguageDropdown />
+                    </div>
+                    <ThemeToggle />
+                  </div>
                 </div>
               </div>
             </motion.div>
