@@ -59,7 +59,7 @@ export const DayradeCard = ({
   return (
     <div 
       className={`w-full h-full mx-auto bg-card border-[6px] border-border rounded-2xl overflow-hidden shadow-xl transition-all duration-300 group hover:shadow-2xl cursor-pointer relative ${className}`}
-      style={{ aspectRatio: "3/4" }}
+      style={{ aspectRatio: "9/16" }}
       data-testid={`card-player-${username.toLowerCase()}`}
       onMouseEnter={() => videoRef.current?.play()}
       onMouseLeave={() => {
