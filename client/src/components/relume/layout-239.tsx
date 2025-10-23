@@ -57,7 +57,7 @@ export function Layout239() {
               <h3 className="heading-h4 mb-5 font-bold md:mb-6">
                 Raider Division
               </h3>
-              <p>Advanced traders battle for premium prizes up to $10K.</p>
+              <p>Advanced traders battle for premium prizes up to $50K.</p>
             </div>
           </div>
           <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">

@@ -50,7 +50,7 @@ export function Layout419() {
               </div>
               <h3 className="heading-h5 mb-3 font-bold md:mb-4">Real money</h3>
               <p>
-                Cash prizes up to $10,000 in Raider Division await those who
+                Cash prizes up to $50,000 in Raider Division await those who
                 master the market's rhythm.
               </p>
             </div>
@@ -66,7 +66,7 @@ export function Layout419() {
               </div>
               <h3 className="heading-h5 mb-3 font-bold md:mb-4">Real money</h3>
               <p>
-                Cash prizes up to $10,000 in Raider Division await those who
+                Cash prizes up to $50,000 in Raider Division await those who
                 master the market's rhythm.
               </p>
             </div>
@@ -82,7 +82,7 @@ export function Layout419() {
               </div>
               <h3 className="heading-h5 mb-3 font-bold md:mb-4">Real money</h3>
               <p>
-                Cash prizes up to $10,000 in Raider Division await those who
+                Cash prizes up to $50,000 in Raider Division await those who
                 master the market's rhythm.
               </p>
             </div>
@@ -98,7 +98,7 @@ export function Layout419() {
               </div>
               <h3 className="heading-h5 mb-3 font-bold md:mb-4">Real money</h3>
               <p>
-                Cash prizes up to $10,000 in Raider Division await those who
+                Cash prizes up to $50,000 in Raider Division await those who
                 master the market's rhythm.
               </p>
             </div>

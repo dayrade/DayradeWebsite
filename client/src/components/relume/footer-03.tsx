@@ -101,13 +101,13 @@ export function Footer3() {
           <p className="text-micro mt-8 md:mt-0 text-muted-foreground">© 2025 DAYRADE. All Rights Reserved.</p>
           <ul className="text-tiny grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0">
             <li className="underline">
-              <a href="/faq#safety-compliance" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
+              <a href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
             </li>
             <li className="underline">
-              <a href="/faq#safety-compliance" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a>
+              <a href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a>
             </li>
             <li className="underline">
-              <a href="/faq#safety-compliance" className="text-muted-foreground hover:text-foreground transition-colors">Cookies Settings</a>
+              <a href="/cookies" className="text-muted-foreground hover:text-foreground transition-colors">Cookies Settings</a>
             </li>
           </ul>
         </div>

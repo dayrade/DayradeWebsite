@@ -18,7 +18,7 @@ export function Stats40() {
               Prize pools
             </h3>
             <p className="text-right text-[3.5rem] leading-[1.3] font-bold md:text-[4rem] lg:text-[5rem]">
-              $10K
+              $20K+
             </p>
             <div className="my-4 h-px w-full bg-scheme-border" />
             <p className="text-right">Average tournament prize money</p>

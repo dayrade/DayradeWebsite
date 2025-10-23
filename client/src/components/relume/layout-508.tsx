@@ -302,7 +302,7 @@ export function Layout508() {
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-start gap-2">
                       <span className="text-primary mt-1">✓</span>
-                      <span>Cash prizes up to $10,000 in Raider Division</span>
+                      <span>Cash prizes up to $50,000 in Raider Division</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary mt-1">✓</span>
