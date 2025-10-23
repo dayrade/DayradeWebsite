@@ -11,9 +11,13 @@ export default function Podcast() {
     <div>
       <Navbar6 />
       <Header83 
-        headlineParts={["The Dayrade Down-Low:", "The Official", "Podcast."]}
-        headlineWidths={[125, 50, 125]}
-        headlineWeights={[700, 400, 700]}
+        headline={
+          <>
+            <span className="font-bold">THE DAYRADE DOWN-LOW:</span>{" "}
+            <span className="font-normal">THE OFFICIAL</span>{" "}
+            <span className="font-bold italic">PODCAST.</span>
+          </>
+        }
         subheadline="Tune in for weekly insights, pro trader interviews, tournament recaps, and deep dives into the psychology of winning. Your weekly dose of market wisdom and community stories."
         primaryCta="Listen Now"
         secondaryCta="View Episodes"

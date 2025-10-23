@@ -10,9 +10,13 @@ export default function Leaderboard() {
     <div>
       <Navbar6 />
       <Header83 
-        headlineParts={["The Climb is Real.", "This is where", "legends are made."]}
-        headlineWidths={[125, 50, 125]}
-        headlineWeights={[700, 400, 700]}
+        headline={
+          <>
+            <span className="font-bold">THE CLIMB IS REAL.</span>{" "}
+            <span className="font-normal">THIS IS WHERE</span>{" "}
+            <span className="font-bold italic">LEGENDS ARE MADE.</span>
+          </>
+        }
         subheadline="Track the top performers across all divisions. Filter by global rank, division, or follow your friends to see who has the ultimate edge."
         primaryCta="View Rankings"
         secondaryCta="Enter Tournament"

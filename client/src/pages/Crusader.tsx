@@ -10,9 +10,13 @@ export default function Crusader() {
     <div>
       <Navbar6 />
       <Header83 
-        headlineParts={["Prove Your Skill.", "Earn", "Real Rewards."]}
-        headlineWidths={[50, 50, 125]}
-        headlineWeights={[700, 400, 700]}
+        headline={
+          <>
+            <span className="font-bold">PROVE YOUR SKILL.</span>{" "}
+            <span className="font-normal">EARN</span>{" "}
+            <span className="font-bold italic">REAL REWARDS.</span>
+          </>
+        }
         subheadline="The Crusader Division is for traders who have mastered the basics and are ready to compete for cash prizes. Consistency wins here."
         primaryCta="Enter Crusader Division"
         secondaryCta="View Tournaments"

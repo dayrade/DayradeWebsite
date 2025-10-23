@@ -11,9 +11,13 @@ export default function Learn() {
     <div>
       <Navbar6 />
       <Header83 
-        headlineParts={["Master Money.", "Master", "Markets."]}
-        headlineWidths={[125, 50, 125]}
-        headlineWeights={[700, 400, 700]}
+        headline={
+          <>
+            <span className="font-bold">MASTER MONEY.</span>{" "}
+            <span className="font-normal">MASTER</span>{" "}
+            <span className="font-bold italic">MARKETS.</span>
+          </>
+        }
         subheadline="DAYRADE isn't just competition—it's education. Learn trading psychology, risk management, technical analysis, and market fundamentals. Free, accessible, actionable."
         primaryCta="Start Learning"
         secondaryCta="Daily Lessons"

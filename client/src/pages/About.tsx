@@ -13,9 +13,13 @@ export default function About() {
     <div>
       <Navbar6 />
       <Header83 
-        headlineParts={["Trading Should Be", "a", "Sport."]}
-        headlineWidths={[50, 50, 125]}
-        headlineWeights={[700, 400, 700]}
+        headline={
+          <>
+            <span className="font-bold">TRADING SHOULD BE</span>{" "}
+            <span className="font-normal">A</span>{" "}
+            <span className="font-bold italic">SPORT.</span>
+          </>
+        }
         subheadline="We're building the arena where skill wins, education empowers, and community thrives. Fair. Transparent. For everyone."
         primaryCta="Read Our Story"
         secondaryCta="Contact Us"

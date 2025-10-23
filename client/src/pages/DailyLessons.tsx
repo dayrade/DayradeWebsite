@@ -11,9 +11,13 @@ export default function DailyLessons() {
     <div>
       <Navbar6 />
       <Header83 
-        headlineParts={["Master the Markets,", "One", "Lesson at a Time."]}
-        headlineWidths={[50, 50, 125]}
-        headlineWeights={[700, 400, 700]}
+        headline={
+          <>
+            <span className="font-bold">MASTER THE MARKETS,</span>{" "}
+            <span className="font-normal">ONE</span>{" "}
+            <span className="font-bold italic">LESSON AT A TIME.</span>
+          </>
+        }
         subheadline="Our daily lessons break down complex financial topics into simple, actionable insights. Build your knowledge, boost your confidence, and make smarter decisions—in and out of the arena."
         primaryCta="Start Your First Lesson"
         secondaryCta="Browse Lessons"

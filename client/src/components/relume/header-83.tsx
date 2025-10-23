@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
-import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 import React from "react";
 
 const useRelume = () => {
@@ -19,31 +18,26 @@ const useRelume = () => {
 };
 
 interface Header83Props {
-  headlineParts?: string[];
-  headlineWidths?: number[];
-  headlineWeights?: number[];
+  headline?: React.ReactNode;
   subheadline?: string;
   primaryCta?: string;
   secondaryCta?: string;
 }
 
 export function Header83({ 
-  headlineParts = ["Trade Like a", "Pro.", "Compete Like an", "Athlete."],
-  headlineWidths,
-  headlineWeights,
+  headline = (
+    <>
+      <span className="font-bold">TRADE LIKE A</span>{" "}
+      <span className="font-normal">PRO.</span>{" "}
+      <span className="font-bold italic">COMPETE LIKE AN ATHLETE.</span>
+    </>
+  ),
   subheadline = "A skill-based arena where traders battle with precision and strategy. Build your trading persona and rise through the ranks.",
   primaryCta = "Sign Up",
   secondaryCta = "Watch"
 }: Header83Props = {}) {
-  // Ensure arrays match length - use default if not provided
-  const partsCount = headlineParts.length;
-  const finalWidths = headlineWidths && headlineWidths.length === partsCount 
-    ? headlineWidths 
-    : Array(partsCount).fill(50).map((_, i) => i % 2 === 0 ? 50 : 125);
-  const finalWeights = headlineWeights && headlineWeights.length === partsCount
-    ? headlineWeights
-    : Array(partsCount).fill(700).map((_, i) => i % 2 === 0 ? 700 : 900);
   const useActive = useRelume();
+  
   return (
     <section className="relative h-[300vh]">
       <div className="sticky top-0 h-screen overflow-hidden">
@@ -53,19 +47,15 @@ export function Header83({
         >
           <div className="px-[5%] py-16 md:py-24 lg:py-28">
             <div className="relative z-10 mx-auto max-w-lg text-center">
-              <AnimatedVariableHeading
-                level="h1"
-                className="mb-5 text-white md:mb-6"
-                parts={headlineParts}
-                widths={finalWidths}
-                weights={finalWeights}
-              />
+              <h1 className="heading-h1 mb-5 text-white md:mb-6">
+                {headline}
+              </h1>
               <p className="text-medium text-white">
                 {subheadline}
               </p>
               <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-                <Button title={primaryCta}>{primaryCta}</Button>
-                <Button title={secondaryCta} variant="secondary-alt">
+                <Button title={primaryCta} data-testid="button-primary-cta">{primaryCta}</Button>
+                <Button title={secondaryCta} variant="secondary-alt" data-testid="button-secondary-cta">
                   {secondaryCta}
                 </Button>
               </div>
@@ -120,27 +110,6 @@ export function Header83({
               <img
                 src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
                 alt="Relume placeholder image 6"
-                className="absolute inset-0 size-full object-cover"
-              />
-            </div>
-            <div className="relative hidden md:block">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Relume placeholder image 7"
-                className="absolute inset-0 size-full object-cover"
-              />
-            </div>
-            <div className="relative">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Relume placeholder image 8"
-                className="absolute inset-0 size-full object-cover"
-              />
-            </div>
-            <div className="relative hidden md:block">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Relume placeholder image 9"
                 className="absolute inset-0 size-full object-cover"
               />
             </div>

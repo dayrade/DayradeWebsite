@@ -14,9 +14,13 @@ export default function Raider() {
     <div>
       <Navbar6 />
       <Header83 
-        headlineParts={["Elite Traders.", "Elite", "Prizes."]}
-        headlineWidths={[50, 50, 125]}
-        headlineWeights={[700, 400, 700]}
+        headline={
+          <>
+            <span className="font-bold">ELITE TRADERS.</span>{" "}
+            <span className="font-normal">ELITE</span>{" "}
+            <span className="font-bold italic">PRIZES.</span>
+          </>
+        }
         subheadline="The Raider Division is the pinnacle of DAYRADE competition. Only the most skilled and disciplined traders compete here. Prize pools reach $10,000."
         primaryCta="Enter Raider Division"
         secondaryCta="Prove You Belong"

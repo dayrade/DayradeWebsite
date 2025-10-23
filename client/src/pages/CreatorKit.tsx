@@ -11,9 +11,13 @@ export default function CreatorKit() {
     <div>
       <Navbar6 />
       <Header83 
-        headlineParts={["Stream Dayrade", "Like a", "Pro."]}
-        headlineWidths={[125, 50, 125]}
-        headlineWeights={[700, 400, 700]}
+        headline={
+          <>
+            <span className="font-bold">STREAM DAYRADE</span>{" "}
+            <span className="font-normal">LIKE A</span>{" "}
+            <span className="font-bold italic">PRO.</span>
+          </>
+        }
         subheadline="We believe in community-driven growth. The Creator Kit helps streamers, educators, and commentators represent Dayrade authentically. Get logos, overlays, stingers, and 3D avatars ready for OBS and Unreal Engine."
         primaryCta="Download Kit"
         secondaryCta="Apply for Partnership"

@@ -1,287 +1,46 @@
 # DAYRADE Website
 
 ## Overview
-DAYRADE is a competitive trading platform website that positions trading as a sport. The site features a comprehensive information architecture with sections for tournament information, learning resources, community engagement, and division-based competition tiers.
+DAYRADE is a competitive trading platform that gamifies trading, positioning it as a sport. The website provides comprehensive information on tournaments, learning resources, community engagement, and tiered competitive divisions (Elevator, Crusader, Raider). Its core purpose is to offer a dynamic and engaging platform for traders to compete, learn, and connect.
 
-## Project Status
-**Current State:** ✅ **COMPLETE** - Full website migration with all routing functional and architect-approved
-**Last Updated:** October 23, 2025
+## User Preferences
+I want iterative development.
+Ask before making major changes.
+I prefer detailed explanations.
+Do not make changes to the folder `Z`.
+Do not make changes to the file `Y`.
 
-### Migration Completion Status
-- ✅ All 60+ Relume components successfully migrated
-- ✅ All 20+ pages created and routed
-- ✅ Complete navigation system with MegaMenu
-- ✅ Design system with custom typography (Roboto Flex + Plus Jakarta Sans)
-- ✅ Theme system with light/dark mode support
-- ✅ All routing verified - zero 404 errors
-- ✅ Responsive design across all breakpoints
-- 📝 Minor React warnings in copied components (non-critical)
+## System Architecture
+The DAYRADE website is built with a modern frontend architecture using **React 18, TypeScript, and Vite**, with **Wouter** for routing. Styling is handled by **Tailwind CSS**, integrated with a custom design system built on **Shadcn/UI** and **Radix UI primitives**. Animations are powered by **Framer Motion**. Icons are sourced from **Google Material Design** and **FontAwesome 6**. A minimal **Express.js** backend serves static content.
 
-## Architecture
+### UI/UX Decisions
+- **Typography:** Headings use Roboto Flex (variable font) and body text uses Plus Jakarta Sans.
+- **Color Scheme:** A blue-based primary palette with full light and dark mode support via `ThemeContext`.
+- **Design System:** Includes a defined radius system (Large, Medium, Small) and an elevation-based shadow system (xxsmall to xxlarge).
+- **Navigation:** Features a complex, centered MegaMenu with 3-column dropdowns and an icon-based structure, fully responsive for mobile.
+- **Animations:** Extensive use of Framer Motion for dynamic elements, including an `AnimatedVariableHeading` component for variable font animations and parallax scrolling on the homepage.
+- **Content Styling:** A `VarText` component system allows for rendering CSV-driven content with dynamic variable font styling (weight, width, italic axes) directly from HTML patterns.
 
-### Tech Stack
-- **Frontend:** React 18 + TypeScript + Vite
-- **Routing:** Wouter (lightweight React router)
-- **Styling:** Tailwind CSS with custom design system
-- **UI Components:** Shadcn/UI + Radix UI primitives
-- **Animations:** Framer Motion
-- **Icons:** Google Material Design (react-icons/md) + FontAwesome 6 social icons
-- **Backend:** Express.js (minimal, serves static content)
+### Technical Implementations
+- **Content Management:** A CSV-based content system (`attached_assets/DAYRADE_1761224192248.csv`) allows for systematic content application to pages using a custom content parser and `VarText` components.
+- **Components:** Utilizes 60+ Relume components and custom UI components like `AnimatedVariableHeading`, `VarText`, and a robust `MegaMenu`.
+- **Error Handling:** Features a custom `ErrorBoundary` component for graceful error display and recovery.
 
-### Design System
-- **Typography:**
-  - Headings: Roboto Flex (variable font with width/weight axes)
-  - Body: Plus Jakarta Sans
-- **Colors:** Blue-based primary palette with light/dark mode support
-- **Theme:** Light mode default, dark mode available via ThemeContext
-- **Radius System:** Large (1-2 cols), Medium (2-3 cols), Small (<4 cols)
-- **Shadow System:** xxsmall through xxlarge elevation hierarchy
-- **Icon Sizing:** Utilities for xs, sm, md, lg, xl icon sizes
+### Feature Specifications
+- **Homepage:** Animated hero section, parallax scrolling, multi-section layout.
+- **Navigation:** Sticky navigation, mobile-responsive hamburger menu, Quick access links (Login/Signup placeholders).
+- **Core Pages (24 total):** Includes marketing, divisional (Elevator, Crusader, Raider), tournament, learning, community, and authentication (placeholder) pages.
+- **Typography System:** Implements a "three-part emphasis pattern" for headlines, using a `headline?: React.ReactNode` prop to allow mixed font weights and italic variations. All headlines are uppercase and follow a consistent visual hierarchy.
 
-## Project Structure
-
-```
-client/
-├── public/
-│   └── fonts/           # Custom variable fonts (Roboto Flex)
-├── src/
-│   ├── components/
-│   │   ├── relume/      # Pre-built layout components (~60 components)
-│   │   └── ui/          # Shadcn/UI components
-│   ├── contexts/
-│   │   └── ThemeContext.tsx
-│   ├── hooks/
-│   │   ├── use-media-query.ts
-│   │   └── useMobile.tsx
-│   ├── lib/
-│   │   ├── icons.tsx    # Icon mapping utilities
-│   │   ├── navigation-data.ts  # MegaMenu navigation structure
-│   │   └── utils.ts     # Tailwind cn() utility
-│   ├── pages/           # 20+ page components
-│   ├── App.tsx          # Main app with routing
-│   ├── const.ts         # App constants
-│   ├── fonts.css        # Variable font definitions
-│   └── index.css        # Global styles + custom utilities
-server/
-└── routes.ts            # Express routes (minimal)
-shared/
-└── const.ts             # Shared constants
-```
-
-## Main Navigation Sections
-
-1. **How It Works** - Onboarding, verification, trading accounts, rewards
-2. **Divisions** - Elevator, Crusader, Raider (competitive tiers)
-3. **Tournaments** - Schedule, leaderboard, creator kit
-4. **Learn** - Daily lessons, glossary, trading education
-5. **Community** - Podcast, player spotlights, social features
-6. **About** - Company info, FAQ, contact
-
-## Key Features
-
-### Homepage
-- Animated hero section with variable typography
-- Parallax scrolling effects
-- Multi-section layout using Relume components
-- Sticky navigation with MegaMenu
-
-### Navigation
-- Complex MegaMenu system with 3-column dropdowns
-- Icon-based navigation links
-- Mobile-responsive hamburger menu
-- Quick access links (Login/Signup)
-
-### Pages (24 Total)
-- **Home:** Marketing homepage with hero, features, CTAs
-- **How It Works:** Verification/KYC, trading accounts, rewards
-- **Divisions:** Main page + Elevator, Crusader, Raider tier pages
-- **Tournaments:** Main page, schedule, leaderboard, creator kit
-- **Learn:** Main page, daily lessons, glossary (+ individual lesson/term pages)
-- **Community:** Main page, podcast, player spotlights
-- **About:** Main page, FAQ, contact
-- **Auth:** Login, Signup (placeholders)
-- **Blog:** Placeholder page
-
-## Custom Components
-
-### AnimatedVariableHeading
-Variable font animation component using Framer Motion to animate between different font weights, widths, and italic variations. Now supports:
-- Width axis (wdth): 25-151
-- Weight axis (wght): 100-1000
-- Italic axis (ital): 0-1
-- Custom fontSize and lineHeight props
-- Theme-aware rendering
-
-### VarText
-HTML parser component for rendering CSV content with variable font styling. Parses `<span class="weight-XXX italic">` patterns and renders text with appropriate font variations. Includes helper components:
-- `VarH1`, `VarH2`, `VarH3`, `VarH4`, `VarH5`, `VarH6` - Heading variants with animation
-- `VarP` - Paragraph variant without animation
-- Supports optional fade-in animations for headings
-
-### MegaMenu
-Complex dropdown navigation with centered positioning:
-- Uses CSS variables `--mega-menu-width` and `--mega-menu-max-width` for perfect centering
-- All dropdown menus align from browser center (not relative to parent button)
-- Single-line text with ellipsis overflow
-- Trading paths, featured insights, and quick access columns
-- Full dark/light mode support
-
-### ErrorBoundary
-React error boundary with styled error display and reload functionality.
-
-## Recent Changes
-- **2025-10-23 (Current Session):** ✅ **Icon Migration & Design System Updates**
-  - **Migrated all icons from Lucide React to Google Material Design**
-    - Updated `lib/icons.tsx` with comprehensive Material Icon mapping
-    - Replaced 30+ icon instances in navbar-06.tsx (MdMenu, MdKeyboardArrowDown, MdPersonAdd, MdEmojiEvents, etc.)
-    - Updated footer social icons (MdFacebook + FontAwesome 6 brand icons)
-    - Fixed runtime errors: Podcast → MdPodcasts, RxChevronDown → MdKeyboardArrowDown
-  - **Enhanced Design Guidelines (design_guidelines.md)**
-    - Added Radius System: Large (1-2 cols), Medium (2-3 cols), Small (<4 cols)
-    - Added Shadow System: xxsmall through xxlarge elevation hierarchy
-    - Added comprehensive UI Elements documentation (buttons, inputs, selects, tags, checkboxes, toggles, tooltips, tabs, filters)
-  - **Updated CSS Utilities (index.css)**
-    - Added radius utilities: .radius-large, .radius-medium, .radius-small
-    - Added icon sizing utilities: .icon-xs through .icon-xl
-  - **E2E Testing:** All pages verified functional with Material Icons across desktop/mobile viewports
-  - **Architect Reviewed:** All changes approved with zero critical issues
-
-- **2025-10-23 (Earlier Session):** ✅ **Content System & Animation Enhancements**
-  - Enhanced AnimatedVariableHeading with italic axis, fontSize/lineHeight props
-  - Created VarText component system for parsing CSV HTML content
-  - Added perfect MegaMenu centering with CSS variables
-  - Updated Footer with DAYRADE branding and © 2025 copyright
-  - Full dark mode support across navbar and footer
-
-- **2025-10-23 (Earlier):** ✅ **Migration Complete**
-  - Fixed all routing inconsistencies
-  - Created placeholder pages for Login, Signup, Blog, Contact
-  - Verified complete navigation matrix (all links → valid routes)
-  - Architect approval received for full site implementation
-  
-- **2025-10-23 (Earlier):** Initial project setup
-  - Migrated all Relume components (60+ layout components)
-  - Created all 20+ pages with proper routing
-  - Implemented MegaMenu navigation system
-  - Set up theme system with light/dark mode
-  - Configured custom typography with variable fonts (Roboto Flex + Plus Jakarta Sans)
-
-## Development Commands
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm start` - Run production build
-
-## Technical Notes
-- Uses Tailwind CSS v4 with `@tailwind` imports
-- Custom container utility with responsive padding
-- Heading classes (heading-h1 through heading-h6) for typography
-- Elevation system for hover/active states (hover-elevate, active-elevate-2)
-- Variable font CSS variables for animation (--font-weight-current, --font-stretch-current)
-- MegaMenu with 3-column dropdown structure
-- Mobile-responsive accordion menu
-- All routes verified and functional
-
-## Content Management System
-
-### Overview
-The site uses a CSV-based content management system with variable font styling. Content is stored in `attached_assets/DAYRADE_1761224192248.csv` and can be systematically applied to pages using the content parser and VarText components.
-
-### Content Parser (`client/src/lib/contentParser.ts`)
-Utilities for extracting content from the CSV:
-
-```typescript
-import { getSectionContent, parseHeroContent } from '@/lib/contentParser';
-
-// Get raw content for a page section
-const content = getSectionContent('Home', 'Hero Header Section');
-
-// Parse hero section
-const hero = parseHeroContent(content);
-// Returns: { headline: "...", subheadline: "...", cta: "..." }
-
-// Parse feature section
-const feature = parseFeatureContent(content);
-// Returns: { headline: "...", body: "...", features: [...], cta: "..." }
-
-// Parse CTA section
-const cta = parseCTAContent(content);
-// Returns: { headline: "...", cta: "..." }
-```
-
-### VarText Components
-For rendering CSV HTML content with variable font styling:
-
-```typescript
-import { VarH1, VarH2, VarP } from '@/components/VarText';
-
-// CSV content with variable weight/italic:
-// "<span class='weight-700'>Bold</span> <span class='weight-400'>Normal</span> <span class='weight-700 italic'>Bold Italic</span>"
-
-<VarH1 html={heroContent.headline} className="mb-6" />
-<VarH2 html={featureContent.headline} className="mb-4" />
-<VarP html={featureContent.body} />
-```
-
-**Available Components:**
-- `VarH1` through `VarH6` - Headings with fade-in animations
-- `VarP` - Paragraphs without animation
-- `VarText` - Base component with custom tag support
-
-**Styling Patterns in CSV:**
-- `<span class='weight-700'>Bold Text</span>` - Sets font weight to 700
-- `<span class='weight-400'>Normal Text</span>` - Sets font weight to 400
-- `<span class='weight-700 italic'>Bold Italic</span>` - Sets weight 700 and italic axis to 1
-
-### Example Components (`client/src/components/CSVContentExample.tsx`)
-Pre-built components for common content patterns:
-
-```typescript
-import { HeroSectionFromCSV, FeatureSectionFromCSV, CTASectionFromCSV } from '@/components/CSVContentExample';
-
-// Use in pages
-<HeroSectionFromCSV page="Home" section="Hero Header Section" />
-<FeatureSectionFromCSV page="Home" section="Feature Section" />
-<CTASectionFromCSV page="Home" section="CTA Section" />
-```
-
-### Updating Pages with CSV Content
-
-**Step 1:** Find content in CSV
-```bash
-# View all sections for a page
-grep "^\"Home\"" attached_assets/DAYRADE_1761224192248.csv
-```
-
-**Step 2:** Import required components
-```typescript
-import { getSectionContent, parseHeroContent } from '@/lib/contentParser';
-import { VarH1, VarP } from '@/components/VarText';
-```
-
-**Step 3:** Parse and render content
-```typescript
-const heroContent = getSectionContent('Home', 'Hero Header Section');
-const parsed = parseHeroContent(heroContent);
-
-<VarH1 html={parsed.headline} />
-<p>{parsed.subheadline}</p>
-<Button>{parsed.cta}</Button>
-```
-
-### CSV Structure
-- **Page** - Page name (e.g., "Home", "Divisions", "Tournaments")
-- **Section** - Section type (e.g., "Hero Header Section", "Feature Section")
-- **Section Description** - Raw content with formatting markers (H1:, H2:, Subhead:, CTA:, Body:, Feature 1:, etc.)
-
-## Known Issues
-- Minor React warnings in copied Relume components (invalid props on Fragment, duplicate keys)
-  - Non-critical, does not affect functionality
-  - Can be addressed in future refinement
-
-## Future Enhancements
-- Systematically update all 20+ pages with CSV content using the content management system
-- Replace Login/Signup/Blog placeholders with actual functionality
-- Add backend authentication when needed
-- Implement blog CMS integration
-- Resolve React component warnings
-- Add analytics tracking
+## External Dependencies
+- **React 18:** Frontend library.
+- **TypeScript:** Superset of JavaScript for type-safety.
+- **Vite:** Frontend tooling.
+- **Wouter:** Lightweight React router.
+- **Tailwind CSS:** Utility-first CSS framework.
+- **Shadcn/UI:** UI component library.
+- **Radix UI:** Low-level UI primitives.
+- **Framer Motion:** Animation library.
+- **Google Material Design Icons:** Icon set (via `react-icons/md`).
+- **FontAwesome 6:** Social media icons.
+- **Express.js:** Minimal backend for serving static content.

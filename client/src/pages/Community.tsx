@@ -11,9 +11,13 @@ export default function Community() {
     <div>
       <Navbar6 />
       <Header83 
-        headlineParts={["Trade Alone.", "Win", "Together."]}
-        headlineWidths={[125, 50, 125]}
-        headlineWeights={[700, 400, 700]}
+        headline={
+          <>
+            <span className="font-bold">TRADE ALONE.</span>{" "}
+            <span className="font-normal">WIN</span>{" "}
+            <span className="font-bold italic">TOGETHER.</span>
+          </>
+        }
         subheadline="DAYRADE is more than a platform—it's a community. Learn from pros, share strategies, celebrate wins, and grow with traders worldwide."
         primaryCta="Join Discord"
         secondaryCta="Explore Content"

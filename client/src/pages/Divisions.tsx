@@ -12,9 +12,13 @@ export default function Divisions() {
     <div>
       <Navbar6 />
       <Header83 
-        headlineParts={["The Arena", "Where", "Skill Wins."]}
-        headlineWidths={[50, 50, 125]}
-        headlineWeights={[700, 400, 700]}
+        headline={
+          <>
+            <span className="font-bold">THE ARENA</span>{" "}
+            <span className="font-normal">WHERE</span>{" "}
+            <span className="font-bold italic">SKILL WINS.</span>
+          </>
+        }
         subheadline="DAYRADE tournaments are time-bound, skill-based competitions where every trader starts with the same virtual capital. Your performance determines your rank. Top performers win real prizes."
         primaryCta="Enter a Tournament"
         secondaryCta="View Divisions"
