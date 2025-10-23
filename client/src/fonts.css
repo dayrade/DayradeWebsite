@@ -1,0 +1,28 @@
+/**
+ * Roboto Flex Variable Font - LOCAL FILE
+ * 
+ * Using the FULL variable font from GitHub with ALL axes:
+ * - wdth: 25-151 (WIDTH - this is what we need!)
+ * - wght: 100-1000 (WEIGHT)
+ * - Plus 11 other axes
+ * 
+ * This is the real variable font, not the subset from Google Fonts.
+ */
+
+@font-face {
+  font-family: 'Roboto Flex';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
+  font-display: swap;
+  src: url('/fonts/RobotoFlex-Full.ttf') format('truetype');
+}
+
+/**
+ * CSS Variables for animation via Framer Motion
+ */
+:root {
+  --wght: 400;      /* Weight: 100-1000 */
+  --wdth: 100;      /* Width: 25-151 (note: raw value, not percentage) */
+  --slnt: 0;        /* Slant: 0 to -10 */
+}

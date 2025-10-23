@@ -1,0 +1,113 @@
+import React from 'react';
+
+interface MixedWeightHeadingProps {
+  level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  parts: string[];
+  weights: ('bold' | 'light' | 'italic')[];
+  className?: string;
+}
+
+/**
+ * MixedWeightHeading component for DAYRADE brand typography
+ * 
+ * Renders headers with mixed font weights following the brand style:
+ * - Bold text (weight-700)
+ * - Light text (weight-400) 
+ * - Italic bold text (weight-700 italic)
+ * 
+ * All headers are automatically uppercase with proper letter spacing
+ * 
+ * @example
+ * <MixedWeightHeading 
+ *   level="h1"
+ *   parts={["Trade Like a", "Pro.", "Compete Like an", "Athlete."]}
+ *   weights={["bold", "light", "bold", "italic"]}
+ * />
+ */
+export default function MixedWeightHeading({ 
+  level, 
+  parts,
+  weights,
+  className = '' 
+}: MixedWeightHeadingProps) {
+  const Tag = level;
+  const headingClass = `heading-${level}`;
+  
+  return (
+    <Tag className={`${headingClass} ${className}`}>
+      {parts.map((part, index) => {
+        const weight = weights[index] || 'bold';
+        let spanClass = '';
+        
+        if (weight === 'bold') {
+          spanClass = 'weight-700';
+        } else if (weight === 'light') {
+          spanClass = 'weight-400';
+        } else if (weight === 'italic') {
+          spanClass = 'weight-700 italic';
+        }
+        
+        return (
+          <React.Fragment key={index}>
+            {index > 0 && ' '}
+            <span className={spanClass}>{part}</span>
+          </React.Fragment>
+        );
+      })}
+    </Tag>
+  );
+}
+
+/**
+ * Preset heading components for common DAYRADE headers
+ */
+export const DayradeHeadings = {
+  Hero: () => (
+    <MixedWeightHeading
+      level="h1"
+      parts={["Trade Like a", "Pro.", "Compete Like an", "Athlete."]}
+      weights={["bold", "light", "bold", "italic"]}
+    />
+  ),
+  
+  HowItWorks: () => (
+    <MixedWeightHeading
+      level="h2"
+      parts={["Your Path to", "Trading", "Mastery"]}
+      weights={["bold", "light", "italic"]}
+    />
+  ),
+  
+  Divisions: () => (
+    <MixedWeightHeading
+      level="h2"
+      parts={["Three", "Divisions.", "One", "Arena."]}
+      weights={["bold", "light", "bold", "italic"]}
+    />
+  ),
+  
+  WhyDayrade: () => (
+    <MixedWeightHeading
+      level="h2"
+      parts={["Why DAYRADE is", "Different"]}
+      weights={["bold", "italic"]}
+    />
+  ),
+  
+  MasterMoney: () => (
+    <MixedWeightHeading
+      level="h2"
+      parts={["Master", "Money.", "Not Just", "Markets."]}
+      weights={["bold", "light", "bold", "italic"]}
+    />
+  ),
+  
+  YourArena: () => (
+    <MixedWeightHeading
+      level="h2"
+      parts={["Your Arena", "Awaits"]}
+      weights={["bold", "italic"]}
+    />
+  ),
+};
+
