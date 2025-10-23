@@ -5,15 +5,6 @@ import { DayradeCard } from "@/components/ui/dayrade-card";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-import toroProfileImage from "@assets/toro-profile.png";
-import toroProfileVideo from "@assets/toro-profile-video.mp4";
-import VerificationIcon from "@assets/icons/Verification_Icon_Container.svg";
-import RankIcon from "@assets/icons/Rank.svg";
-import PNLIcon from "@assets/icons/PNL.svg";
-import FollowersIcon from "@assets/icons/Followers.svg";
-import FollowingIcon from "@assets/icons/Following.svg";
-import EyeIcon from "@assets/icons/Eye.svg";
-
 const useRelume = () => {
   const transformRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: transformRef });
@@ -61,8 +52,8 @@ export function Header80() {
             <div className="relative h-[35vw] pt-[120%] sm:h-auto w-[30vw] md:w-[28vw] lg:w-[22vw]">
               <div className="absolute inset-0 size-full">
                 <DayradeCard
-                  avatarImage={toroProfileImage}
-                  avatarVideo={toroProfileVideo}
+                  avatarImage="/assets/toro-profile.png"
+                  avatarVideo="/assets/toro-profile-video.mp4"
                   username="Toro"
                   bio="Badass trader focused on Cash money!"
                   rank={7}
@@ -70,12 +61,12 @@ export function Header80() {
                   followers={312}
                   following={312}
                   views={312}
-                  verificationIcon={VerificationIcon}
-                  rankIcon={RankIcon}
-                  pnlIcon={PNLIcon}
-                  followersIcon={FollowersIcon}
-                  followingIcon={FollowingIcon}
-                  eyeIcon={EyeIcon}
+                  verificationIcon="/assets/icons/Verification_Icon_Container.svg"
+                  rankIcon="/assets/icons/Rank.svg"
+                  pnlIcon="/assets/icons/PNL.svg"
+                  followersIcon="/assets/icons/Followers.svg"
+                  followingIcon="/assets/icons/Following.svg"
+                  eyeIcon="/assets/icons/Eye.svg"
                   onDashboardClick={handleDashboard}
                   onFollowClick={handleFollow}
                 />
@@ -84,8 +75,8 @@ export function Header80() {
             <div className="relative h-[35vw] pt-[120%] sm:h-auto left-[52vw] mt-[-46vw] w-[30vw] md:w-[28vw] lg:left-[58vw] lg:w-[22vw]">
               <div className="absolute inset-0 size-full">
                 <DayradeCard
-                  avatarImage={toroProfileImage}
-                  avatarVideo={toroProfileVideo}
+                  avatarImage="/assets/toro-profile.png"
+                  avatarVideo="/assets/toro-profile-video.mp4"
                   username="Toro"
                   bio="Badass trader focused on Cash money!"
                   rank={7}
@@ -93,12 +84,12 @@ export function Header80() {
                   followers={312}
                   following={312}
                   views={312}
-                  verificationIcon={VerificationIcon}
-                  rankIcon={RankIcon}
-                  pnlIcon={PNLIcon}
-                  followersIcon={FollowersIcon}
-                  followingIcon={FollowingIcon}
-                  eyeIcon={EyeIcon}
+                  verificationIcon="/assets/icons/Verification_Icon_Container.svg"
+                  rankIcon="/assets/icons/Rank.svg"
+                  pnlIcon="/assets/icons/PNL.svg"
+                  followersIcon="/assets/icons/Followers.svg"
+                  followingIcon="/assets/icons/Following.svg"
+                  eyeIcon="/assets/icons/Eye.svg"
                   onDashboardClick={handleDashboard}
                   onFollowClick={handleFollow}
                 />
@@ -107,8 +98,8 @@ export function Header80() {
             <div className="relative h-[35vw] pt-[120%] sm:h-auto left-[4vw] mt-[-5vw] w-[28vw] md:w-[26vw] lg:w-[20vw]">
               <div className="absolute inset-0 size-full">
                 <DayradeCard
-                  avatarImage={toroProfileImage}
-                  avatarVideo={toroProfileVideo}
+                  avatarImage="/assets/toro-profile.png"
+                  avatarVideo="/assets/toro-profile-video.mp4"
                   username="Toro"
                   bio="Badass trader focused on Cash money!"
                   rank={7}
@@ -116,12 +107,12 @@ export function Header80() {
                   followers={312}
                   following={312}
                   views={312}
-                  verificationIcon={VerificationIcon}
-                  rankIcon={RankIcon}
-                  pnlIcon={PNLIcon}
-                  followersIcon={FollowersIcon}
-                  followingIcon={FollowingIcon}
-                  eyeIcon={EyeIcon}
+                  verificationIcon="/assets/icons/Verification_Icon_Container.svg"
+                  rankIcon="/assets/icons/Rank.svg"
+                  pnlIcon="/assets/icons/PNL.svg"
+                  followersIcon="/assets/icons/Followers.svg"
+                  followingIcon="/assets/icons/Following.svg"
+                  eyeIcon="/assets/icons/Eye.svg"
                   onDashboardClick={handleDashboard}
                   onFollowClick={handleFollow}
                 />
@@ -130,8 +121,8 @@ export function Header80() {
             <div className="relative h-[35vw] pt-[120%] sm:h-auto left-[64vw] mt-[-45vw] w-[26vw] md:w-[24vw] lg:w-[18vw]">
               <div className="absolute inset-0 size-full">
                 <DayradeCard
-                  avatarImage={toroProfileImage}
-                  avatarVideo={toroProfileVideo}
+                  avatarImage="/assets/toro-profile.png"
+                  avatarVideo="/assets/toro-profile-video.mp4"
                   username="Toro"
                   bio="Badass trader focused on Cash money!"
                   rank={7}
@@ -139,12 +130,12 @@ export function Header80() {
                   followers={312}
                   following={312}
                   views={312}
-                  verificationIcon={VerificationIcon}
-                  rankIcon={RankIcon}
-                  pnlIcon={PNLIcon}
-                  followersIcon={FollowersIcon}
-                  followingIcon={FollowingIcon}
-                  eyeIcon={EyeIcon}
+                  verificationIcon="/assets/icons/Verification_Icon_Container.svg"
+                  rankIcon="/assets/icons/Rank.svg"
+                  pnlIcon="/assets/icons/PNL.svg"
+                  followersIcon="/assets/icons/Followers.svg"
+                  followingIcon="/assets/icons/Following.svg"
+                  eyeIcon="/assets/icons/Eye.svg"
                   onDashboardClick={handleDashboard}
                   onFollowClick={handleFollow}
                 />
