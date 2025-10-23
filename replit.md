@@ -25,7 +25,7 @@ DAYRADE is a competitive trading platform website that positions trading as a sp
 - **Styling:** Tailwind CSS with custom design system
 - **UI Components:** Shadcn/UI + Radix UI primitives
 - **Animations:** Framer Motion
-- **Icons:** Lucide React + React Icons
+- **Icons:** Google Material Design (react-icons/md) + FontAwesome 6 social icons
 - **Backend:** Express.js (minimal, serves static content)
 
 ### Design System
@@ -34,6 +34,9 @@ DAYRADE is a competitive trading platform website that positions trading as a sp
   - Body: Plus Jakarta Sans
 - **Colors:** Blue-based primary palette with light/dark mode support
 - **Theme:** Light mode default, dark mode available via ThemeContext
+- **Radius System:** Large (1-2 cols), Medium (2-3 cols), Small (<4 cols)
+- **Shadow System:** xxsmall through xxlarge elevation hierarchy
+- **Icon Sizing:** Utilities for xs, sm, md, lg, xl icon sizes
 
 ## Project Structure
 
@@ -127,7 +130,23 @@ Complex dropdown navigation with centered positioning:
 React error boundary with styled error display and reload functionality.
 
 ## Recent Changes
-- **2025-10-23 (Current Session):** ✅ **Content System & Animation Enhancements**
+- **2025-10-23 (Current Session):** ✅ **Icon Migration & Design System Updates**
+  - **Migrated all icons from Lucide React to Google Material Design**
+    - Updated `lib/icons.tsx` with comprehensive Material Icon mapping
+    - Replaced 30+ icon instances in navbar-06.tsx (MdMenu, MdKeyboardArrowDown, MdPersonAdd, MdEmojiEvents, etc.)
+    - Updated footer social icons (MdFacebook + FontAwesome 6 brand icons)
+    - Fixed runtime errors: Podcast → MdPodcasts, RxChevronDown → MdKeyboardArrowDown
+  - **Enhanced Design Guidelines (design_guidelines.md)**
+    - Added Radius System: Large (1-2 cols), Medium (2-3 cols), Small (<4 cols)
+    - Added Shadow System: xxsmall through xxlarge elevation hierarchy
+    - Added comprehensive UI Elements documentation (buttons, inputs, selects, tags, checkboxes, toggles, tooltips, tabs, filters)
+  - **Updated CSS Utilities (index.css)**
+    - Added radius utilities: .radius-large, .radius-medium, .radius-small
+    - Added icon sizing utilities: .icon-xs through .icon-xl
+  - **E2E Testing:** All pages verified functional with Material Icons across desktop/mobile viewports
+  - **Architect Reviewed:** All changes approved with zero critical issues
+
+- **2025-10-23 (Earlier Session):** ✅ **Content System & Animation Enhancements**
   - Enhanced AnimatedVariableHeading with italic axis, fontSize/lineHeight props
   - Created VarText component system for parsing CSV HTML content
   - Added perfect MegaMenu centering with CSS variables
