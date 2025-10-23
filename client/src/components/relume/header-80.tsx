@@ -49,97 +49,89 @@ export function Header80() {
             className="flex flex-col gap-[26vw] pt-[70vh]"
             style={{ y: useActive.yFirst }}
           >
-            <div className="relative h-[35vw] pt-[120%] sm:h-auto w-[30vw] md:w-[28vw] lg:w-[22vw]">
-              <div className="absolute inset-0 size-full">
-                <DayradeCard
-                  avatarImage="/assets/toro-profile.png"
-                  avatarVideo="/assets/toro-profile-video.mp4"
-                  username="Toro"
-                  bio="Badass trader focused on Cash money!"
-                  rank={7}
-                  pnl={67357}
-                  followers={312}
-                  following={312}
-                  views={312}
-                  verificationIcon="/assets/icons/Verification_Icon_Container.svg"
-                  rankIcon="/assets/icons/Rank.svg"
-                  pnlIcon="/assets/icons/PNL.svg"
-                  followersIcon="/assets/icons/Followers.svg"
-                  followingIcon="/assets/icons/Following.svg"
-                  eyeIcon="/assets/icons/Eye.svg"
-                  onDashboardClick={handleDashboard}
-                  onFollowClick={handleFollow}
-                />
-              </div>
+            <div className="relative w-[30vw] md:w-[28vw] lg:w-[22vw]">
+              <DayradeCard
+                avatarImage="/assets/toro-profile.png"
+                avatarVideo="/assets/toro-profile-video.mp4"
+                username="Toro"
+                bio="Badass trader focused on Cash money!"
+                rank={7}
+                pnl={67357}
+                followers={312}
+                following={312}
+                views={312}
+                verificationIcon="/assets/icons/Verification_Icon_Container.svg"
+                rankIcon="/assets/icons/Rank.svg"
+                pnlIcon="/assets/icons/PNL.svg"
+                followersIcon="/assets/icons/Followers.svg"
+                followingIcon="/assets/icons/Following.svg"
+                eyeIcon="/assets/icons/Eye.svg"
+                onDashboardClick={handleDashboard}
+                onFollowClick={handleFollow}
+              />
             </div>
-            <div className="relative h-[35vw] pt-[120%] sm:h-auto left-[52vw] mt-[-46vw] w-[30vw] md:w-[28vw] lg:left-[58vw] lg:w-[22vw]">
-              <div className="absolute inset-0 size-full">
-                <DayradeCard
-                  avatarImage="/assets/toro-profile.png"
-                  avatarVideo="/assets/toro-profile-video.mp4"
-                  username="Toro"
-                  bio="Badass trader focused on Cash money!"
-                  rank={7}
-                  pnl={67357}
-                  followers={312}
-                  following={312}
-                  views={312}
-                  verificationIcon="/assets/icons/Verification_Icon_Container.svg"
-                  rankIcon="/assets/icons/Rank.svg"
-                  pnlIcon="/assets/icons/PNL.svg"
-                  followersIcon="/assets/icons/Followers.svg"
-                  followingIcon="/assets/icons/Following.svg"
-                  eyeIcon="/assets/icons/Eye.svg"
-                  onDashboardClick={handleDashboard}
-                  onFollowClick={handleFollow}
-                />
-              </div>
+            <div className="relative w-[30vw] md:w-[28vw] lg:w-[22vw] left-[52vw] mt-[-46vw] lg:left-[58vw]">
+              <DayradeCard
+                avatarImage="/assets/toro-profile.png"
+                avatarVideo="/assets/toro-profile-video.mp4"
+                username="Toro"
+                bio="Badass trader focused on Cash money!"
+                rank={7}
+                pnl={67357}
+                followers={312}
+                following={312}
+                views={312}
+                verificationIcon="/assets/icons/Verification_Icon_Container.svg"
+                rankIcon="/assets/icons/Rank.svg"
+                pnlIcon="/assets/icons/PNL.svg"
+                followersIcon="/assets/icons/Followers.svg"
+                followingIcon="/assets/icons/Following.svg"
+                eyeIcon="/assets/icons/Eye.svg"
+                onDashboardClick={handleDashboard}
+                onFollowClick={handleFollow}
+              />
             </div>
-            <div className="relative h-[35vw] pt-[120%] sm:h-auto left-[4vw] mt-[-5vw] w-[28vw] md:w-[26vw] lg:w-[20vw]">
-              <div className="absolute inset-0 size-full">
-                <DayradeCard
-                  avatarImage="/assets/toro-profile.png"
-                  avatarVideo="/assets/toro-profile-video.mp4"
-                  username="Toro"
-                  bio="Badass trader focused on Cash money!"
-                  rank={7}
-                  pnl={67357}
-                  followers={312}
-                  following={312}
-                  views={312}
-                  verificationIcon="/assets/icons/Verification_Icon_Container.svg"
-                  rankIcon="/assets/icons/Rank.svg"
-                  pnlIcon="/assets/icons/PNL.svg"
-                  followersIcon="/assets/icons/Followers.svg"
-                  followingIcon="/assets/icons/Following.svg"
-                  eyeIcon="/assets/icons/Eye.svg"
-                  onDashboardClick={handleDashboard}
-                  onFollowClick={handleFollow}
-                />
-              </div>
+            <div className="relative w-[28vw] md:w-[26vw] lg:w-[20vw] left-[4vw] mt-[-5vw]">
+              <DayradeCard
+                avatarImage="/assets/toro-profile.png"
+                avatarVideo="/assets/toro-profile-video.mp4"
+                username="Toro"
+                bio="Badass trader focused on Cash money!"
+                rank={7}
+                pnl={67357}
+                followers={312}
+                following={312}
+                views={312}
+                verificationIcon="/assets/icons/Verification_Icon_Container.svg"
+                rankIcon="/assets/icons/Rank.svg"
+                pnlIcon="/assets/icons/PNL.svg"
+                followersIcon="/assets/icons/Followers.svg"
+                followingIcon="/assets/icons/Following.svg"
+                eyeIcon="/assets/icons/Eye.svg"
+                onDashboardClick={handleDashboard}
+                onFollowClick={handleFollow}
+              />
             </div>
-            <div className="relative h-[35vw] pt-[120%] sm:h-auto left-[64vw] mt-[-45vw] w-[26vw] md:w-[24vw] lg:w-[18vw]">
-              <div className="absolute inset-0 size-full">
-                <DayradeCard
-                  avatarImage="/assets/toro-profile.png"
-                  avatarVideo="/assets/toro-profile-video.mp4"
-                  username="Toro"
-                  bio="Badass trader focused on Cash money!"
-                  rank={7}
-                  pnl={67357}
-                  followers={312}
-                  following={312}
-                  views={312}
-                  verificationIcon="/assets/icons/Verification_Icon_Container.svg"
-                  rankIcon="/assets/icons/Rank.svg"
-                  pnlIcon="/assets/icons/PNL.svg"
-                  followersIcon="/assets/icons/Followers.svg"
-                  followingIcon="/assets/icons/Following.svg"
-                  eyeIcon="/assets/icons/Eye.svg"
-                  onDashboardClick={handleDashboard}
-                  onFollowClick={handleFollow}
-                />
-              </div>
+            <div className="relative w-[26vw] md:w-[24vw] lg:w-[18vw] left-[64vw] mt-[-45vw]">
+              <DayradeCard
+                avatarImage="/assets/toro-profile.png"
+                avatarVideo="/assets/toro-profile-video.mp4"
+                username="Toro"
+                bio="Badass trader focused on Cash money!"
+                rank={7}
+                pnl={67357}
+                followers={312}
+                following={312}
+                views={312}
+                verificationIcon="/assets/icons/Verification_Icon_Container.svg"
+                rankIcon="/assets/icons/Rank.svg"
+                pnlIcon="/assets/icons/PNL.svg"
+                followersIcon="/assets/icons/Followers.svg"
+                followingIcon="/assets/icons/Following.svg"
+                eyeIcon="/assets/icons/Eye.svg"
+                onDashboardClick={handleDashboard}
+                onFollowClick={handleFollow}
+              />
             </div>
           </motion.div>
         </div>
