@@ -49,7 +49,8 @@ export function Header80() {
             className="flex flex-col gap-[26vw] pt-[70vh]"
             style={{ y: useActive.yFirst }}
           >
-            <div className="relative w-[22vw] md:w-[20vw] lg:w-[16vw]">
+            {/* Large foreground card - scale 1.0 */}
+            <div className="relative w-[20vw]" style={{ transformOrigin: "top left" }}>
               <DayradeCard
                 avatarImage="/assets/toro-profile.png"
                 avatarVideo="/assets/toro-profile-video.mp4"
@@ -70,7 +71,8 @@ export function Header80() {
                 onFollowClick={handleFollow}
               />
             </div>
-            <div className="relative w-[22vw] md:w-[20vw] lg:w-[16vw] left-[52vw] mt-[-46vw] lg:left-[58vw]">
+            {/* Large foreground card - scale 1.0 */}
+            <div className="relative w-[20vw] left-[52vw] mt-[-46vw] lg:left-[58vw]" style={{ transformOrigin: "top left" }}>
               <DayradeCard
                 avatarImage="/assets/toro-profile.png"
                 avatarVideo="/assets/toro-profile-video.mp4"
@@ -91,7 +93,8 @@ export function Header80() {
                 onFollowClick={handleFollow}
               />
             </div>
-            <div className="relative w-[20vw] md:w-[18vw] lg:w-[14vw] left-[4vw] mt-[-5vw]">
+            {/* Medium card - scale 0.75 */}
+            <div className="relative w-[20vw] left-[4vw] mt-[-5vw]" style={{ transform: "scale(0.75)", transformOrigin: "top left" }}>
               <DayradeCard
                 avatarImage="/assets/toro-profile.png"
                 avatarVideo="/assets/toro-profile-video.mp4"
@@ -112,7 +115,8 @@ export function Header80() {
                 onFollowClick={handleFollow}
               />
             </div>
-            <div className="relative w-[18vw] md:w-[16vw] lg:w-[12vw] left-[64vw] mt-[-45vw]">
+            {/* Small card - scale 0.6 */}
+            <div className="relative w-[20vw] left-[64vw] mt-[-45vw]" style={{ transform: "scale(0.6)", transformOrigin: "top left" }}>
               <DayradeCard
                 avatarImage="/assets/toro-profile.png"
                 avatarVideo="/assets/toro-profile-video.mp4"
@@ -140,7 +144,8 @@ export function Header80() {
           style={{ y: useActive.ySecond }}
         >
           <div className="flex flex-col gap-[26vw] pt-[70vh]">
-            <div className="relative w-[20vw] md:w-[18vw] lg:w-[14vw]">
+            {/* Medium background card - scale 0.75 */}
+            <div className="relative w-[20vw]" style={{ transform: "scale(0.75)", transformOrigin: "top right" }}>
               <DayradeCard
                 avatarImage="/assets/toro-profile.png"
                 avatarVideo="/assets/toro-profile-video.mp4"
@@ -161,7 +166,8 @@ export function Header80() {
                 onFollowClick={handleFollow}
               />
             </div>
-            <div className="relative w-[18vw] md:w-[16vw] lg:w-[12vw] right-[50vw] mt-[-44vw] lg:right-[54vw]">
+            {/* Small background card - scale 0.6 */}
+            <div className="relative w-[20vw] right-[50vw] mt-[-44vw] lg:right-[54vw]" style={{ transform: "scale(0.6)", transformOrigin: "top right" }}>
               <DayradeCard
                 avatarImage="/assets/toro-profile.png"
                 avatarVideo="/assets/toro-profile-video.mp4"
