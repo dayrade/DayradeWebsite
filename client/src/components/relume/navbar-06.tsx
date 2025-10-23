@@ -491,7 +491,7 @@ export function Navbar6() {
                             Trending content
                           </h3>
                           <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg h-48 flex items-center justify-center">
-                            <Podcast className="w-12 h-12 text-white" />
+                            <MdPodcasts className="w-12 h-12 text-white" />
                           </div>
                         </div>
                       </div>
@@ -552,7 +552,7 @@ export function Navbar6() {
                       className="flex items-center justify-between w-full text-left font-medium text-gray-900 dark:text-gray-100"
                     >
                       {item.title}
-                      <RxChevronDown
+                      <MdKeyboardArrowDown
                         className={`w-4 h-4 transition-transform ${
                           activeDropdown === item.title ? "rotate-180" : ""
                         }`}
