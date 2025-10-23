@@ -1,8 +1,18 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { DayradeCard } from "@/components/ui/dayrade-card";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import React, { useRef } from "react";
+import { useRef } from "react";
+
+import toroProfileImage from "@assets/toro-profile.png";
+import toroProfileVideo from "@assets/toro-profile-video.mp4";
+import VerificationIcon from "@assets/icons/Verification_Icon_Container.svg";
+import RankIcon from "@assets/icons/Rank.svg";
+import PNLIcon from "@assets/icons/PNL.svg";
+import FollowersIcon from "@assets/icons/Followers.svg";
+import FollowingIcon from "@assets/icons/Following.svg";
+import EyeIcon from "@assets/icons/Eye.svg";
 
 const useRelume = () => {
   const transformRef = useRef(null);
@@ -28,6 +38,15 @@ const useRelume = () => {
 
 export function Header80() {
   const useActive = useRelume();
+
+  const handleDashboard = () => {
+    console.log("Dashboard clicked");
+  };
+
+  const handleFollow = () => {
+    console.log("Follow clicked");
+  };
+
   return (
     <section
       ref={useActive.transformRef}
@@ -40,32 +59,96 @@ export function Header80() {
             style={{ y: useActive.yFirst }}
           >
             <div className="relative h-[35vw] pt-[120%] sm:h-auto w-[30vw] md:w-[28vw] lg:w-[22vw]">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                className="absolute inset-0 size-full rounded-image object-cover"
-                alt="Relume placeholder image 1"
-              />
+              <div className="absolute inset-0 size-full">
+                <DayradeCard
+                  avatarImage={toroProfileImage}
+                  avatarVideo={toroProfileVideo}
+                  username="Toro"
+                  bio="Badass trader focused on Cash money!"
+                  rank={7}
+                  pnl={67357}
+                  followers={312}
+                  following={312}
+                  views={312}
+                  verificationIcon={VerificationIcon}
+                  rankIcon={RankIcon}
+                  pnlIcon={PNLIcon}
+                  followersIcon={FollowersIcon}
+                  followingIcon={FollowingIcon}
+                  eyeIcon={EyeIcon}
+                  onDashboardClick={handleDashboard}
+                  onFollowClick={handleFollow}
+                />
+              </div>
             </div>
             <div className="relative h-[35vw] pt-[120%] sm:h-auto left-[52vw] mt-[-46vw] w-[30vw] md:w-[28vw] lg:left-[58vw] lg:w-[22vw]">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                className="absolute inset-0 size-full rounded-image object-cover"
-                alt="Relume placeholder image 2"
-              />
+              <div className="absolute inset-0 size-full">
+                <DayradeCard
+                  avatarImage={toroProfileImage}
+                  avatarVideo={toroProfileVideo}
+                  username="Toro"
+                  bio="Badass trader focused on Cash money!"
+                  rank={7}
+                  pnl={67357}
+                  followers={312}
+                  following={312}
+                  views={312}
+                  verificationIcon={VerificationIcon}
+                  rankIcon={RankIcon}
+                  pnlIcon={PNLIcon}
+                  followersIcon={FollowersIcon}
+                  followingIcon={FollowingIcon}
+                  eyeIcon={EyeIcon}
+                  onDashboardClick={handleDashboard}
+                  onFollowClick={handleFollow}
+                />
+              </div>
             </div>
             <div className="relative h-[35vw] pt-[120%] sm:h-auto left-[4vw] mt-[-5vw] w-[28vw] md:w-[26vw] lg:w-[20vw]">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                className="absolute inset-0 size-full rounded-image object-cover"
-                alt="Relume placeholder image 3"
-              />
+              <div className="absolute inset-0 size-full">
+                <DayradeCard
+                  avatarImage={toroProfileImage}
+                  avatarVideo={toroProfileVideo}
+                  username="Toro"
+                  bio="Badass trader focused on Cash money!"
+                  rank={7}
+                  pnl={67357}
+                  followers={312}
+                  following={312}
+                  views={312}
+                  verificationIcon={VerificationIcon}
+                  rankIcon={RankIcon}
+                  pnlIcon={PNLIcon}
+                  followersIcon={FollowersIcon}
+                  followingIcon={FollowingIcon}
+                  eyeIcon={EyeIcon}
+                  onDashboardClick={handleDashboard}
+                  onFollowClick={handleFollow}
+                />
+              </div>
             </div>
             <div className="relative h-[35vw] pt-[120%] sm:h-auto left-[64vw] mt-[-45vw] w-[26vw] md:w-[24vw] lg:w-[18vw]">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                className="absolute inset-0 size-full rounded-image object-cover"
-                alt="Relume placeholder image 4"
-              />
+              <div className="absolute inset-0 size-full">
+                <DayradeCard
+                  avatarImage={toroProfileImage}
+                  avatarVideo={toroProfileVideo}
+                  username="Toro"
+                  bio="Badass trader focused on Cash money!"
+                  rank={7}
+                  pnl={67357}
+                  followers={312}
+                  following={312}
+                  views={312}
+                  verificationIcon={VerificationIcon}
+                  rankIcon={RankIcon}
+                  pnlIcon={PNLIcon}
+                  followersIcon={FollowersIcon}
+                  followingIcon={FollowingIcon}
+                  eyeIcon={EyeIcon}
+                  onDashboardClick={handleDashboard}
+                  onFollowClick={handleFollow}
+                />
+              </div>
             </div>
           </motion.div>
         </div>
@@ -100,8 +183,10 @@ export function Header80() {
               embodies your market instincts and strategic prowess.
             </p>
             <div className="relative z-20 mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-              <Button title="Generate">Generate</Button>
-              <Button title="Explore" variant="secondary">
+              <Button title="Generate" data-testid="button-generate">
+                Generate
+              </Button>
+              <Button title="Explore" variant="secondary" data-testid="button-explore">
                 Explore
               </Button>
             </div>
