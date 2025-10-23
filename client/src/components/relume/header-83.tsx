@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
+import { Link } from "wouter";
 
 const useRelume = () => {
   const { scrollYProgress } = useScroll();
@@ -49,10 +50,14 @@ export function Header83({
                 {subheadline}
               </p>
               <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-                <Button title={primaryCta} data-testid="button-primary-cta">{primaryCta}</Button>
-                <Button title={secondaryCta} variant="secondary-alt" data-testid="button-secondary-cta">
-                  {secondaryCta}
-                </Button>
+                <Link href="/signup">
+                  <Button title={primaryCta} data-testid="button-primary-cta">{primaryCta}</Button>
+                </Link>
+                <Link href="/tournaments">
+                  <Button title={secondaryCta} variant="secondary-alt" data-testid="button-secondary-cta">
+                    {secondaryCta}
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

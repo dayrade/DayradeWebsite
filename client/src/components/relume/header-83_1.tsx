@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
 import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
+import { Link } from "wouter";
 
 const useRelume = () => {
   const { scrollYProgress } = useScroll();
@@ -30,10 +31,14 @@ export function Header83_1() {
                 competitive, skill-driven trading.
               </p>
               <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-                <Button title="Begin">Begin</Button>
-                <Button title="Learn More" variant="secondary-alt">
-                  Learn More
-                </Button>
+                <Link href="/signup">
+                  <Button title="Begin" data-testid="button-begin">Begin</Button>
+                </Link>
+                <Link href="/how-it-works">
+                  <Button title="Learn More" variant="secondary-alt" data-testid="button-learn-more">
+                    Learn More
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

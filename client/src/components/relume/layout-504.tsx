@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 import { MdSchool, MdAttachMoney, MdEmojiEvents, MdTrendingUp } from "react-icons/md";
+import { Link } from "wouter";
 
 export function Layout504() {
   return (
@@ -19,17 +20,22 @@ export function Layout504() {
               Choose the division that matches your skill level. Start in Elevator to learn, move to Crusader to compete, and reach Raider for elite prizes.
             </p>
             <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-              <Button title="View All Divisions" variant="secondary">
-                View All Divisions
-              </Button>
-              <Button
-                title="How It Works"
-                variant="link"
-                size="link"
-                iconRight={<RxChevronRight />}
-              >
-                How It Works
-              </Button>
+              <Link href="/divisions">
+                <Button title="View All Divisions" variant="secondary" data-testid="button-divisions">
+                  View All Divisions
+                </Button>
+              </Link>
+              <Link href="/how-it-works">
+                <Button
+                  title="How It Works"
+                  variant="link"
+                  size="link"
+                  iconRight={<RxChevronRight />}
+                  data-testid="link-how-it-works"
+                >
+                  How It Works
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -107,17 +113,22 @@ export function Layout504() {
                   </div>
                 </div>
                 <div className="mt-6 flex items-center gap-x-4 md:mt-8">
-                  <Button title="Enter Elevator Division" variant="secondary">
-                    Enter Elevator Division
-                  </Button>
-                  <Button
-                    title="Learn More"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    Learn More
-                  </Button>
+                  <Link href="/elevator">
+                    <Button title="Enter Elevator Division" variant="secondary" data-testid="button-elevator">
+                      Enter Elevator Division
+                    </Button>
+                  </Link>
+                  <Link href="/faq#tournaments-divisions">
+                    <Button
+                      title="Learn More"
+                      variant="link"
+                      size="link"
+                      iconRight={<RxChevronRight />}
+                      data-testid="link-elevator-faq"
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Card>
@@ -142,7 +153,7 @@ export function Layout504() {
                   Prove Your Skill. Earn Real Rewards.
                 </h2>
                 <p className="mb-6">
-                  For traders with a solid foundation. Compete for cash prizes up to $1,000 and prove your consistency.
+                  For traders with a solid foundation. 3-day simulation event. 10 winners receive $1,000 Zimtra trading accounts to prove your consistency.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2">
@@ -175,17 +186,22 @@ export function Layout504() {
                   </div>
                 </div>
                 <div className="mt-6 flex items-center gap-x-4 md:mt-8">
-                  <Button title="Enter Crusader Division" variant="secondary">
-                    Enter Crusader Division
-                  </Button>
-                  <Button
-                    title="View Tournaments"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    View Tournaments
-                  </Button>
+                  <Link href="/crusader">
+                    <Button title="Enter Crusader Division" variant="secondary" data-testid="button-crusader">
+                      Enter Crusader Division
+                    </Button>
+                  </Link>
+                  <Link href="/tournaments">
+                    <Button
+                      title="View Tournaments"
+                      variant="link"
+                      size="link"
+                      iconRight={<RxChevronRight />}
+                      data-testid="link-tournaments"
+                    >
+                      View Tournaments
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Card>
@@ -210,7 +226,7 @@ export function Layout504() {
                   Elite Traders. Elite Prizes.
                 </h2>
                 <p className="mb-6">
-                  The highest stakes, the biggest prizes, and the most intense trading environment. Prize pools reach $10,000.
+                  The highest stakes, the biggest prizes, and the most intense real-money trading. Grand prize: $50,000 cash + $250,000 Zimtra account.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2">
@@ -223,8 +239,8 @@ export function Layout504() {
                   <div className="flex items-start gap-2">
                     <MdAttachMoney className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-sm">$10K Prizes</p>
-                      <p className="text-xs text-muted-foreground">Life-changing cash</p>
+                      <p className="font-semibold text-sm">$50K Grand Prize</p>
+                      <p className="text-xs text-muted-foreground">+ $250K account</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-2">
@@ -243,17 +259,22 @@ export function Layout504() {
                   </div>
                 </div>
                 <div className="mt-6 flex items-center gap-x-4 md:mt-8">
-                  <Button title="Enter Raider Division" variant="secondary">
-                    Enter Raider Division
-                  </Button>
-                  <Button
-                    title="Prove You Belong"
-                    variant="link"
-                    size="link"
-                    iconRight={<RxChevronRight />}
-                  >
-                    Prove You Belong
-                  </Button>
+                  <Link href="/raider">
+                    <Button title="Enter Raider Division" variant="secondary" data-testid="button-raider">
+                      Enter Raider Division
+                    </Button>
+                  </Link>
+                  <Link href="/leaderboard">
+                    <Button
+                      title="View Leaderboard"
+                      variant="link"
+                      size="link"
+                      iconRight={<RxChevronRight />}
+                      data-testid="link-leaderboard"
+                    >
+                      View Leaderboard
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Card>

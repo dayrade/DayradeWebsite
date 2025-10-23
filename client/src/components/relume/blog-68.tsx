@@ -13,6 +13,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { RxChevronRight } from "react-icons/rx";
+import { Link } from "wouter";
 
 const useCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -43,6 +44,81 @@ const useCarousel = () => {
   return { api, setApi, current, handleDotClick, dotClassName };
 };
 
+const blogPosts = [
+  {
+    image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+    category: "Strategy",
+    readTime: "7 min read",
+    title: "Risk Management: The Secret to Tournament Longevity",
+    description: "Master position sizing, daily loss limits, and risk-reward ratios to stay competitive across all three divisions. Learn from top performers who protect capital first.",
+    href: "/faq#safety-compliance"
+  },
+  {
+    image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+    category: "Success Stories",
+    readTime: "5 min read",
+    title: "From Elevator to Raider: Sarah's 6-Month Journey",
+    description: "How one beginner trader climbed through all three divisions using disciplined practice, community feedback, and relentless journaling.",
+    href: "/divisions"
+  },
+  {
+    image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+    category: "Rewards",
+    readTime: "6 min read",
+    title: "Maximizing Your DAYRADE Reward Points System",
+    description: "Unlock free tickets and exclusive perks by completing daily lessons, referring friends, and maintaining consistency. Your complete guide to the rewards program.",
+    href: "/faq#rewards-prizes"
+  },
+  {
+    image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+    category: "Community",
+    readTime: "4 min read",
+    title: "Meet Your Hosts: Toro, Grizz, Jet & Orin",
+    description: "Get to know the personalities behind the mic. From Toro's momentum calls to Grizz's risk wisdom, discover how each host brings unique edge to your trading education.",
+    href: "/podcast"
+  },
+  {
+    image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+    category: "Psychology",
+    readTime: "8 min read",
+    title: "Tournament Psychology: Building Unshakeable Discipline",
+    description: "The mental frameworks elite traders use to stay calm under pressure, stick to their plan, and avoid FOMO in live competitions.",
+    href: "/learn"
+  },
+  {
+    image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+    category: "Education",
+    readTime: "6 min read",
+    title: "The Economic Calendar: Your Hidden Trading Edge",
+    description: "Learn how CPI releases, FOMC decisions, and earnings calls create volatility windows. Timing your trades around catalysts separates good from great.",
+    href: "/schedule"
+  },
+  {
+    image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+    category: "Analysis",
+    readTime: "5 min read",
+    title: "Crusader Division Breakdown: What Winners Do Differently",
+    description: "Data analysis reveals the three habits that separate Crusader winners from the pack. Spoiler: it's not about being the most aggressive trader.",
+    href: "/crusader"
+  },
+  {
+    image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+    category: "Tutorial",
+    readTime: "9 min read",
+    title: "Your First Elevator Tournament: Complete Setup Guide",
+    description: "Step-by-step walkthrough from account creation to your first trade. Everything beginners need to know before entering the Elevator Division.",
+    href: "/elevator"
+  },
+  {
+    image: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+    category: "Market Insights",
+    readTime: "7 min read",
+    title: "Reading the Tape: Level 2 Data in Real Tournaments",
+    description: "Advanced execution techniques for Raider competitors. How top traders use order flow and Time & Sales to nail precise entries.",
+    href: "/raider"
+  }
+];
+
 export function Blog68() {
   const carouselState = useCarousel();
   return (
@@ -53,17 +129,19 @@ export function Blog68() {
             <div className="w-full max-w-lg">
               <p className="mb-3 font-semibold md:mb-4">Blog</p>
               <h2 className="heading-h2 mb-3 font-bold md:mb-4">
-                Latest insights and stories
+                Latest Insights and Stories
               </h2>
               <p className="text-medium">
-                Discover expert analysis and community perspectives on trading
+                Expert analysis, success stories, and educational content from the DAYRADE arena
               </p>
             </div>
           </div>
           <div className="hidden md:flex">
-            <Button title="View all" variant="secondary">
-              View all
-            </Button>
+            <Link href="/blog">
+              <Button title="View all" variant="secondary" data-testid="button-view-all-blog">
+                View All
+              </Button>
+            </Link>
           </div>
         </div>
         <Carousel
@@ -71,272 +149,70 @@ export function Blog68() {
           opts={{ loop: true, align: "start" }}
         >
           <CarouselContent className="ml-0">
-            <CarouselItem className="basis-[95%] pr-6 pl-0 sm:basis-[80%] md:basis-1/3 md:pr-8">
-              <Card>
-                <a
-                  href="#"
-                  className="flex size-full flex-col items-center justify-start"
-                >
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                    alt="Relume placeholder image"
-                    className="aspect-[3/2] size-full object-cover"
-                  />
-                  <div className="px-5 py-6 md:p-6">
-                    <div className="mb-3 flex w-full items-center justify-start md:mb-4">
-                      <Badge className="mr-4">Transcripts</Badge>
-                      <p className="text-small inline font-semibold">
-                        5 min read
+            {blogPosts.map((post, index) => (
+              <CarouselItem key={index} className="basis-[95%] pr-6 pl-0 sm:basis-[80%] md:basis-1/3 md:pr-8">
+                <Card>
+                  <a
+                    href={post.href}
+                    className="flex size-full flex-col items-center justify-start"
+                  >
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="aspect-[3/2] size-full object-cover"
+                    />
+                    <div className="px-5 py-6 md:p-6">
+                      <div className="mb-3 flex w-full items-center justify-start md:mb-4">
+                        <Badge className="mr-4">{post.category}</Badge>
+                        <p className="text-small inline font-semibold">
+                          {post.readTime}
+                        </p>
+                      </div>
+                      <h2 className="heading-h5 mb-2 font-bold">
+                        {post.title}
+                      </h2>
+                      <p>
+                        {post.description}
                       </p>
+                      <Button
+                        title="Read more"
+                        variant="link"
+                        size="link"
+                        iconRight={<RxChevronRight />}
+                        className="mt-5 flex items-center justify-center gap-x-2 md:mt-6"
+                        data-testid={`button-read-more-${index}`}
+                      >
+                        Read more
+                      </Button>
                     </div>
-                    <h2 className="heading-h5 mb-2 font-bold">
-                      Market movements decoded this week
-                    </h2>
-                    <p>
-                      Deep analysis of recent trading patterns and emerging
-                      market trends
-                    </p>
-                    <Button
-                      title="Read more"
-                      variant="link"
-                      size="link"
-                      iconRight={<RxChevronRight />}
-                      className="mt-5 flex items-center justify-center gap-x-2 md:mt-6"
-                    >
-                      Read more
-                    </Button>
-                  </div>
-                </a>
-              </Card>
-            </CarouselItem>
-            <CarouselItem className="basis-[95%] pr-6 pl-0 sm:basis-[80%] md:basis-1/3 md:pr-8">
-              <Card>
-                <a
-                  href="#"
-                  className="flex size-full flex-col items-center justify-start"
-                >
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                    alt="Relume placeholder image"
-                    className="aspect-[3/2] size-full object-cover"
-                  />
-                  <div className="px-5 py-6 md:p-6">
-                    <div className="mb-3 flex w-full items-center justify-start md:mb-4">
-                      <Badge className="mr-4">Transcripts</Badge>
-                      <p className="text-small inline font-semibold">
-                        5 min read
-                      </p>
-                    </div>
-                    <h2 className="heading-h5 mb-2 font-bold">
-                      Market movements decoded this week
-                    </h2>
-                    <p>
-                      Deep analysis of recent trading patterns and emerging
-                      market trends
-                    </p>
-                    <Button
-                      title="Read more"
-                      variant="link"
-                      size="link"
-                      iconRight={<RxChevronRight />}
-                      className="mt-5 flex items-center justify-center gap-x-2 md:mt-6"
-                    >
-                      Read more
-                    </Button>
-                  </div>
-                </a>
-              </Card>
-            </CarouselItem>
-            <CarouselItem className="basis-[95%] pr-6 pl-0 sm:basis-[80%] md:basis-1/3 md:pr-8">
-              <Card>
-                <a
-                  href="#"
-                  className="flex size-full flex-col items-center justify-start"
-                >
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                    alt="Relume placeholder image"
-                    className="aspect-[3/2] size-full object-cover"
-                  />
-                  <div className="px-5 py-6 md:p-6">
-                    <div className="mb-3 flex w-full items-center justify-start md:mb-4">
-                      <Badge className="mr-4">Transcripts</Badge>
-                      <p className="text-small inline font-semibold">
-                        5 min read
-                      </p>
-                    </div>
-                    <h2 className="heading-h5 mb-2 font-bold">
-                      Market movements decoded this week
-                    </h2>
-                    <p>
-                      Deep analysis of recent trading patterns and emerging
-                      market trends
-                    </p>
-                    <Button
-                      title="Read more"
-                      variant="link"
-                      size="link"
-                      iconRight={<RxChevronRight />}
-                      className="mt-5 flex items-center justify-center gap-x-2 md:mt-6"
-                    >
-                      Read more
-                    </Button>
-                  </div>
-                </a>
-              </Card>
-            </CarouselItem>
-            <CarouselItem className="basis-[95%] pr-6 pl-0 sm:basis-[80%] md:basis-1/3 md:pr-8">
-              <Card>
-                <a
-                  href="#"
-                  className="flex size-full flex-col items-center justify-start"
-                >
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                    alt="Relume placeholder image"
-                    className="aspect-[3/2] size-full object-cover"
-                  />
-                  <div className="px-5 py-6 md:p-6">
-                    <div className="mb-3 flex w-full items-center justify-start md:mb-4">
-                      <Badge className="mr-4">Transcripts</Badge>
-                      <p className="text-small inline font-semibold">
-                        5 min read
-                      </p>
-                    </div>
-                    <h2 className="heading-h5 mb-2 font-bold">
-                      Market movements decoded this week
-                    </h2>
-                    <p>
-                      Deep analysis of recent trading patterns and emerging
-                      market trends
-                    </p>
-                    <Button
-                      title="Read more"
-                      variant="link"
-                      size="link"
-                      iconRight={<RxChevronRight />}
-                      className="mt-5 flex items-center justify-center gap-x-2 md:mt-6"
-                    >
-                      Read more
-                    </Button>
-                  </div>
-                </a>
-              </Card>
-            </CarouselItem>
-            <CarouselItem className="basis-[95%] pr-6 pl-0 sm:basis-[80%] md:basis-1/3 md:pr-8">
-              <Card>
-                <a
-                  href="#"
-                  className="flex size-full flex-col items-center justify-start"
-                >
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                    alt="Relume placeholder image"
-                    className="aspect-[3/2] size-full object-cover"
-                  />
-                  <div className="px-5 py-6 md:p-6">
-                    <div className="mb-3 flex w-full items-center justify-start md:mb-4">
-                      <Badge className="mr-4">Transcripts</Badge>
-                      <p className="text-small inline font-semibold">
-                        5 min read
-                      </p>
-                    </div>
-                    <h2 className="heading-h5 mb-2 font-bold">
-                      Market movements decoded this week
-                    </h2>
-                    <p>
-                      Deep analysis of recent trading patterns and emerging
-                      market trends
-                    </p>
-                    <Button
-                      title="Read more"
-                      variant="link"
-                      size="link"
-                      iconRight={<RxChevronRight />}
-                      className="mt-5 flex items-center justify-center gap-x-2 md:mt-6"
-                    >
-                      Read more
-                    </Button>
-                  </div>
-                </a>
-              </Card>
-            </CarouselItem>
-            <CarouselItem className="basis-[95%] pr-6 pl-0 sm:basis-[80%] md:basis-1/3 md:pr-8">
-              <Card>
-                <a
-                  href="#"
-                  className="flex size-full flex-col items-center justify-start"
-                >
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                    alt="Relume placeholder image"
-                    className="aspect-[3/2] size-full object-cover"
-                  />
-                  <div className="px-5 py-6 md:p-6">
-                    <div className="mb-3 flex w-full items-center justify-start md:mb-4">
-                      <Badge className="mr-4">Transcripts</Badge>
-                      <p className="text-small inline font-semibold">
-                        5 min read
-                      </p>
-                    </div>
-                    <h2 className="heading-h5 mb-2 font-bold">
-                      Market movements decoded this week
-                    </h2>
-                    <p>
-                      Deep analysis of recent trading patterns and emerging
-                      market trends
-                    </p>
-                    <Button
-                      title="Read more"
-                      variant="link"
-                      size="link"
-                      iconRight={<RxChevronRight />}
-                      className="mt-5 flex items-center justify-center gap-x-2 md:mt-6"
-                    >
-                      Read more
-                    </Button>
-                  </div>
-                </a>
-              </Card>
-            </CarouselItem>
+                  </a>
+                </Card>
+              </CarouselItem>
+            ))}
           </CarouselContent>
-          <div className="mt-12 flex items-center justify-between md:mt-20">
-            <div className="mt-5 flex w-full items-start justify-start">
-              <button
-                onClick={carouselState.handleDotClick(0)}
-                className={carouselState.dotClassName(0)}
-              />
-              <button
-                onClick={carouselState.handleDotClick(1)}
-                className={carouselState.dotClassName(1)}
-              />
-              <button
-                onClick={carouselState.handleDotClick(2)}
-                className={carouselState.dotClassName(2)}
-              />
-              <button
-                onClick={carouselState.handleDotClick(3)}
-                className={carouselState.dotClassName(3)}
-              />
-              <button
-                onClick={carouselState.handleDotClick(4)}
-                className={carouselState.dotClassName(4)}
-              />
-              <button
-                onClick={carouselState.handleDotClick(5)}
-                className={carouselState.dotClassName(5)}
-              />
+          <div className="mt-8 flex items-center justify-between">
+            <div className="mt-8 flex w-full items-center justify-start">
+              {blogPosts.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={carouselState.handleDotClick(index)}
+                  className={carouselState.dotClassName(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
             </div>
-            <div className="flex items-end justify-end gap-2 md:gap-4">
-              <CarouselPrevious className="static top-0 right-0 size-12 -translate-y-0" />
-              <CarouselNext className="static top-0 right-0 size-12 -translate-y-0" />
+            <div className="flex items-center justify-end gap-2 md:gap-4">
+              <CarouselPrevious className="static right-0 top-0 size-12 -translate-y-0" />
+              <CarouselNext className="static right-0 top-0 size-12 -translate-y-0" />
             </div>
           </div>
         </Carousel>
-        <div className="mt-12 flex justify-end md:hidden">
-          <Button title="View all" variant="secondary">
-            View all
-          </Button>
+        <div className="mt-10 flex md:hidden">
+          <Link href="/blog" className="w-full">
+            <Button title="View all" variant="secondary" className="w-full" data-testid="button-view-all-blog-mobile">
+              View All
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

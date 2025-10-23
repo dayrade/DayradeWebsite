@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
+import { Link } from "wouter";
 
 export function Cta31() {
   return (
@@ -15,10 +16,14 @@ export function Cta31() {
             continuous improvement.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
-            <Button title="Sign Up">Sign Up</Button>
-            <Button title="View Schedule" variant="secondary">
-              View Schedule
-            </Button>
+            <Link href="/signup">
+              <Button title="Sign Up" data-testid="button-signup">Sign Up</Button>
+            </Link>
+            <Link href="/schedule">
+              <Button title="View Schedule" variant="secondary" data-testid="button-schedule">
+                View Schedule
+              </Button>
+            </Link>
           </div>
         </div>
         <img

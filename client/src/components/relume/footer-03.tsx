@@ -45,19 +45,19 @@ export function Footer3() {
               </a>
             </div>
             <div className="grid grid-flow-col grid-cols-[max-content] items-start justify-start gap-x-3">
-              <a href="#" className="text-foreground hover:text-[#00BFA5] transition-colors">
+              <a href="https://facebook.com/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#00BFA5] transition-colors" aria-label="Follow DAYRADE on Facebook">
                 <MdFacebook className="size-6" />
               </a>
-              <a href="#" className="text-foreground hover:text-[#00BFA5] transition-colors">
+              <a href="https://instagram.com/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#00BFA5] transition-colors" aria-label="Follow DAYRADE on Instagram">
                 <FaInstagram className="size-6" />
               </a>
-              <a href="#" className="text-foreground hover:text-[#00BFA5] transition-colors">
+              <a href="https://twitter.com/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#00BFA5] transition-colors" aria-label="Follow DAYRADE on Twitter">
                 <FaXTwitter className="size-6" />
               </a>
-              <a href="#" className="text-foreground hover:text-[#00BFA5] transition-colors">
+              <a href="https://linkedin.com/company/dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#00BFA5] transition-colors" aria-label="Follow DAYRADE on LinkedIn">
                 <FaLinkedin className="size-6" />
               </a>
-              <a href="#" className="text-foreground hover:text-[#00BFA5] transition-colors">
+              <a href="https://youtube.com/@dayrade" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-[#00BFA5] transition-colors" aria-label="Subscribe to DAYRADE on YouTube">
                 <FaYoutube className="size-6" />
               </a>
             </div>
@@ -101,13 +101,13 @@ export function Footer3() {
           <p className="text-micro mt-8 md:mt-0 text-muted-foreground">© 2025 DAYRADE. All Rights Reserved.</p>
           <ul className="text-tiny grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0">
             <li className="underline">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
+              <a href="/faq#safety-compliance" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
             </li>
             <li className="underline">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a>
+              <a href="/faq#safety-compliance" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a>
             </li>
             <li className="underline">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Cookies Settings</a>
+              <a href="/faq#safety-compliance" className="text-muted-foreground hover:text-foreground transition-colors">Cookies Settings</a>
             </li>
           </ul>
         </div>
