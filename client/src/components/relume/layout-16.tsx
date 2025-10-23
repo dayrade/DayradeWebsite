@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import { MdShoppingCart, MdCardGiftcard, MdPeople } from "react-icons/md";
 
 export function Layout16() {
   return (
@@ -21,31 +22,25 @@ export function Layout16() {
             <ul className="grid grid-cols-1 gap-4 py-2">
               <li className="flex self-start">
                 <div className="mr-4 flex-none self-start">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    alt="Relume logo 1"
-                    className="size-6"
-                  />
+                  <div className="flex size-8 items-center justify-center rounded-lg bg-primary">
+                    <MdShoppingCart className="size-5 text-primary-foreground" />
+                  </div>
                 </div>
                 <span>Direct purchase</span>
               </li>
               <li className="flex self-start">
                 <div className="mr-4 flex-none self-start">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    alt="Relume logo 1"
-                    className="size-6"
-                  />
+                  <div className="flex size-8 items-center justify-center rounded-lg bg-primary">
+                    <MdCardGiftcard className="size-5 text-primary-foreground" />
+                  </div>
                 </div>
                 <span>Earn through rewards</span>
               </li>
               <li className="flex self-start">
                 <div className="mr-4 flex-none self-start">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    alt="Relume logo 1"
-                    className="size-6"
-                  />
+                  <div className="flex size-8 items-center justify-center rounded-lg bg-primary">
+                    <MdPeople className="size-5 text-primary-foreground" />
+                  </div>
                 </div>
                 <span>Referral programs</span>
               </li>

@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import { MdCalendarToday } from "react-icons/md";
 
 export function Layout22() {
   return (
@@ -11,11 +12,9 @@ export function Layout22() {
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
             <div className="mb-5 md:mb-6">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                className="size-20"
-                alt="Relume logo"
-              />
+              <div className="flex size-20 items-center justify-center rounded-xl bg-primary">
+                <MdCalendarToday className="size-10 text-primary-foreground" />
+              </div>
             </div>
             <h2 className="heading-h2 mb-5 font-bold md:mb-6">
               Tournament schedule for strategic traders

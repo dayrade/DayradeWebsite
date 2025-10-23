@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import { MdMenuBook, MdSchool } from "react-icons/md";
 
 export function Layout371() {
   return (
@@ -57,11 +58,9 @@ export function Layout371() {
               <div className="flex h-full flex-col justify-between p-6 md:p-8 lg:p-6">
                 <div>
                   <div className="mb-3 md:mb-4">
-                    <img
-                      src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                      alt="Relume logo 1"
-                      className="size-12"
-                    />
+                    <div className="flex size-12 items-center justify-center rounded-xl bg-primary">
+                      <MdMenuBook className="size-7 text-primary-foreground" />
+                    </div>
                   </div>
                   <h3 className="heading-h5 mb-2 font-bold">
                     Examples that bring financial terms to life
@@ -87,11 +86,9 @@ export function Layout371() {
               <div className="flex h-full flex-col justify-between p-6 md:p-8 lg:p-6">
                 <div>
                   <div className="mb-3 md:mb-4">
-                    <img
-                      src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                      alt="Relume logo 2"
-                      className="size-12"
-                    />
+                    <div className="flex size-12 items-center justify-center rounded-xl bg-primary">
+                      <MdSchool className="size-7 text-primary-foreground" />
+                    </div>
                   </div>
                   <h3 className="heading-h5 mb-2 font-bold">
                     Examples that bring financial terms to life

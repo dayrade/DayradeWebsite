@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import { MdBarChart, MdGpsFixed, MdPattern, MdLightbulb } from "react-icons/md";
 
 export function Layout29() {
   return (
@@ -13,11 +14,9 @@ export function Layout29() {
             <div className="grid grid-cols-1 gap-x-6 gap-y-8 py-2 sm:grid-cols-2">
               <div>
                 <div className="mb-3 md:mb-4">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    className="size-12"
-                    alt="Relume logo 1"
-                  />
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-primary">
+                    <MdBarChart className="size-7 text-primary-foreground" />
+                  </div>
                 </div>
                 <h1 className="heading-h5 mb-3 font-bold md:mb-4">
                   Reading the market
@@ -29,11 +28,9 @@ export function Layout29() {
               </div>
               <div>
                 <div className="mb-3 md:mb-4">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    className="size-12"
-                    alt="Relume logo 1"
-                  />
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-primary">
+                    <MdGpsFixed className="size-7 text-primary-foreground" />
+                  </div>
                 </div>
                 <h1 className="heading-h5 mb-3 font-bold md:mb-4">
                   Identifying signals
@@ -45,11 +42,9 @@ export function Layout29() {
               </div>
               <div>
                 <div className="mb-3 md:mb-4">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    className="size-12"
-                    alt="Relume logo 1"
-                  />
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-primary">
+                    <MdPattern className="size-7 text-primary-foreground" />
+                  </div>
                 </div>
                 <h1 className="heading-h5 mb-3 font-bold md:mb-4">
                   Pattern recognition
@@ -61,11 +56,9 @@ export function Layout29() {
               </div>
               <div>
                 <div className="mb-3 md:mb-4">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    className="size-12"
-                    alt="Relume logo 1"
-                  />
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-primary">
+                    <MdLightbulb className="size-7 text-primary-foreground" />
+                  </div>
                 </div>
                 <h1 className="heading-h5 mb-3 font-bold md:mb-4">
                   Strategic insights

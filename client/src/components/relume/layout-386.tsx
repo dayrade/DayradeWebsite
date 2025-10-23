@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import { MdTrendingUp, MdInsights } from "react-icons/md";
 
 export function Layout386() {
   return (
@@ -23,11 +24,9 @@ export function Layout386() {
           <Card className="flex flex-col justify-center p-6 md:p-8">
             <div>
               <div className="mb-5 md:mb-6">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                  className="size-12"
-                  alt="Relume logo 1"
-                />
+                <div className="flex size-12 items-center justify-center rounded-xl bg-primary">
+                  <MdTrendingUp className="size-7 text-primary-foreground" />
+                </div>
               </div>
               <h2 className="heading-h4 mb-3 font-bold md:mb-4">
                 Improve trading decision making
@@ -51,11 +50,9 @@ export function Layout386() {
           <Card className="flex flex-col justify-center p-6 md:p-8">
             <div>
               <div className="mb-5 md:mb-6">
-                <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                  className="size-12"
-                  alt="Relume logo 2"
-                />
+                <div className="flex size-12 items-center justify-center rounded-xl bg-primary">
+                  <MdInsights className="size-7 text-primary-foreground" />
+                </div>
               </div>
               <h2 className="heading-h4 mb-3 font-bold md:mb-4">
                 Improve trading decision making

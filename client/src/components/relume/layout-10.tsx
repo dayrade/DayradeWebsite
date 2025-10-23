@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import { MdEmojiEvents, MdBarChart } from "react-icons/md";
 
 export function Layout10() {
   return (
@@ -20,11 +21,9 @@ export function Layout10() {
             <div className="grid grid-cols-1 gap-6 py-2 sm:grid-cols-2">
               <div>
                 <div className="mb-3 md:mb-4">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    className="size-12"
-                    alt="Relume logo 1"
-                  />
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-primary">
+                    <MdEmojiEvents className="size-7 text-primary-foreground" />
+                  </div>
                 </div>
                 <h6 className="heading-h6 mb-3 font-bold md:mb-4">
                   Tournaments
@@ -36,11 +35,9 @@ export function Layout10() {
               </div>
               <div>
                 <div className="mb-3 md:mb-4">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    className="size-12"
-                    alt="Relume logo 1"
-                  />
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-primary">
+                    <MdBarChart className="size-7 text-primary-foreground" />
+                  </div>
                 </div>
                 <h6 className="heading-h6 mb-3 font-bold md:mb-4">
                   Economic events

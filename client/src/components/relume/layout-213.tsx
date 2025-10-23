@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import { MdFilterList } from "react-icons/md";
 
 export function Layout213() {
   return (
@@ -18,11 +19,9 @@ export function Layout213() {
           </div>
           <div className="order-1 md:order-2">
             <div className="mb-5 md:mb-6">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                className="size-20"
-                alt="Relume logo"
-              />
+              <div className="flex size-20 items-center justify-center rounded-xl bg-primary">
+                <MdFilterList className="size-10 text-primary-foreground" />
+              </div>
             </div>
             <h2 className="heading-h2 mb-5 font-bold md:mb-6">
               Custom views for strategic planning

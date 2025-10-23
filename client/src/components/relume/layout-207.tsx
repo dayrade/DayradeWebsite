@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import { MdStar, MdTrendingUp, MdWorkspacePremium } from "react-icons/md";
 
 export function Layout207() {
   return (
@@ -28,31 +29,25 @@ export function Layout207() {
             <div className="grid grid-cols-1 gap-4 py-2">
               <div className="flex self-start">
                 <div className="mr-4 flex-none self-start">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    alt="Relume logo"
-                    className="size-6"
-                  />
+                  <div className="flex size-8 items-center justify-center rounded-lg bg-primary">
+                    <MdStar className="size-5 text-primary-foreground" />
+                  </div>
                 </div>
                 <p>Novice: Your first steps into competitive trading</p>
               </div>
               <div className="flex self-start">
                 <div className="mr-4 flex-none self-start">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    alt="Relume logo"
-                    className="size-6"
-                  />
+                  <div className="flex size-8 items-center justify-center rounded-lg bg-primary">
+                    <MdTrendingUp className="size-5 text-primary-foreground" />
+                  </div>
                 </div>
                 <p>Apprentice: Developing strategic insights</p>
               </div>
               <div className="flex self-start">
                 <div className="mr-4 flex-none self-start">
-                  <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
-                    alt="Relume logo"
-                    className="size-6"
-                  />
+                  <div className="flex size-8 items-center justify-center rounded-lg bg-primary">
+                    <MdWorkspacePremium className="size-5 text-primary-foreground" />
+                  </div>
                 </div>
                 <p>Contender: Proving your trading prowess</p>
               </div>
