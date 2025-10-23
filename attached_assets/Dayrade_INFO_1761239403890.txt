@@ -1,0 +1,546 @@
+1) Executive Positioning (for homepage hero)
+DAYRADE is the skill-based, esports-style arena for day traders. Compete in fair, transparent, time-bound tournaments where talent, discipline, and momentum decide the podium—not luck. Build your persona, track your edge, and rise through divisions as the crowd watches the climb.
+
+Designed for competitive retail traders, curious spectators, and bold sponsors, D-A-Y-R-A-D-E packages market intensity into a clear, hype-forward experience. No jargon. No black boxes. Just clean rules, real rivalry, and the thrill of improving every session.
+
+Headline Options
+
+Trade Like an Esports Pro, Win Real Bragging Rights
+Day Trading, Game On: Compete. Climb. Conquer.
+Fair, Skill-Based Tournaments for Competitive Retail Traders
+Subheadline Options
+
+Enter fair, time-bound tournaments with transparent scoring and division climbs.
+Build your persona, compare stats, and turn discipline into leaderboard momentum.
+Watch live, follow favorites, and join the next bracket when you’re ready.
+Primary CTAs
+
+Enter a Tournament
+Watch Live Now
+See Leaderboards
+Create Your Profile
+2) Feature Pillars (Hero-Level)
+Pillar Name: Tournaments
+
+One-line Hook: Skill-first day-trading tournaments with fair rules and clear winners.
+Value Trio
+Compete in time-bound formats that reward disciplined trading.
+Rise through divisions by proving consistency over flashes of luck.
+Win buying-power prizes and badges that elevate your status.
+Primary Interactions: Enter bracket, check-in, review rules, track progress, claim rewards.
+Moments of Delight: Rank-up animations, podium confetti, “streak active” glow.
+Trust & Fairness Cues: Transparent scoring, anti-cheat checks, visible rulebook.
+Pillar Name: Profiles
+
+One-line Hook: Your competitive identity: clean stats, badges, and form snapshots.
+Value Trio
+Showcase performance with digestible metrics and recent trend lines.
+Earn and display achievements that reflect your style and growth.
+Share your profile card to attract spectators and followers.
+Primary Interactions: Edit bio, pin highlights, toggle privacy, share card.
+Moments of Delight: Badge unlock reveals, stat pulse on personal bests.
+Trust & Fairness Cues: Verified stats, timestamped results, session logs.
+Pillar Name: Avatars & Personas
+
+One-line Hook: Spirit-Animal avatars that flex identity and intent.
+Value Trio
+Pick a spirit-animal persona that matches your trading style.
+Unlock animated flair on wins, streaks, and division jumps.
+Build recognition with consistent visual identity across the arena.
+Primary Interactions: Choose avatar, switch persona, unlock animations, preview on hover.
+Moments of Delight: Hover glows, victory particle bursts, division-aura upgrades.
+Trust & Fairness Cues: Cosmetic-only; no gameplay advantage.
+Pillar Name: Compare Traders
+
+One-line Hook: Head-to-head stats to learn fast and climb smarter.
+Value Trio
+See recent form, strengths, and risk control side-by-side.
+Spot what’s working and borrow best practices confidently.
+Track progress against rivals or friends to stay motivated.
+Primary Interactions: Add comparison, filter timeframe, save matchup, follow.
+Moments of Delight: Trend delta animations, “you improved here” highlights.
+Trust & Fairness Cues: Unified scoring definitions, data source clarity.
+Pillar Name: Calendars (Event & Economic)
+
+One-line Hook: Plan your edge: know when to trade and when to watch.
+Value Trio
+See tournament schedule, check-ins, and deadlines at a glance.
+Track market catalysts and countdowns to anticipated volatility.
+Sync reminders so you never miss your division’s window.
+Primary Interactions: Subscribe, set alerts, filter by division/impact, add to calendar.
+Moments of Delight: Countdown ticks, impact waves, “next up” slot glow.
+Trust & Fairness Cues: Clear time windows, bold deadline prompts.
+Pillar Name: Leaderboards & Badges
+
+One-line Hook: Earn your spot—then defend it in style.
+Value Trio
+Climb global, division, and friends leaderboards with hard-won stats.
+Unlock achievements that mark milestones and mastery.
+Showcase credibility to spectators, sponsors, and future rivals.
+Primary Interactions: Filter boards, view friends, claim badges, share.
+Moments of Delight: Rank-up confetti, badge-medallion spins, streak banners.
+Trust & Fairness Cues: Anti-cheat flags, transparent tie-breakers, audit trail.
+Pillar Name: Live Trading Experience (Live/Sim)
+
+One-line Hook: Watch the arena—top movers, highlights, and real-time drama.
+Value Trio
+Follow the action with clean visual cues and fair delays where needed.
+See movers and moments that define the session—no noise, all signal.
+Spectate today, enter tomorrow with confidence.
+Primary Interactions: Watch mode, follow trader, toggle highlights, replay moments.
+Moments of Delight: “Play of the session” reels, surge sparks, heatmap shimmer.
+Trust & Fairness Cues: Integrity indicators, delay policies, rule overlays.
+3) Feature Catalog (Detailed, Copy-Ready)
+Feature Name: Profile Cards
+
+What It Does: Presents a clean snapshot of each trader’s identity, recent form, badges, and social handles. Designed to be shareable, scannable, and credible for both rivals and fans.
+Why It Matters
+Showcase: Earned achievements, not empty hype.
+Clarity: Stats that explain strength and style.
+Status: A card worth sharing, following, and sponsoring.
+Ideal Users: Trader, Spectator
+Key UI Elements: Avatar, name/handle, division tag, stat tiles, badges row, follow/share.
+Empty/Loading/Success/Error States: “No stats yet—your first tournament awaits.” / Skeleton tiles / “Profile updated—looking sharp.” / “Couldn’t load card—refresh and retry.”
+Suggested CTAs & Microcopy: “Edit Profile”, “Share Card”, “View Badges”, “Follow”
+Feature Name: Spirit-Animal Avatars & Personas
+
+What It Does: Lets users choose a spirit-animal identity with static and animated variants. Unlocks motion cues for wins, streaks, and rank-ups—purely cosmetic, purely hype.
+Why It Matters
+Fun: Personality that amplifies the grind.
+Recognition: Become memorable across leaderboards.
+Motivation: Visual feedback on milestones.
+Ideal Users: Trader, Spectator
+Key UI Elements: Avatar selector, persona badges, animation preview, unlock tracker.
+Empty/Loading/Success/Error States: “Pick a spirit-animal to set your vibe.” / Preview skeleton / “Persona saved.” / “Animation preview failed—try again.”
+Suggested CTAs & Microcopy: “Choose Avatar”, “Preview Animation”, “Unlock Next”
+Feature Name: Compare Traders
+
+What It Does: Side-by-side comparison of key performance metrics, recent form, and style indicators over selected timeframes. Highlights strengths, improvement areas, and trend deltas.
+Why It Matters
+Mastery: Learn fast from rivals and peers.
+Clarity: Understand what actually drives rank.
+Focus: Targeted practice beats random tweaks.
+Ideal Users: Trader
+Key UI Elements: Search bar, timeframe filter, metric toggles, save comparison.
+Empty/Loading/Success/Error States: “Pick two traders to begin.” / Loading stripes / “Comparison saved.” / “Could not load metrics—retry.”
+Suggested CTAs & Microcopy: “Add Trader”, “Save Matchup”, “Follow Both”
+Feature Name: Event Calendar
+
+What It Does: Centralizes tournament schedules, check-in windows, deadlines, and results rollups. Integrates reminders and session summaries to keep players on pace.
+Why It Matters
+Speed: One place to plan weeks ahead.
+Reliability: Never miss cutoffs again.
+Control: Prepare your edge around the schedule.
+Ideal Users: Trader, Spectator
+Key UI Elements: Calendar grid/list, impact tags, reminders toggle, add-to-calendar.
+Empty/Loading/Success/Error States: “No events this week—browse upcoming.” / Skeleton rows / “Added to calendar.” / “Couldn’t fetch events—refresh.”
+Suggested CTAs & Microcopy: “Subscribe”, “Set Reminder”, “See Rules”
+Feature Name: Economic Calendar
+
+What It Does: Displays market-moving events with severity tags, countdowns, and volatility cues. Helps traders decide when to compete, observe, or wait.
+Why It Matters
+Clarity: See catalysts at a glance.
+Timing: Enter the right bracket at the right moment.
+Confidence: Prepare mentally for volatility.
+Ideal Users: Trader
+Key UI Elements: Impact filter, countdown chips, event detail popover, “Add alert”.
+Empty/Loading/Success/Error States: “No major events today.” / Pulsing countdowns / “Alert set.” / “Event data delayed—check back soon.”
+Suggested CTAs & Microcopy: “Add Alert”, “Filter Impact”, “View Week”
+Feature Name: Tournament Lobby & Divisions (Elevator / Crusader / Raider)
+
+What It Does: The entry point for bracket selection, division rules, and division-based leaderboards. Elevator is entry-level, Crusader mid-tier, Raider elite.
+Why It Matters
+Fairness: Face peers at your level.
+Progression: Earn your way up, visibly.
+Hype: Division identity fuels rivalries.
+Ideal Users: Trader, Spectator
+Key UI Elements: Division tabs, entry cards, rule highlights, “Enter Now”.
+Empty/Loading/Success/Error States: “No active brackets—next start in X:XX.” / Slot shimmer / “You’re in—check your checklist.” / “Entry failed—confirm eligibility.”
+Suggested CTAs & Microcopy: “Enter Now”, “See Rules”, “View Division Board”
+Feature Name: Registration & Eligibility
+
+What It Does: Clear requirements, identity confirmation where applicable, and rule acknowledgement for tournament entry. Lightweight, transparent, and mobile-friendly.
+Why It Matters
+Safety: Protects the field from bad actors.
+Speed: Fast path to your first match.
+Certainty: Know you’re good to go.
+Ideal Users: Trader
+Key UI Elements: Requirements checklist, identity confirmation (if required), rule acceptance, confirmation screen.
+Empty/Loading/Success/Error States: “You’re nearly ready—just one step left.” / Spinner with checklist / “Registration confirmed.” / “Not eligible—see why.”
+Suggested CTAs & Microcopy: “Confirm Eligibility”, “Finish Setup”, “View Rules”
+Feature Name: Leaderboards (Global, Division, Friends)
+
+What It Does: Real-time rankings across scopes with filters, form indicators, and shareable placements. Includes transparent tie-break logic.
+Why It Matters
+Motivation: Chase rivals; defend your spot.
+Social: Friendly flexing boosts engagement.
+Learning: Top players show what “good” looks like.
+Ideal Users: Trader, Spectator
+Key UI Elements: Scope filters, rank tiles, follow buttons, share placement.
+Empty/Loading/Success/Error States: “No rankings yet—enter a tournament.” / Rank shimmer / “Placement shared.” / “Could not load board—retry.”
+Suggested CTAs & Microcopy: “Filter”, “Follow”, “Share Rank”
+Feature Name: Badges & Achievements
+
+What It Does: Milestone-based unlocks that mark consistency, discipline, and standout moments. Displayed on profiles and cards.
+Why It Matters
+Status: Visual proof of progress.
+Fun: Collectible goals keep it sticky.
+Clarity: Encourages repeatable, good habits.
+Ideal Users: Trader
+Key UI Elements: Badge gallery, unlock tracker, rarity labels, equip toggle.
+Empty/Loading/Success/Error States: “Your first badge awaits—enter a bracket.” / Badge placeholders / “Badge unlocked!” / “Badge not found—refresh.”
+Suggested CTAs & Microcopy: “View Gallery”, “Equip Badge”, “See Requirements”
+Feature Name: Live/Sim Session Experience
+
+What It Does: Spectator-friendly views of session highlights, top movers, and clean playbacks. Optional sim events to practice with the same ruleset.
+Why It Matters
+Practice: Improve before the big day.
+Entertainment: Watch momentum swing live.
+Discovery: Find new rivals and inspirations.
+Ideal Users: Trader, Spectator
+Key UI Elements: Watch toggle, highlights rail, follow buttons, replay controls.
+Empty/Loading/Success/Error States: “No live events—sim mode available.” / Live ticker shimmer / “Highlight saved.” / “Playback unavailable—try later.”
+Suggested CTAs & Microcopy: “Watch Live”, “Try Sim”, “Follow Trader”
+Feature Name: Scoring & Prizes (Buying-Power Rewards)
+
+What It Does: Transparent scoring that rewards skillful execution and disciplined risk; prizes framed as buying-power rewards and status recognition.
+Why It Matters
+Fairness: Everyone knows the rules.
+Motivation: Tangible rewards drive commitment.
+Integrity: Anti-cheat measures keep results clean.
+Ideal Users: Trader, Sponsor
+Key UI Elements: Rulebook modal, scoring explainer, prize ladder, claim button.
+Empty/Loading/Success/Error States: “No current prize pool—see upcoming.” / Rulebook loading / “Prize claimed.” / “Eligibility issue—see details.”
+Suggested CTAs & Microcopy: “View Scoring”, “See Prizes”, “Claim”
+Feature Name: Onboarding Wizard
+
+What It Does: A guided flow to set avatar/persona, confirm eligibility, learn rules, and enter a first match—under five minutes.
+Why It Matters
+Speed: From curious to competing fast.
+Confidence: No surprises mid-tournament.
+Fun: Persona setup makes it personal.
+Ideal Users: Trader
+Key UI Elements: Stepper, progress bar, quick tips, “Enter Now”.
+Empty/Loading/Success/Error States: “Welcome—let’s set your edge.” / Step shimmer / “You’re ready—good luck!” / “Required step missing—review.”
+Suggested CTAs & Microcopy: “Continue”, “Skip (I’ll return)”, “Enter Now”
+Feature Name: Participants Directory
+
+What It Does: A searchable list of traders with filters, quick stat snapshots, and follow/compare actions. Ideal for scouting rivals.
+Why It Matters
+Discovery: Find peers worth watching.
+Social: Build your rivals list.
+Learning: See how others win.
+Ideal Users: Trader, Spectator
+Key UI Elements: Search, filters (division, form), follow, compare, view card.
+Empty/Loading/Success/Error States: “No participants matched—try fewer filters.” / Card skeletons / “Added to compare.” / “Couldn’t load—retry.”
+Suggested CTAs & Microcopy: “Follow”, “Compare”, “View Card”
+Feature Name: QR-coded Player Cards & Affiliates
+
+What It Does: Scannable cards for quick follows, profile pops, and affiliate tracking. Perfect for live events, streams, and sponsor promos.
+Why It Matters
+Growth: Make discovery instant.
+Brand: Look pro online and offline.
+Sponsorship: Track partner campaigns easily.
+Ideal Users: Trader, Sponsor, Spectator
+Key UI Elements: QR generator, share/export, affiliate tag, track clicks.
+Empty/Loading/Success/Error States: “Create a QR to share your card.” / QR preview shimmer / “QR saved.” / “QR render failed—retry.”
+Suggested CTAs & Microcopy: “Generate QR”, “Copy Link”, “Track”
+Feature Name: Notifications & Social Sharing
+
+What It Does: Timely nudges for check-ins, rank changes, wins, and friend activity. Easy sharing of placements and highlights.
+Why It Matters
+Momentum: Stay engaged between sessions.
+Community: Celebrate wins with your circle.
+Accountability: Don’t miss the next shot.
+Ideal Users: Trader, Spectator
+Key UI Elements: Subscribe toggles, in-app inbox, share buttons.
+Empty/Loading/Success/Error States: “You’re all caught up.” / Notification skeleton / “Shared.” / “Delivery delayed—check settings.”
+Suggested CTAs & Microcopy: “Enable Alerts”, “Share Win”, “Remind Me”
+Feature Name: Safety, Integrity & Fair Play
+
+What It Does: Explains anti-cheat, audit trails, and rule enforcement in simple language. Displays integrity signals throughout the app.
+Why It Matters
+Trust: Everyone wants a clean bracket.
+Transparency: No hidden levers.
+Confidence: Sponsors and players align on fairness.
+Ideal Users: Trader, Spectator, Sponsor
+Key UI Elements: Integrity badge, policy page, report button, audit timeline.
+Empty/Loading/Success/Error States: “All clear.” / Policy loading / “Report received.” / “Submit failed—try again.”
+Suggested CTAs & Microcopy: “View Policies”, “Report Issue”, “Learn More”
+Feature Name: Help & FAQ
+
+What It Does: A friendly, search-first hub that answers common questions fast, with plain-language explainers and links to rules and support.
+Why It Matters
+Clarity: Doubts resolved quickly.
+Speed: Fewer blockages to entry.
+Inclusivity: Welcomes newcomers.
+Ideal Users: Trader, Spectator
+Key UI Elements: Search bar, categories, featured FAQs, contact.
+Empty/Loading/Success/Error States: “No matches—try a simpler term.” / FAQ loaders / “Sent to support.” / “Request failed—retry.”
+Suggested CTAs & Microcopy: “Ask Support”, “View Rules”, “Contact”
+4) Page-by-Page Placement Blueprint
+Home
+
+Section Order: Hero → Pillars → Tournaments Preview → Leaderboards Snapshot → Avatars & Badges → Social Proof → How It Works → CTA
+Headline Idea: “Trade Like an Esports Pro, Win Real Bragging Rights”
+Lead: DAYRADE turns day trading into a fair, skill-based arena. Enter brackets, climb divisions, and put your edge on display.
+CTA: “Enter a Tournament”
+Proof Points: Transparent scoring; Verified results; Integrity-first policies.
+Tournaments
+
+Section Order: Divisions Overview → Active Brackets → Rules & Scoring → Prize Ladder → Calendar
+Headline Idea: “Pick Your Division. Prove Your Edge.”
+Lead: From Elevator to Raider, every bracket rewards discipline and clean execution. The rules are simple—and published.
+CTA: “Enter Now”
+Proof Points: Time-bound formats; Tie-break clarity; Anti-cheat monitoring.
+Leaderboards
+
+Section Order: Global → Division → Friends → Badges Spotlight → Share Placement
+Headline Idea: “Climb the Board. Defend Your Rank.”
+Lead: Filter by scope, track form, and celebrate your best sessions with shareable placements and badges.
+CTA: “See Division Board”
+Proof Points: Real-time updates; Transparent tie-breakers; Form indicators.
+Profiles
+
+Section Order: Card Header → Stats Snapshot → Badges → Recent Form → Social Links
+Headline Idea: “Your Competitive Identity, Clean and Credible.”
+Lead: A profile built for rivals and fans—shareable, scannable, and always up to date.
+CTA: “Share Card”
+Proof Points: Verified results; Timestamped highlights; Privacy controls.
+Compare
+
+Section Order: Picker → Metrics Grid → Trend Deltas → Save Matchup → Follow
+Headline Idea: “Learn Faster with Head-to-Head Metrics.”
+Lead: Put your stats next to your rivals to see where you shine—and where to sharpen.
+CTA: “Save Matchup”
+Proof Points: Unified definitions; Visual trends; Quick filters.
+Calendars
+
+Section Order: Tournament Calendar → Economic Calendar → Alerts & Subscriptions
+Headline Idea: “Plan Your Peak. Never Miss the Moment.”
+Lead: Lock in check-ins and track market catalysts with clean countdowns and reminders.
+CTA: “Subscribe to Alerts”
+Proof Points: Clear deadlines; Impact tags; Add-to-calendar.
+How-It-Works
+
+Section Order: Overview → Scoring Explained → Divisions → Fair Play → Onboarding
+Headline Idea: “Simple Rules. No Black Boxes.”
+Lead: We explain exactly how to win, why it’s fair, and how to start in minutes.
+CTA: “Start Onboarding”
+Proof Points: Plain-language rulebook; Visible enforcement; Fast onboarding.
+Pricing (if applicable) — TBD
+
+Section Order: Free vs. Premium Features → Sponsor Perks → FAQs
+Headline Idea: “Compete Free. Upgrade for Extras.” (TBD)
+Lead: Core tournaments remain accessible; optional upgrades and sponsor-backed perks are clearly labeled.
+CTA: “Create Free Profile”
+Proof Points: Transparent tiers; No hidden fees; Sponsor-supported rewards.
+FAQ
+
+Section Order: Quick Answers → Scoring & Fairness → Eligibility → Prizes → Contact
+Headline Idea: “Get Clarity, Then Get Competitive.”
+Lead: We answer the big questions in one scroll—fast, fair, and friendly.
+CTA: “Ask Support”
+Proof Points: Plain-language policies; Quick links; Active support.
+About
+
+Section Order: Mission → Fair Play Principles → Community → Partners & Sponsors
+Headline Idea: “Building the World’s Cleanest Trading Arena.”
+Lead: We believe competition makes traders better—when it’s fair and fun.
+CTA: “Partner With Us”
+Proof Points: Integrity focus; Community-first roadmap; Sponsor-friendly assets.
+5) Microcopy Library
+Buttons (Primary)
+
+“Enter a Tournament”
+“Watch Live Now”
+“Create Your Profile”
+“See Leaderboards”
+“Start Onboarding”
+Buttons (Secondary)
+
+“View Rules”
+“Set Reminder”
+“Compare Traders”
+“Share Card”
+“Try Sim Mode”
+Tooltips
+
+“Your recent form over the last 7 sessions.”
+“Division rules ensure fair matchups.”
+“Badges are earned—no purchases, no shortcuts.”
+“Trend delta shows change versus your last period.”
+Empty-State Lines
+
+“No results yet—your first win starts here.”
+“No events today—subscribe to the weekly rundown.”
+“Pick two traders to compare your edge.”
+Success Toasts
+
+“You’re in! Check your match checklist.”
+“Badge unlocked—nice work.”
+“Reminder set—see you at start time.”
+Error Nudges
+
+“We couldn’t load that—refresh or try again.”
+“Eligibility missing a step—review and retry.”
+“Connection hiccup—your data is safe.”
+Onboarding Hints
+
+“Pick a spirit-animal persona—make it yours.”
+“Short, fair rules—two minutes to learn.”
+“Set reminders so you never miss check-in.”
+6) Visual & Motion Prompts (for designers/illustrators)
+Tournaments
+
+“Division ladder climb: each rung lights up as the avatar ascends.”
+“Podium reveal: spotlights sweep, confetti bursts on rank announce.”
+Profiles
+
+“Stat card flip: tiles slide in with subtle number count-ups.”
+“Badge ribbon unfurl: medallion spins and locks into place.”
+Avatars & Personas
+
+“Avatar pulse on hover: soft glow + particle sparkle on win.”
+“Spirit-animal roar: silhouette expands, shimmer trails fade.”
+Compare Traders
+
+“Split-screen bars race: deltas animate to the stronger side.”
+“Trend lines weave: one pulls ahead, sparkline blinks on crossover.”
+Calendars
+
+“Countdown rings: ticking sweep fills to event start.”
+“Impact ripples: event chip sends waves across a calendar grid.”
+Leaderboards & Badges
+
+“Rank-up banner: number flips like a scoreboard, confetti bursts.”
+“Badge unlock: rotating medallion reveals division emblem.”
+Live/Sim Experience
+
+“Top mover surge: heatmap tile glows and briefly radiates.”
+“Highlight reel: quick cut-ins with bold captions and swoosh transitions.”
+QR Cards & Affiliates
+
+“Scan ripple: concentric waves emanate as code lights.”
+“Card pop: profile card scales in with sleek shine across the top.”
+Fair Play & Integrity
+
+“Shield glint: lock icon beam sweeps to signify verified results.”
+“Audit trail timeline: checkmarks cascade with a satisfying tick.”
+7) Conversion Pathways
+Journey 1: Discover → Register → Compete
+
+Path: Homepage hero → Onboarding wizard → Division entry → Check-in → Play.
+Friction & Copy
+“I’m not sure how it works.” → “Two-minute rules walkthrough—know exactly how to win.”
+“What if I’m not good enough?” → “Start in Elevator; climb at your pace.”
+Journey 2: Spectate → Follow → Join
+
+Path: Live highlights → Follow traders → Notifications → Onboarding → First bracket.
+Friction & Copy
+“I’ll just watch.” → “Try sim mode now—same rules, zero risk.”
+“I’ll forget to check in.” → “One-tap reminders keep you on schedule.”
+Journey 3: Compare → Improve → Enter Higher Division
+
+Path: Compare tool → Saved matchup → Practice (sim/live) → Division upgrade.
+Friction & Copy
+“I don’t know what to improve.” → “We highlight your best opportunity this week.”
+“Higher division seems scary.” → “Your form says you’re ready—go claim it.”
+Additional Friction Reducers
+
+“Is this gambling?” → “No. DAYRADE is skill-based competition with transparent scoring.”
+“Will rules change mid-event?” → “Never mid-bracket—any updates are announced ahead.”
+“What about safety?” → “Integrity badges and anti-cheat checks run every bracket.”
+8) Social Proof & Credibility (non-technical)
+Accolade Slots
+
+“Featured by [TBD Media Partner]”
+“Community Favorite at [TBD Expo]”
+“Backed by [TBD Sponsor] for Fair-Play Innovation”
+Community Stats
+
+“X,000+ matches entered”
+“Y divisions climbed this month”
+“Z% complete their first tournament within 48 hours”
+Fairness Statements
+
+“Transparent scoring. Published rules. No surprises.”
+“Anti-cheat monitoring and verified results every bracket.”
+“Cosmetics never affect competitive outcomes.”
+Safety Highlights
+
+“Clear eligibility; respectful conduct; report tools available.”
+“Session integrity badges shown across the app.”
+“Your data, your control—privacy-first settings.”
+Taglines
+
+“Play Clean. Win Loud.”
+“Skill Forward. Fair Always.”
+“The Arena for Disciplined Traders.”
+9) Glossary of Branded Terms
+DAYRADE: Esports-style, skill-based day-trading tournaments with fair, transparent scoring.
+Divisions (Elevator/Crusader/Raider): Skill tiers; climb by proving consistent performance.
+Spirit-Animal: Your avatar theme; a visual identity that reflects style.
+Persona: A curated combo of avatar, badges, and profile tone.
+Buying-Power Prizes: Rewards framed as buying-power credit and status recognition.
+Check-In: Time-bound confirmation to enter a bracket session.
+Live/Sim: Live brackets for competition; sim sessions for practice with the same rules.
+Spectator Mode: Watch highlights, movers, and replays without entering.
+Streak: A run of strong sessions that unlocks badges and effects.
+Form: Recent performance indicator used in profiles and comparisons.
+Trader Card: Shareable profile snapshot with stats, badges, and QR link.
+Compare: Side-by-side metrics to learn from peers and rivals.
+Skill Index: Composite indicator of disciplined trading behaviors (TBD exact label).
+Clean Trade: A rule-compliant action that the scoring system rewards.
+Integrity Score: Visual cue for fair-play status across sessions.
+Anti-Cheat: Behind-the-scenes detection and review to keep brackets clean.
+Ladder: Your progression path through divisions and ranks.
+Heatmap: Visual of market or leaderboard intensity in real time.
+Trader Tag: Your handle; unique identity across the arena.
+Affiliate: Trackable link/QR for partners and creators to promote entries.
+10) FAQ Draft (Copy-First)
+Is DAYRADE gambling?
+
+No. DAYRADE is a skill-based tournament platform with published rules and transparent scoring. We reward disciplined, consistent trading—not chance.
+How are scores set?
+
+Scoring rewards clean execution, risk control, and consistent performance. The rulebook uses simple definitions and tie-breakers you can read in two minutes.
+Who can join?
+
+Most retail traders can join, subject to regional eligibility and age requirements. Check the eligibility list during onboarding.
+What does it cost?
+
+Core features are free; optional upgrades and sponsor-backed perks may be offered (TBD). Pricing will always be clearly labeled.
+What regions are supported?
+
+Availability varies by region and local policy. The onboarding flow tells you instantly if you’re eligible.
+What do I win?
+
+Prizes are framed as buying-power rewards and status recognition. Prize ladders are published for each bracket.
+Can I practice first?
+
+Yes. Try sim mode with the same rules so you can build confidence before entering a live bracket.
+How fair is this?
+
+Very. We use anti-cheat monitoring, verified results, and clear rule enforcement. Integrity badges are visible across the arena.
+Will rules change mid-tournament?
+
+No. Rules won’t change during an active bracket. Any updates are announced ahead with effective dates.
+How do divisions work?
+
+Elevator is entry-level, Crusader is mid-tier, Raider is elite. Win and maintain form to climb and keep your spot.
+Can spectators participate?
+
+Absolutely. Watch highlights, follow traders, share placements, and join when you’re ready.
+What if I miss check-in?
+
+You’ll be prompted to re-enter in the next available window. Enable reminders to prevent misses.
+How do sponsors fit in?
+
+Sponsors support fair-play competition and provide perks or prize pools. Sponsor integrations never affect competitive outcomes.
+Can I share my profile?
+
+Yes. Use your Trader Card link or QR code to share on socials, streams, or at events.
+How do I contact support?
+
+Visit Help & FAQ and tap “Ask Support.” You’ll get a quick response with clear next steps.
