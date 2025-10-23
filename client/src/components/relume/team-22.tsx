@@ -39,8 +39,8 @@ export function Team22() {
                 />
               </div>
               <div className="mb-3 md:mb-4">
-                <h5 className="text-large font-semibold">Alex Rodriguez</h5>
-                <h6 className="text-medium">Chief executive officer</h6>
+                <h5 className="text-regular font-semibold">Alex Rodriguez</h5>
+                <h6 className="text-small text-muted-foreground">Chief executive officer</h6>
               </div>
               <p>
                 A former hedge fund manager with a passion for democratizing
@@ -73,8 +73,8 @@ export function Team22() {
                 />
               </div>
               <div className="mb-3 md:mb-4">
-                <h5 className="text-large font-semibold">Maya Chen</h5>
-                <h6 className="text-medium">Chief technology officer</h6>
+                <h5 className="text-regular font-semibold">Maya Chen</h5>
+                <h6 className="text-small text-muted-foreground">Chief technology officer</h6>
               </div>
               <p>
                 An expert in AI and machine learning who believes in
@@ -106,8 +106,8 @@ export function Team22() {
                 />
               </div>
               <div className="mb-3 md:mb-4">
-                <h5 className="text-large font-semibold">Jake Thompson</h5>
-                <h6 className="text-medium">Chief product officer</h6>
+                <h5 className="text-regular font-semibold">Jake Thompson</h5>
+                <h6 className="text-small text-muted-foreground">Chief product officer</h6>
               </div>
               <p>
                 A gaming industry veteran who sees trading as the next great
@@ -140,8 +140,8 @@ export function Team22() {
                 />
               </div>
               <div className="mb-3 md:mb-4">
-                <h5 className="text-large font-semibold">Sarah Kim</h5>
-                <h6 className="text-medium">Head of education</h6>
+                <h5 className="text-regular font-semibold">Sarah Kim</h5>
+                <h6 className="text-small text-muted-foreground">Head of education</h6>
               </div>
               <p>
                 A financial literacy advocate committed to making complex
@@ -174,8 +174,8 @@ export function Team22() {
                 />
               </div>
               <div className="mb-3 md:mb-4">
-                <h5 className="text-large font-semibold">Michael Torres</h5>
-                <h6 className="text-medium">Head of community</h6>
+                <h5 className="text-regular font-semibold">Michael Torres</h5>
+                <h6 className="text-small text-muted-foreground">Head of community</h6>
               </div>
               <p>
                 A community builder who understands the power of shared learning
@@ -208,8 +208,8 @@ export function Team22() {
                 />
               </div>
               <div className="mb-3 md:mb-4">
-                <h5 className="text-large font-semibold">Elena Petrova</h5>
-                <h6 className="text-medium">Head of design</h6>
+                <h5 className="text-regular font-semibold">Elena Petrova</h5>
+                <h6 className="text-small text-muted-foreground">Head of design</h6>
               </div>
               <p>
                 A creative director who transforms complex ideas into intuitive,
@@ -241,8 +241,8 @@ export function Team22() {
                 />
               </div>
               <div className="mb-3 md:mb-4">
-                <h5 className="text-large font-semibold">Full name</h5>
-                <h6 className="text-medium">Job title</h6>
+                <h5 className="text-regular font-semibold">Full name</h5>
+                <h6 className="text-small text-muted-foreground">Job title</h6>
               </div>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -275,8 +275,8 @@ export function Team22() {
                 />
               </div>
               <div className="mb-3 md:mb-4">
-                <h5 className="text-large font-semibold">Full name</h5>
-                <h6 className="text-medium">Job title</h6>
+                <h5 className="text-regular font-semibold">Full name</h5>
+                <h6 className="text-small text-muted-foreground">Job title</h6>
               </div>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

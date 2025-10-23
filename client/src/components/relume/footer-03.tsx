@@ -97,9 +97,9 @@ export function Footer3() {
           </div>
         </div>
         <div className="h-px w-full bg-border" />
-        <div className="text-small flex flex-col-reverse items-start justify-between pt-6 pb-4 md:flex-row md:items-center md:pt-8 md:pb-0">
-          <p className="mt-8 md:mt-0 text-muted-foreground">© 2025 DAYRADE. All Rights Reserved.</p>
-          <ul className="text-small grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0">
+        <div className="flex flex-col-reverse items-start justify-between pt-6 pb-4 md:flex-row md:items-center md:pt-8 md:pb-0">
+          <p className="text-micro mt-8 md:mt-0 text-muted-foreground">© 2025 DAYRADE. All Rights Reserved.</p>
+          <ul className="text-tiny grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0">
             <li className="underline">
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
             </li>
