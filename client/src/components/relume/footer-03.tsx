@@ -2,12 +2,17 @@
 
 import React from "react";
 import {
-  BiLogoFacebookCircle,
-  BiLogoInstagram,
-  BiLogoLinkedinSquare,
-  BiLogoYoutube,
-} from "react-icons/bi";
-import { FaXTwitter } from "react-icons/fa6";
+  MdFacebook,
+  MdEmail,
+  MdPhone,
+  MdLocationOn,
+} from "react-icons/md";
+import {
+  FaInstagram,
+  FaXTwitter,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa6";
 
 export function Footer3() {
   return (
@@ -41,19 +46,19 @@ export function Footer3() {
             </div>
             <div className="grid grid-flow-col grid-cols-[max-content] items-start justify-start gap-x-3">
               <a href="#" className="text-foreground hover:text-[#00BFA5] transition-colors">
-                <BiLogoFacebookCircle className="size-6" />
+                <MdFacebook className="size-6" />
               </a>
               <a href="#" className="text-foreground hover:text-[#00BFA5] transition-colors">
-                <BiLogoInstagram className="size-6" />
+                <FaInstagram className="size-6" />
               </a>
               <a href="#" className="text-foreground hover:text-[#00BFA5] transition-colors">
-                <FaXTwitter className="size-6 p-0.5" />
+                <FaXTwitter className="size-6" />
               </a>
               <a href="#" className="text-foreground hover:text-[#00BFA5] transition-colors">
-                <BiLogoLinkedinSquare className="size-6" />
+                <FaLinkedin className="size-6" />
               </a>
               <a href="#" className="text-foreground hover:text-[#00BFA5] transition-colors">
-                <BiLogoYoutube className="size-6" />
+                <FaYoutube className="size-6" />
               </a>
             </div>
           </div>

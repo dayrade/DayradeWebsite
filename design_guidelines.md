@@ -58,7 +58,41 @@
 - Trading View: 2-column (chart-orderbook)
 - Landing: Single column with max-w-6xl, feature grids at lg:grid-cols-3
 
-### D. Component Library
+### D. Radius System
+
+**Border Radius Guidelines:**
+- **Large Radius**: Applied to elements which are 1 or 2 columns in width
+  - Use: `rounded-lg` (8px) or `rounded-xl` (12px)
+  - Examples: Hero cards, feature sections, large images
+  
+- **Medium Radius**: Applied to elements which are between 2 and 3 columns in width
+  - Use: `rounded-md` (6px)
+  - Examples: Cards, modals, medium-sized containers
+  
+- **Small Radius**: Applied to elements which are smaller than 4 columns in width
+  - Use: `rounded` (4px) or `rounded-sm` (2px)
+  - Examples: Buttons, inputs, tags, badges, small UI controls
+
+**Consistency Rule:** Maintain consistent radius sizes across similar component types. Avoid mixing radius sizes on the same visual level.
+
+### E. Shadow System
+
+**Elevation Hierarchy (from subtle to prominent):**
+- **xxsmall**: Minimal depth, barely visible (`shadow-sm`)
+- **xsmall**: Subtle elevation for hover states (`shadow`)
+- **small**: Standard card elevation (`shadow-md`)
+- **medium**: Raised components, dropdowns (`shadow-lg`)
+- **large**: Modals, important notifications (`shadow-xl`)
+- **xlarge**: High-priority overlays (`shadow-2xl`)
+- **xxlarge**: Maximum elevation for critical UI
+
+**Usage Guidelines:**
+- Use shadows sparingly - only where depth hierarchy is meaningful
+- Prefer border/color contrast over shadows when possible
+- Shadows should be subtle in dark mode (reduce opacity)
+- Never stack multiple shadow sizes on nested elements
+
+### F. Component Library
 
 **Navigation:**
 - Top nav: Sticky header with glassmorphism effect (backdrop-blur-lg bg-surface/80)
@@ -85,15 +119,59 @@
 - Testimonials: 2-column card grid with user photos and quotes
 - CTA Section: Centered with gradient background, large button
 
-**Forms:**
-- Inputs: Clean borders, focus:ring-2 in brand color, dark backgrounds
-- Buttons: 
-  - Primary: Solid brand color with hover:brightness-110
-  - Secondary: Outline with backdrop-blur when over images
-  - Danger: Solid red for sell/close actions
-- Toggle switches for order types, checkboxes for terms
+**UI Elements (Based on Design System):**
 
-### E. Interaction Patterns
+*Buttons:*
+- Variants: Primary (solid), Secondary (outline), Ghost (transparent), Link
+- Sizes: Small (h-8), Default (h-9), Large (h-10), Icon (h-9 w-9)
+- States: Default, Hover (brightness-110), Active, Disabled (opacity-50), Focus (ring-2)
+
+*Inputs:*
+- Text Input: Clean borders, focus:ring-2 in brand color, dark backgrounds
+- Text Area: Resizable, minimum height 80px
+- Search: Include search icon (MdSearch) on left
+- With Icons: Email (MdEmail), Phone (MdPhone), Location (MdLocationOn)
+- With Prefix: Currency ($, USD), Protocol (http://)
+
+*Select:*
+- Dropdown with chevron down icon (MdKeyboardArrowDown)
+- Placeholder: "Select one..."
+- Options list with hover states
+
+*Tags/Categories:*
+- Rounded-full, small text, colored backgrounds
+- Removable variant with close icon (MdClose)
+- Spacing: gap-2 between tags
+
+*Checkboxes & Radios:*
+- Size: 16x16px or 20x20px
+- With labels and optional descriptions
+- Group spacing: space-y-3
+- Visual feedback: border-primary when checked
+
+*Toggles:*
+- Modern switch design (rounded-full track)
+- Sizes: Default (h-6 w-11), Large (h-8 w-14)
+- States: Off (gray), On (primary color)
+- Optional labels and descriptions
+
+*Tooltips:*
+- Small: Simple text tooltip
+- Large: Title + description + optional link
+- Positioning: Top, Right, Bottom, Left
+- Arrow indicator pointing to trigger element
+
+*Tabs:*
+- Horizontal navigation (e.g., "Monthly / Yearly")
+- Active state with solid background or underline
+- Spacing: gap-1 or gap-2
+
+*Filters:*
+- "View all" + Category buttons
+- Active filter has primary background
+- Clear/reset functionality
+
+### G. Interaction Patterns
 
 **Micro-interactions (Minimal):**
 - Button hover: Subtle brightness increase (5-10%)

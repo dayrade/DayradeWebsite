@@ -391,4 +391,38 @@
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
   }
+
+  /* Radius utilities based on design system */
+  .radius-large {
+    @apply rounded-lg;
+  }
+  
+  .radius-medium {
+    @apply rounded-md;
+  }
+  
+  .radius-small {
+    @apply rounded;
+  }
+  
+  /* Icon sizing utilities for Material Icons */
+  .icon-xs {
+    @apply w-4 h-4;
+  }
+  
+  .icon-sm {
+    @apply w-5 h-5;
+  }
+  
+  .icon-md {
+    @apply w-6 h-6;
+  }
+  
+  .icon-lg {
+    @apply w-7 h-7;
+  }
+  
+  .icon-xl {
+    @apply w-8 h-8;
+  }
 }
