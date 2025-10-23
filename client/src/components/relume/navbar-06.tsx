@@ -379,138 +379,158 @@ export function Navbar6() {
   }, [isMobile]);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/">
-            <a className="text-2xl font-bold text-[#C8FF00]">
-              Dayrade<sup className="text-xs">®</sup>
-            </a>
-          </Link>
+    <nav className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+      <div className="relative">
+        <div className="container mx-auto px-4">
+          <div className="flex h-16 items-center justify-between">
+            {/* Logo */}
+            <Link href="/">
+              <a className="text-2xl font-bold text-[#C8FF00]">
+                Dayrade<sup className="text-xs">®</sup>
+              </a>
+            </Link>
 
-          {/* Desktop Navigation */}
-          {!isMobile && (
-            <>
-              <div className="flex items-center gap-6">
-                {navigationData.map((item, index) => (
-                  <div
-                    key={index}
-                    className="relative"
+            {/* Desktop Navigation */}
+            {!isMobile && (
+              <>
+                <div className="flex items-center gap-6">
+                  {navigationData.map((item, index) => (
+                    <div
+                      key={index}
+                      className="relative"
+                      onMouseEnter={() => setActiveDropdown(item.title)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <button className="flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-gray-100 hover:text-[#00BFA5] transition-colors">
+                        {item.title}
+                        <RxChevronDown
+                          className={`w-4 h-4 transition-transform ${
+                            activeDropdown === item.title ? "rotate-180" : ""
+                          }`}
+                        />
+                        {activeDropdown === item.title && (
+                          <span className="absolute -top-1 -right-2 w-2 h-2 bg-[#00BFA5] rounded-full"></span>
+                        )}
+                      </button>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex items-center gap-3">
+                  <Link href="/signup">
+                    <Button variant="outline" size="sm">
+                      Sign up
+                    </Button>
+                  </Link>
+                  <Link href="/learn">
+                    <Button variant="default" size="sm">
+                      Learn
+                    </Button>
+                  </Link>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+        
+        {/* Centered MegaMenu Container - rendered outside the main nav container for perfect centering */}
+        {!isMobile && (
+          <div className="absolute left-0 right-0 top-full pointer-events-none">
+            {navigationData.map((item, index) => (
+              <AnimatePresence key={index}>
+                {activeDropdown === item.title && (
+                  <div 
+                    className="pointer-events-auto"
                     onMouseEnter={() => setActiveDropdown(item.title)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <button className="flex items-center gap-1 text-sm font-medium text-gray-900 hover:text-[#00BFA5] transition-colors">
-                      {item.title}
-                      <RxChevronDown
-                        className={`w-4 h-4 transition-transform ${
-                          activeDropdown === item.title ? "rotate-180" : ""
-                        }`}
-                      />
-                      {activeDropdown === item.title && (
-                        <span className="absolute -top-1 -right-2 w-2 h-2 bg-[#00BFA5] rounded-full"></span>
-                      )}
-                    </button>
-
-                    <AnimatePresence>
-                      {activeDropdown === item.title && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-screen max-w-5xl bg-white border border-gray-200 rounded-lg shadow-xl p-8"
-                        >
-                          <div className="grid grid-cols-4 gap-8">
-                            {item.megaMenu.map((column, colIndex) => (
-                              <div key={colIndex}>
-                                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
-                                  {column.title}
-                                </h3>
-                                <div className="space-y-3">
-                                  {column.links.map((link, linkIndex) => (
-                                    <Link key={linkIndex} href={link.url}>
-                                      <a className="block group">
-                                        <div className="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                                          <div className="text-gray-400 group-hover:text-[#00BFA5] transition-colors mt-0.5">
-                                            {link.icon}
-                                          </div>
-                                          <div>
-                                            <div className="font-semibold text-gray-900 group-hover:text-[#00BFA5] transition-colors">
-                                              {link.title}
-                                            </div>
-                                            <div className="text-sm text-gray-600">
-                                              {link.description}
-                                            </div>
-                                          </div>
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="mx-auto mt-2 w-[var(--mega-menu-width)] max-w-[var(--mega-menu-max-width)] bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-xl p-8"
+                      style={{
+                        maxWidth: 'min(var(--mega-menu-width), var(--mega-menu-max-width))'
+                      }}
+                    >
+                      <div className="grid grid-cols-4 gap-8">
+                        {item.megaMenu.map((column, colIndex) => (
+                          <div key={colIndex}>
+                            <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4 whitespace-nowrap">
+                              {column.title}
+                            </h3>
+                            <div className="space-y-3">
+                              {column.links.map((link, linkIndex) => (
+                                <Link key={linkIndex} href={link.url}>
+                                  <a className="block group">
+                                    <div className="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                      <div className="text-gray-400 group-hover:text-[#00BFA5] transition-colors mt-0.5 flex-shrink-0">
+                                        {link.icon}
+                                      </div>
+                                      <div className="min-w-0">
+                                        <div className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[#00BFA5] transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
+                                          {link.title}
                                         </div>
-                                      </a>
-                                    </Link>
-                                  ))}
-                                </div>
-                              </div>
-                            ))}
-                            {/* Trending Content Column */}
-                            <div>
-                              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
-                                Trending content
-                              </h3>
-                              <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg h-48 flex items-center justify-center">
-                                <Podcast className="w-12 h-12 text-white" />
-                              </div>
+                                        <div className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap overflow-hidden text-ellipsis">
+                                          {link.description}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </a>
+                                </Link>
+                              ))}
                             </div>
                           </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                        ))}
+                        {/* Trending Content Column */}
+                        <div>
+                          <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4 whitespace-nowrap">
+                            Trending content
+                          </h3>
+                          <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg h-48 flex items-center justify-center">
+                            <Podcast className="w-12 h-12 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
                   </div>
-                ))}
-              </div>
+                )}
+              </AnimatePresence>
+            ))}
+          </div>
+        )}
 
-              {/* CTA Buttons */}
-              <div className="flex items-center gap-3">
-                <Link href="/signup">
-                  <Button variant="outline" size="sm">
-                    Sign up
-                  </Button>
-                </Link>
-                <Link href="/learn">
-                  <Button variant="default" size="sm">
-                    Learn
-                  </Button>
-                </Link>
-              </div>
-            </>
-          )}
+        {/* Mobile Menu Button */}
+        {isMobile && (
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2"
+          >
+            <div className="w-6 h-5 flex flex-col justify-between">
+              <span
+                className={`w-full h-0.5 bg-gray-900 dark:bg-gray-100 transition-all ${
+                  isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+                }`}
+              ></span>
+              <span
+                className={`w-full h-0.5 bg-gray-900 dark:bg-gray-100 transition-all ${
+                  isMobileMenuOpen ? "opacity-0" : ""
+                }`}
+              ></span>
+              <span
+                className={`w-full h-0.5 bg-gray-900 dark:bg-gray-100 transition-all ${
+                  isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                }`}
+              ></span>
+            </div>
+          </button>
+        )}
+      </div>
 
-          {/* Mobile Menu Button */}
-          {isMobile && (
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2"
-            >
-              <div className="w-6 h-5 flex flex-col justify-between">
-                <span
-                  className={`w-full h-0.5 bg-gray-900 transition-all ${
-                    isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
-                  }`}
-                ></span>
-                <span
-                  className={`w-full h-0.5 bg-gray-900 transition-all ${
-                    isMobileMenuOpen ? "opacity-0" : ""
-                  }`}
-                ></span>
-                <span
-                  className={`w-full h-0.5 bg-gray-900 transition-all ${
-                    isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
-                  }`}
-                ></span>
-              </div>
-            </button>
-          )}
-        </div>
-
-        {/* Mobile Menu */}
+      {/* Mobile Menu */}
+      <div className="container mx-auto px-4">
         <AnimatePresence>
           {isMobile && isMobileMenuOpen && (
             <motion.div
@@ -528,7 +548,7 @@ export function Navbar6() {
                           activeDropdown === item.title ? null : item.title
                         )
                       }
-                      className="flex items-center justify-between w-full text-left font-medium text-gray-900"
+                      className="flex items-center justify-between w-full text-left font-medium text-gray-900 dark:text-gray-100"
                     >
                       {item.title}
                       <RxChevronDown
@@ -547,23 +567,23 @@ export function Navbar6() {
                         >
                           {item.megaMenu.map((column, colIndex) => (
                             <div key={colIndex}>
-                              <h4 className="text-xs font-semibold text-gray-500 uppercase mb-2">
+                              <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase mb-2">
                                 {column.title}
                               </h4>
                               <div className="space-y-2">
                                 {column.links.map((link, linkIndex) => (
                                   <Link key={linkIndex} href={link.url}>
                                     <a
-                                      className="block p-2 rounded hover:bg-gray-50"
+                                      className="block p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800"
                                       onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                       <div className="flex items-center gap-2">
                                         {link.icon}
                                         <div>
-                                          <div className="font-medium text-sm">
+                                          <div className="font-medium text-sm text-gray-900 dark:text-gray-100">
                                             {link.title}
                                           </div>
-                                          <div className="text-xs text-gray-600">
+                                          <div className="text-xs text-gray-600 dark:text-gray-400">
                                             {link.description}
                                           </div>
                                         </div>

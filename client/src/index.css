@@ -100,6 +100,10 @@
   --wght: 400;
   --wdth: 100;
   --slnt: 0;
+  
+  /* MegaMenu positioning */
+  --mega-menu-width: 80rem;
+  --mega-menu-max-width: calc(100vw - 2rem);
 }
 
 .dark {
