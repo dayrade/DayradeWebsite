@@ -46,7 +46,7 @@ export function Header80() {
       <div className="sticky top-0 h-screen overflow-hidden">
         <div className="absolute top-0 right-auto bottom-0 left-0 z-10">
           <motion.div
-            className="flex flex-col gap-[26vw] pt-[70vh]"
+            className="flex flex-col gap-[26vw] pt-[20vh]"
             style={{ y: useActive.yFirst }}
           >
             {/* Large foreground card - scale 1.0 */}
@@ -143,7 +143,7 @@ export function Header80() {
           className="absolute top-0 right-0 bottom-0 left-auto z-0"
           style={{ y: useActive.ySecond }}
         >
-          <div className="flex flex-col gap-[26vw] pt-[70vh]">
+          <div className="flex flex-col gap-[26vw] pt-[20vh]">
             {/* Medium background card - scale 0.75 */}
             <div className="relative w-[20vw]" style={{ transform: "scale(0.75)", transformOrigin: "top right" }}>
               <DayradeCard
