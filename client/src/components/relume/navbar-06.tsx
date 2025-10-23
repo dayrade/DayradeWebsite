@@ -451,30 +451,30 @@ export function Navbar6() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="mx-auto mt-2 w-[var(--mega-menu-width)] max-w-[var(--mega-menu-max-width)] bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-xl p-8"
+                      className="mx-auto mt-2 w-[var(--mega-menu-width)] max-w-[var(--mega-menu-max-width)] bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-xl p-6"
                       style={{
                         maxWidth: 'min(var(--mega-menu-width), var(--mega-menu-max-width))'
                       }}
                     >
-                      <div className="grid grid-cols-4 gap-8">
+                      <div className="grid grid-cols-4 gap-6">
                         {item.megaMenu.map((column, colIndex) => (
                           <div key={colIndex}>
-                            <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4 whitespace-nowrap">
+                            <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3 whitespace-nowrap">
                               {column.title}
                             </h3>
-                            <div className="space-y-3">
+                            <div className="space-y-2">
                               {column.links.map((link, linkIndex) => (
                                 <Link key={linkIndex} href={link.url}>
                                   <a className="block group">
-                                    <div className="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                                    <div className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
                                       <div className="text-gray-400 group-hover:text-[#00BFA5] transition-colors mt-0.5 flex-shrink-0">
                                         {link.icon}
                                       </div>
                                       <div className="min-w-0">
-                                        <div className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[#00BFA5] transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
+                                        <div className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[#00BFA5] transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
                                           {link.title}
                                         </div>
-                                        <div className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap overflow-hidden text-ellipsis">
+                                        <div className="text-xs text-gray-600 dark:text-gray-400 whitespace-nowrap overflow-hidden text-ellipsis">
                                           {link.description}
                                         </div>
                                       </div>
@@ -487,7 +487,7 @@ export function Navbar6() {
                         ))}
                         {/* Trending Content Column */}
                         <div>
-                          <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4 whitespace-nowrap">
+                          <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3 whitespace-nowrap">
                             Trending content
                           </h3>
                           <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg h-48 flex items-center justify-center">
