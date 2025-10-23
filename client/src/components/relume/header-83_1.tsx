@@ -50,7 +50,7 @@ export function Header83_1() {
           />
           <motion.div
             style={{ scale: useActive.scale }}
-            className="grid size-full auto-cols-fr grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-3"
+            className="grid size-full auto-cols-fr grid-cols-1 md:grid-cols-3"
           >
             <div className="relative hidden md:block">
               <img
