@@ -157,8 +157,7 @@ export function Layout514() {
               <p className="mb-3 font-semibold md:mb-4">Difference</p>
               <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Why", "Dayrade", "is", "Different"]} widths={[50, 75, 50, 150]} weights={[400, 500, 300, 900]} italics={[0, 1, 0, 0]} lineHeight="1.15" />
               <p className="text-medium">
-                We transform trading from a solitary risk into a collaborative
-                skill-building experience.
+                Other platforms isolate you and risk your money. Without structure, 90% of traders lose. DAYRADE combines sport, education, and esports for a better way.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
                 <Button title="Details" variant="secondary">
@@ -181,8 +180,7 @@ export function Layout514() {
                     <div>
                       <h5 className="heading-h6 mb-3 font-bold">Fair Play</h5>
                       <p>
-                        Daily lessons and resources to sharpen your trading
-                        knowledge.
+                        Same virtual capital for all—skill determines who wins, not bank account size.
                       </p>
                       <div className="mt-4">
                         <img
@@ -208,8 +206,7 @@ export function Layout514() {
                         Fair Play
                       </h5>
                       <p className="text-medium">
-                        Daily lessons and resources to sharpen your trading
-                        knowledge.
+                        Same virtual capital for all—skill determines who wins, not bank account size.
                       </p>
                     </motion.div>
                   </ConditionalRender>
@@ -218,11 +215,10 @@ export function Layout514() {
                   <ConditionalRender condition={renderMobile.isMobile}>
                     <div>
                       <h5 className="heading-h6 mb-3 font-bold">
-                        Continuous Learning
+                        Education
                       </h5>
                       <p>
-                        Daily lessons and resources to sharpen your trading
-                        knowledge.
+                        Daily lessons, glossary, and practice. Learn trading psychology, risk management, and analysis.
                       </p>
                       <div className="mt-4">
                         <img
@@ -245,11 +241,10 @@ export function Layout514() {
                       className="md:absolute first:md:relative"
                     >
                       <h5 className="heading-h5 font-bold md:mb-4">
-                        Continuous Learning
+                        Education
                       </h5>
                       <p className="text-medium">
-                        Daily lessons and resources to sharpen your trading
-                        knowledge.
+                        Daily lessons, glossary, and practice. Learn trading psychology, risk management, and analysis.
                       </p>
                     </motion.div>
                   </ConditionalRender>
@@ -258,11 +253,10 @@ export function Layout514() {
                   <ConditionalRender condition={renderMobile.isMobile}>
                     <div>
                       <h5 className="heading-h6 mb-3 font-bold">
-                        Total Transparency
+                        Transparency
                       </h5>
                       <p>
-                        Connect with traders worldwide, share strategies, and
-                        grow together.
+                        No hidden fees or manipulation. Anti-cheat system. Clear rules and fair competition.
                       </p>
                       <div className="mt-4">
                         <img
@@ -285,11 +279,10 @@ export function Layout514() {
                       className="md:absolute first:md:relative"
                     >
                       <h5 className="heading-h5 font-bold md:mb-4">
-                        Total Transparency
+                        Transparency
                       </h5>
                       <p className="text-medium">
-                        Connect with traders worldwide, share strategies, and
-                        grow together.
+                        No hidden fees or manipulation. Anti-cheat system. Clear rules and fair competition.
                       </p>
                     </motion.div>
                   </ConditionalRender>
@@ -298,11 +291,10 @@ export function Layout514() {
                   <ConditionalRender condition={renderMobile.isMobile}>
                     <div>
                       <h5 className="heading-h6 mb-3 font-bold">
-                        Global Community
+                        Community
                       </h5>
                       <p>
-                        Daily lessons and resources to sharpen your trading
-                        knowledge.
+                        Global traders, podcasts, shared strategies. Connect, learn, and grow together.
                       </p>
                       <div className="mt-4">
                         <img
@@ -325,11 +317,10 @@ export function Layout514() {
                       className="md:absolute first:md:relative"
                     >
                       <h5 className="heading-h5 font-bold md:mb-4">
-                        Global Community
+                        Community
                       </h5>
                       <p className="text-medium">
-                        Daily lessons and resources to sharpen your trading
-                        knowledge.
+                        Global traders, podcasts, shared strategies. Connect, learn, and grow together.
                       </p>
                     </motion.div>
                   </ConditionalRender>

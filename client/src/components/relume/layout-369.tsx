@@ -37,8 +37,7 @@ export function Layout369() {
                     Create Your Persona
                   </h3>
                   <p>
-                    Generate a unique AI spirit animal that reflects your
-                    trading style.
+                    AI spirit animal plus profile card. Ready in 2 minutes.
                   </p>
                 </div>
                 <div className="mt-5 flex flex-wrap items-center gap-4 md:mt-6">
@@ -68,8 +67,7 @@ export function Layout369() {
                     Learn and Practice
                   </h3>
                   <p>
-                    Master market psychology, risk management, and strategic
-                    analysis.
+                    Daily lessons on psychology, risk management, and technical analysis.
                   </p>
                 </div>
                 <div className="mt-5 flex items-center gap-4 md:mt-6">
@@ -94,13 +92,12 @@ export function Layout369() {
             <Card className="flex flex-col">
               <div className="flex flex-col justify-center p-6">
                 <div>
-                  <p className="text-small mb-2 font-semibold">02</p>
+                  <p className="text-small mb-2 font-semibold">03</p>
                   <h3 className="heading-h5 mb-2 font-bold">
-                    Learn and Practice
+                    Compete and Win
                   </h3>
                   <p>
-                    Master market psychology, risk management, and strategic
-                    analysis.
+                    Tournament competitions with virtual capital. Prizes based on skill and performance.
                   </p>
                 </div>
                 <div className="mt-5 flex items-center gap-4 md:mt-6">

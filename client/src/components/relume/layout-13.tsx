@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 
@@ -11,9 +12,15 @@ export function Layout13() {
         <div className="grid grid-cols-1 gap-y-12 md:grid-flow-row md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
             <p className="mb-3 font-semibold md:mb-4">Accounts</p>
-            <h2 className="heading-h2 mb-5 font-bold md:mb-6">
-              A level playing field
-            </h2>
+            <AnimatedVariableHeading
+              level="h2"
+              className="mb-5 md:mb-6"
+              parts={["A", "Level", "Playing", "Field"]}
+              widths={[50, 100, 75, 150]}
+              weights={[400, 700, 500, 900]}
+              italics={[0, 0, 0, 1]}
+              lineHeight="1.15"
+            />
             <p className="text-medium mb-5 md:mb-6">
               Tournament accounts reset the game. Every trader starts with
               identical virtual capital, ensuring pure skill determines victory.

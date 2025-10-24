@@ -157,8 +157,7 @@ export function Layout514_1() {
               <p className="mb-3 font-semibold md:mb-4">Education</p>
               <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Master", "Money.", "Not Just", "Markets."]} widths={[100, 125, 75, 150]} weights={[700, 900, 400, 700]} italics={[0, 0, 0, 1]} lineHeight="1.15" />
               <p className="text-medium">
-                Understand financial dynamics beyond simple trading. Build
-                lasting wealth through knowledge.
+                Understand markets, manage risk, and make informed choices. Learn or compete—we empower your financial future.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
                 <Button title="Learn" variant="secondary">
@@ -180,11 +179,10 @@ export function Layout514_1() {
                   <ConditionalRender condition={renderMobile.isMobile}>
                     <div>
                       <h5 className="heading-h6 mb-3 font-bold">
-                        Risk Management
+                        Trading Psychology
                       </h5>
                       <p>
-                        Understand the emotional intelligence behind successful
-                        trading.
+                        Control emotions, avoid revenge trading, and build the discipline needed to succeed.
                       </p>
                       <div className="mt-4">
                         <img
@@ -207,11 +205,10 @@ export function Layout514_1() {
                       className="md:absolute first:md:relative"
                     >
                       <h5 className="heading-h5 font-bold md:mb-4">
-                        Risk Management
+                        Trading Psychology
                       </h5>
                       <p className="text-medium">
-                        Understand the emotional intelligence behind successful
-                        trading.
+                        Control emotions, avoid revenge trading, and build the discipline needed to succeed.
                       </p>
                     </motion.div>
                   </ConditionalRender>
@@ -220,11 +217,10 @@ export function Layout514_1() {
                   <ConditionalRender condition={renderMobile.isMobile}>
                     <div>
                       <h5 className="heading-h6 mb-3 font-bold">
-                        Market Psychology
+                        Risk Management
                       </h5>
                       <p>
-                        Understand the emotional intelligence behind successful
-                        trading.
+                        Protect your capital, size positions correctly, and never blow up your account.
                       </p>
                       <div className="mt-4">
                         <img
@@ -247,11 +243,10 @@ export function Layout514_1() {
                       className="md:absolute first:md:relative"
                     >
                       <h5 className="heading-h5 font-bold md:mb-4">
-                        Market Psychology
+                        Risk Management
                       </h5>
                       <p className="text-medium">
-                        Understand the emotional intelligence behind successful
-                        trading.
+                        Protect your capital, size positions correctly, and never blow up your account.
                       </p>
                     </motion.div>
                   </ConditionalRender>
@@ -263,8 +258,7 @@ export function Layout514_1() {
                         Technical Analysis
                       </h5>
                       <p>
-                        Develop comprehensive strategies for long-term financial
-                        success.
+                        Read charts, identify patterns, and time your entries like a professional trader.
                       </p>
                       <div className="mt-4">
                         <img
@@ -290,8 +284,7 @@ export function Layout514_1() {
                         Technical Analysis
                       </h5>
                       <p className="text-medium">
-                        Develop comprehensive strategies for long-term financial
-                        success.
+                        Read charts, identify patterns, and time your entries like a professional trader.
                       </p>
                     </motion.div>
                   </ConditionalRender>
@@ -300,11 +293,10 @@ export function Layout514_1() {
                   <ConditionalRender condition={renderMobile.isMobile}>
                     <div>
                       <h5 className="heading-h6 mb-3 font-bold">
-                        Financial Planning
+                        Market Fundamentals
                       </h5>
                       <p>
-                        Understand the emotional intelligence behind successful
-                        trading.
+                        Understand economics, follow the news, and think like a seasoned market professional.
                       </p>
                       <div className="mt-4">
                         <img
@@ -327,11 +319,10 @@ export function Layout514_1() {
                       className="md:absolute first:md:relative"
                     >
                       <h5 className="heading-h5 font-bold md:mb-4">
-                        Financial Planning
+                        Market Fundamentals
                       </h5>
                       <p className="text-medium">
-                        Understand the emotional intelligence behind successful
-                        trading.
+                        Understand economics, follow the news, and think like a seasoned market professional.
                       </p>
                     </motion.div>
                   </ConditionalRender>

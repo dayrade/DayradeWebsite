@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 import { MdCalendarToday } from "react-icons/md";
@@ -16,9 +17,15 @@ export function Layout22() {
                 <MdCalendarToday className="size-10 text-primary-foreground" />
               </div>
             </div>
-            <h2 className="heading-h2 mb-5 font-bold md:mb-6">
-              Tournament schedule for strategic traders
-            </h2>
+            <AnimatedVariableHeading
+              level="h2"
+              className="mb-5 md:mb-6"
+              parts={["Tournament", "Schedule", "for", "Strategic", "Traders"]}
+              widths={[100, 125, 50, 75, 150]}
+              weights={[700, 900, 400, 500, 700]}
+              italics={[0, 0, 0, 0, 1]}
+              lineHeight="1.15"
+            />
             <p className="text-medium">
               Navigate the markets with precision and confidence. Our
               comprehensive event calendar helps you plan your trading strategy

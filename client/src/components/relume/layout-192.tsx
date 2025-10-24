@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 
@@ -18,9 +19,15 @@ export function Layout192() {
           </div>
           <div className="order-1 lg:order-2">
             <p className="mb-3 font-semibold md:mb-4">Interact</p>
-            <h2 className="heading-h2 mb-5 font-bold md:mb-6">
-              Dive deep into event details
-            </h2>
+            <AnimatedVariableHeading
+              level="h2"
+              className="mb-5 md:mb-6"
+              parts={["Dive", "Deep", "into", "Event", "Details"]}
+              widths={[75, 100, 50, 100, 150]}
+              weights={[500, 700, 400, 700, 900]}
+              italics={[0, 0, 0, 0, 1]}
+              lineHeight="1.15"
+            />
             <p className="text-medium">
               Click any event to reveal comprehensive information, registration
               options, and strategic insights.

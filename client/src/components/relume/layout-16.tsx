@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 import { MdShoppingCart, MdCardGiftcard, MdPeople } from "react-icons/md";
@@ -12,9 +13,15 @@ export function Layout16() {
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
             <p className="mb-3 font-semibold md:mb-4">Tickets</p>
-            <h1 className="heading-h2 mb-5 font-bold md:mb-6">
-              One ticket, one entry
-            </h1>
+            <AnimatedVariableHeading
+              level="h2"
+              className="mb-5 md:mb-6"
+              parts={["One", "Ticket,", "One", "Entry"]}
+              widths={[75, 100, 75, 150]}
+              weights={[500, 700, 500, 900]}
+              italics={[0, 0, 0, 1]}
+              lineHeight="1.15"
+            />
             <p className="text-medium mb-5 md:mb-6">
               Each tournament demands a ticket. This ensures every trader brings
               their sharpest skills and highest commitment to the arena.

@@ -5,6 +5,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 import React from "react";
 
 export function Contact7() {
@@ -14,9 +15,15 @@ export function Contact7() {
         <div>
           <div className="mb-6 md:mb-8">
             <p className="mb-3 font-semibold md:mb-4">Message</p>
-            <h2 className="heading-h2 mb-5 font-bold md:mb-6">
-              Send us a message
-            </h2>
+            <AnimatedVariableHeading
+              level="h2"
+              className="mb-5 md:mb-6"
+              parts={["Send", "Us", "a", "Message"]}
+              widths={[75, 100, 50, 150]}
+              weights={[500, 700, 400, 900]}
+              italics={[0, 0, 0, 1]}
+              lineHeight="1.15"
+            />
             <p className="text-medium">
               Share your thoughts and we'll respond quickly.
             </p>

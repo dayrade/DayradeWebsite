@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 import React from "react";
 
 export function Cta32() {
@@ -9,9 +10,15 @@ export function Cta32() {
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container flex flex-col items-center">
         <div className="mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
-          <h2 className="heading-h2 mb-5 font-bold md:mb-6">
-            Stay ahead of the market
-          </h2>
+          <AnimatedVariableHeading
+            level="h2"
+            className="mb-5 md:mb-6"
+            parts={["Stay", "Ahead", "of the", "Market"]}
+            widths={[75, 125, 50, 150]}
+            weights={[500, 900, 400, 700]}
+            italics={[0, 0, 0, 1]}
+            lineHeight="1.15"
+          />
           <p className="text-medium">
             Get the latest trading insights, strategies, and exclusive DAYRADE
             updates

@@ -1,5 +1,6 @@
 "use client";
 
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 import React from "react";
 
 export function Gallery5() {
@@ -7,7 +8,15 @@ export function Gallery5() {
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mb-12 text-center md:mb-18 lg:mb-20">
-          <h2 className="heading-h2 mb-5 font-bold md:mb-6">The spotlights</h2>
+          <AnimatedVariableHeading
+            level="h2"
+            className="mb-5 md:mb-6"
+            parts={["The", "Spotlights"]}
+            widths={[75, 150]}
+            weights={[500, 900]}
+            italics={[0, 1]}
+            lineHeight="1.15"
+          />
           <p className="text-medium">
             Profiles of traders who define the DAYRADE competitive landscape
           </p>
