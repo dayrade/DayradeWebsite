@@ -1,0 +1,312 @@
+{
+  "project": "DAYRADE Website",
+  "version": "1.0",
+  "last_updated": "2025-10-24",
+  "total_images": 85,
+  "pages": [
+    {
+      "page_name": "Home",
+      "page_slug": "home",
+      "priority": 1,
+      "image_count": 25,
+      "images": [
+        {
+          "image_id": "HOME-HERO-001",
+          "section": "Header83 Hero Section",
+          "component_type": "hero_background",
+          "description": "Main hero with all four DAYRADE mascots in welcoming community pose",
+          "characters": ["Grizz", "Toro", "Jet", "Oran"],
+          "character_role": "All primary - equal prominence",
+          "dimensions": {
+            "width": 1920,
+            "height": 1080,
+            "aspect_ratio": "16:9"
+          },
+          "filenames": {
+            "dark": "home-hero-all-characters-dark.png",
+            "light": "home-hero-all-characters-light.png"
+          },
+          "alt_text": "Four DAYRADE mascots - Grizz, Toro, Jet, and Oran - standing together welcoming new traders",
+          "floating_elements": [
+            "Stock symbol coins (AAPL, TSLA, NVDA, GME, AMC, COIN)",
+            "DAYRADE holographic logo",
+            "Market data streams with candlesticks",
+            "Trading chart panels",
+            "Achievement badges (Elevator, Crusader, Raider)",
+            "Leaderboard preview cards"
+          ],
+          "mood": "Energetic, welcoming, professional, diverse community",
+          "priority": "critical",
+          "prompt_structure": {
+            "characters": "All four mascots in group formation - Toro and Jet center (confident), Grizz and Oran flanking (friendly)",
+            "pose": "Welcoming group pose - Toro arms crossed power stance, Jet alert perched, Grizz friendly curious, Oran warm gesture",
+            "expression": "Mix of confidence (Toro/Jet) and approachability (Grizz/Oran)",
+            "style": "Modern 3D isometric at 30° angle",
+            "background_dark": "Deep navy gradient #0A1628 to #1A2642 with vibrant cyan-purple-magenta radial gradient mesh",
+            "background_light": "Soft white gradient #F8FAFC to #FFFFFF with subtle pastel blue-lavender mesh",
+            "lighting_dark": "Neon rim lighting, cyan and blue highlights, bright glowing accents",
+            "lighting_light": "Natural daylight, warm highlights, soft gray shadows",
+            "depth_foreground": "Characters (largest, most detailed, sharp focus)",
+            "depth_midground": "Trading UI and charts (medium detail, glowing)",
+            "depth_background": "Gradient mesh and data streams (soft, atmospheric, blurred)",
+            "colors": {
+              "Grizz": "#8B4513 to #D2691E with #FFD700 gold",
+              "Toro": "#2C2C2C with #00D9FF electric blue",
+              "Jet": "#4A5568 with #00FFFF bright cyan spots",
+              "Oran": "#FF6B35 to #D84315 with #FFA726 gold"
+            }
+          }
+        },
+        {
+          "image_id": "HOME-LAYOUT369-001",
+          "section": "Layout369 - Path to Mastery Step 1",
+          "component_type": "feature_card",
+          "description": "Create Your Persona - Grizz interacting with holographic character selection",
+          "characters": ["Grizz"],
+          "character_role": "Primary solo",
+          "dimensions": {
+            "width": 800,
+            "height": 600,
+            "aspect_ratio": "4:3"
+          },
+          "filenames": {
+            "dark": "home-layout369-create-persona-grizz-dark.png",
+            "light": "home-layout369-create-persona-grizz-light.png"
+          },
+          "alt_text": "Grizz the Bear excitedly choosing his trading persona from holographic character selection interface",
+          "floating_elements": [
+            "Holographic character silhouettes (all four)",
+            "AI particle effects and neural network visualization",
+            "Choose Your Spirit Animal UI card (glassmorphism)",
+            "Personality trait badges (Patient, Curious, Eager, Friendly)",
+            "Character customization icons",
+            "Creation progress indicator"
+          ],
+          "mood": "Magical, technological, personalized, AI-powered",
+          "priority": "critical"
+        },
+        {
+          "image_id": "HOME-LAYOUT369-002",
+          "section": "Layout369 - Path to Mastery Step 2",
+          "component_type": "feature_card",
+          "description": "Learn and Practice - Oran teaching Grizz with educational dashboard",
+          "characters": ["Oran", "Grizz"],
+          "character_role": "Oran primary mentor, Grizz secondary student",
+          "dimensions": {
+            "width": 800,
+            "height": 600,
+            "aspect_ratio": "4:3"
+          },
+          "filenames": {
+            "dark": "home-layout369-learn-practice-oran-grizz-dark.png",
+            "light": "home-layout369-learn-practice-oran-grizz-light.png"
+          },
+          "alt_text": "Oran the Orangutan teaching Grizz the Bear trading fundamentals with educational materials",
+          "floating_elements": [
+            "Educational lesson modules (Risk, Technical, Psychology, Fundamentals)",
+            "Chart pattern examples (Head & Shoulders, Double Top, Candlesticks)",
+            "Practice mode badges",
+            "Progress bars with completion percentages",
+            "Educational achievement badges",
+            "Notebook and tablet with glowing screens",
+            "Trading simulator interface preview"
+          ],
+          "mood": "Studious, supportive, growth-oriented, educational mentorship",
+          "priority": "critical"
+        },
+        {
+          "image_id": "HOME-LAYOUT369-003",
+          "section": "Layout369 - Path to Mastery Step 3",
+          "component_type": "feature_card",
+          "description": "Compete and Win - Toro and Jet in competitive tournament scene",
+          "characters": ["Toro", "Jet"],
+          "character_role": "Both primary - friendly rivalry",
+          "dimensions": {
+            "width": 800,
+            "height": 600,
+            "aspect_ratio": "4:3"
+          },
+          "filenames": {
+            "dark": "home-layout369-compete-win-toro-jet-dark.png",
+            "light": "home-layout369-compete-win-toro-jet-light.png"
+          },
+          "alt_text": "Toro the Bull and Jet the Leopard competing in live DAYRADE tournament with rankings visible",
+          "floating_elements": [
+            "Live leaderboard (#1 Jet, #2 Toro with arrows)",
+            "Tournament arena with spectator count (1,250 watching)",
+            "Prize coins ($100, $1K, $10K, $50K) metallic with neon edges",
+            "Trophy badges (Gold, Silver, Bronze)",
+            "Real-time rank indicators",
+            "P&L displays (Jet: +$8,450, Toro: +$7,890)",
+            "Position cards showing open trades",
+            "Tournament countdown timer (02:45:33)"
+          ],
+          "mood": "Competitive, high-energy, rewarding, intense skilled rivalry",
+          "priority": "critical"
+        },
+        {
+          "image_id": "HOME-LAYOUT239-001",
+          "section": "Layout239 - Three Divisions Elevator",
+          "component_type": "division_card",
+          "description": "Elevator Division representation - Beginner friendly learning environment",
+          "characters": ["Grizz"],
+          "character_role": "Primary representing Elevator",
+          "dimensions": {
+            "width": 800,
+            "height": 600,
+            "aspect_ratio": "4:3"
+          },
+          "filenames": {
+            "dark": "home-layout239-elevator-division-grizz-dark.png",
+            "light": "home-layout239-elevator-division-grizz-light.png"
+          },
+          "alt_text": "Grizz the Bear in beginner-friendly Elevator Division learning environment",
+          "floating_elements": [
+            "Elevator Division badge (prominent)",
+            "Free Entry coin",
+            "Daily Lesson cards",
+            "Beginner badge",
+            "Safety shield icon",
+            "Start Here signage",
+            "Practice mode indicators"
+          ],
+          "mood": "Approachable, encouraging, safe, beginner-friendly",
+          "priority": "high"
+        },
+        {
+          "image_id": "HOME-LAYOUT239-002",
+          "section": "Layout239 - Three Divisions Crusader",
+          "component_type": "division_card",
+          "description": "Crusader Division representation - Intermediate competitive arena",
+          "characters": ["Toro"],
+          "character_role": "Primary representing Crusader",
+          "dimensions": {
+            "width": 800,
+            "height": 600,
+            "aspect_ratio": "4:3"
+          },
+          "filenames": {
+            "dark": "home-layout239-crusader-division-toro-dark.png",
+            "light": "home-layout239-crusader-division-toro-light.png"
+          },
+          "alt_text": "Toro the Bull in intermediate Crusader Division competitive trading arena",
+          "floating_elements": [
+            "Crusader Division insignia",
+            "$1,000 prize indicator",
+            "Multi-chart trading setup (3-4 charts)",
+            "Performance metrics cards",
+            "Win streak badge",
+            "Strategic analysis tools",
+            "Leaderboard position indicator"
+          ],
+          "mood": "Confident, competitive, professional, strategic",
+          "priority": "high"
+        },
+        {
+          "image_id": "HOME-LAYOUT239-003",
+          "section": "Layout239 - Three Divisions Raider",
+          "component_type": "division_card",
+          "description": "Raider Division representation - Elite high-stakes competition",
+          "characters": ["Jet"],
+          "character_role": "Primary representing Raider",
+          "dimensions": {
+            "width": 800,
+            "height": 600,
+            "aspect_ratio": "4:3"
+          },
+          "filenames": {
+            "dark": "home-layout239-raider-division-jet-dark.png",
+            "light": "home-layout239-raider-division-jet-light.png"
+          },
+          "alt_text": "Jet the Leopard in elite Raider Division high-stakes trading environment",
+          "floating_elements": [
+            "Raider elite insignia",
+            "$10,000 grand prize indicator",
+            "Advanced trading command center with multiple terminals",
+            "Level 3 market data feeds",
+            "Precision targeting reticle",
+            "Speed execution indicators (< 1ms)",
+            "Elite status badges",
+            "Championship trophy"
+          ],
+          "mood": "Elite, high-stakes, precision, championship caliber",
+          "priority": "high"
+        }
+      ]
+    }
+  ],
+  "generation_guide": {
+    "style_foundation": {
+      "perspective": "Isometric 3D at 30° angle",
+      "geometric_language": "Rounded corners (8-16px), soft edges, no sharp angles",
+      "depth_layers": "Minimum 3 layers - foreground, midground, background",
+      "lighting_direction": "Top-left to bottom-right (consistent)",
+      "material_qualities": {
+        "glass": "Frosted with 15-20% transparency (glassmorphism)",
+        "metal": "Brushed with gradient highlights",
+        "screens": "Glowing displays with bezels",
+        "cards": "Soft shadows, subtle texture"
+      }
+    },
+    "character_guidelines": {
+      "Grizz": {
+        "when_to_use": "Beginner content, learning scenarios, asking questions, taking notes, approachable moments",
+        "personality_in_images": "Patient, curious, eager to learn, friendly, humble",
+        "typical_poses": "Taking notes, studying charts, practicing on demo account, receiving mentorship",
+        "typical_expressions": "Friendly smile, curious look, focused concentration, excitement when learning"
+      },
+      "Toro": {
+        "when_to_use": "Competitive scenarios, strategic analysis, intermediate skill demonstrations, discipline",
+        "personality_in_images": "Disciplined, strategic, competitive, focused, resilient, professional",
+        "typical_poses": "Power stance (arms crossed), analyzing multiple charts, forward-leaning intensity, fist pump victory",
+        "typical_expressions": "Intense focus, competitive confidence, determination, respectful acknowledgment"
+      },
+      "Jet": {
+        "when_to_use": "Elite performance, precision execution, advanced strategies, high-stakes moments",
+        "personality_in_images": "Lightning-fast, surgical precision, hyper-focused, calm under pressure, elite",
+        "typical_poses": "Perched alert stance, swift execution movements, targeting precision, poised to strike",
+        "typical_expressions": "Cool calm focus, predatory precision, subtle satisfaction, intense concentration"
+      },
+      "Oran": {
+        "when_to_use": "Teaching moments, mentorship, community building, explaining concepts, supportive scenarios",
+        "personality_in_images": "Wise, patient, supportive, encouraging, experienced, community-focused",
+        "typical_poses": "Gesturing to explain, hand on student's shoulder, presenting to group, holding educational materials",
+        "typical_expressions": "Warm smile, patient encouragement, knowing look, supportive nod"
+      }
+    },
+    "floating_elements_catalog": {
+      "stock_symbol_coins": [
+        "AAPL (Apple logo)",
+        "TSLA (Tesla T)",
+        "NVDA (Nvidia eye)",
+        "GME (GameStop)",
+        "AMC",
+        "COIN (Coinbase)",
+        "SPY",
+        "QQQ"
+      ],
+      "division_badges": [
+        "Elevator (beginner badge, soft green)",
+        "Crusader (intermediate insignia, blue-gold)",
+        "Raider (elite emblem, platinum-cyan)"
+      ],
+      "achievement_badges": [
+        "Risk Management Master",
+        "Technical Analysis Pro",
+        "Trading Psychology Expert",
+        "Market Fundamentals Scholar",
+        "Streak badges (3-day, 7-day, 30-day)",
+        "Tournament winner badges"
+      ],
+      "ui_elements": [
+        "Glassmorphism cards (frosted, 15-20% transparency)",
+        "Trading charts (candlesticks, line charts, bar charts)",
+        "Progress bars",
+        "Leaderboard panels",
+        "Price tickers",
+        "Notification bubbles",
+        "Timer countdowns"
+      ]
+    }
+  }
+}
