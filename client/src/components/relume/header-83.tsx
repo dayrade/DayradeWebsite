@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 import { Link } from "wouter";
 
 const useRelume = () => {
@@ -23,29 +24,33 @@ interface Header83Props {
   secondaryCta?: string;
 }
 
-export function Header83({ 
-  headline = (
-    <>
-      <span className="font-bold">TRADE LIKE A</span>{" "}
-      <span className="font-normal">PRO.</span>{" "}
-      <span className="font-bold italic">COMPETE LIKE AN ATHLETE.</span>
-    </>
-  ),
+export function Header83({
+  headline,
   subheadline = "A skill-based arena where traders battle with precision and strategy. Build your trading persona and rise through the ranks.",
   primaryCta = "Sign Up",
   secondaryCta = "Watch"
 }: Header83Props = {}) {
   const useActive = useRelume();
-  
+
   return (
     <section className="relative h-[300vh]">
       <div className="sticky top-0 h-screen overflow-hidden">
         <div className="flex h-full items-center justify-center">
           <div className="px-[5%] py-16 md:py-24 lg:py-28">
             <div className="relative z-10 mx-auto max-w-lg text-center">
-              <h1 className="heading-h1 mb-5 text-white md:mb-6">
-                {headline}
-              </h1>
+              {headline ? (
+                <h1 className="heading-h1 mb-5 text-white md:mb-6">
+                  {headline}
+                </h1>
+              ) : (
+                <AnimatedVariableHeading
+                  level="h1"
+                  className="mb-5 text-white md:mb-6"
+                  parts={["Trade Like a", "Pro.", "Compete Like an", "Athlete."]}
+                  widths={[50, 125, 50, 125]}
+                  weights={[700, 900, 700, 900]}
+                />
+              )}
               <p className="text-medium text-white">
                 {subheadline}
               </p>
