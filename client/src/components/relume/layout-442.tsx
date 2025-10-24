@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 
 export function Layout442() {
   return (
@@ -11,9 +12,7 @@ export function Layout442() {
         <div className="grid grid-cols-1 gap-x-12 gap-y-5 md:grid-cols-2 lg:gap-x-20">
           <div>
             <p className="mb-3 font-semibold text-white md:mb-4">Rewards</p>
-            <h2 className="heading-h2 font-bold text-white">
-              Win more than just money
-            </h2>
+            <AnimatedVariableHeading level="h2" className="text-white" parts={["Win", "more", "than just", "money"]} widths={[75, 50, 75, 150]} weights={[500, 400, 300, 900]} italics={[0, 1, 0, 0]} lineHeight="1.15" />
           </div>
           <div className="mx-[7.5%] md:mt-48">
             <p className="text-medium text-white">

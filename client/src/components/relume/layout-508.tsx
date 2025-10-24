@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 import { MdHowToReg, MdPlayArrow, MdLeaderboard, MdEmojiEvents, MdAttachMoney } from "react-icons/md";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 
 export function Layout508() {
   return (
@@ -13,9 +14,7 @@ export function Layout508() {
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">Fair. Transparent. Thrilling.</p>
-          <h1 className="heading-h2 mb-5 font-bold md:mb-6">
-            How Tournaments Work
-          </h1>
+          <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["How", "Tournaments", "Work"]} widths={[50, 100, 150]} weights={[400, 700, 900]} italics={[0, 1, 0]} lineHeight="1.15" />
           <p className="text-medium">
             A transparent, five-step process ensures every tournament is fair, exciting, and rewarding.
           </p>

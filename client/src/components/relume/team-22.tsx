@@ -4,6 +4,7 @@ import React, { Fragment } from "react";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { BiLogoDribbble, BiLogoLinkedinSquare } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 
 const ConditionalRender = ({ condition, children }: { condition: boolean; children: React.ReactNode }) => {
   return condition ? <>{children}</> : null;
@@ -21,9 +22,7 @@ export function Team22() {
       <div className="relative container">
         <div className="static top-[50vh] mx-auto mt-20 max-w-lg translate-y-[-50%] text-center md:sticky">
           <p className="mb-3 font-semibold md:mb-4">Team</p>
-          <h2 className="heading-h2 mb-5 font-bold md:mb-6">
-            Meet our founders
-          </h2>
+          <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Meet", "our", "founders"]} widths={[75, 50, 150]} weights={[500, 300, 900]} italics={[0, 1, 0]} lineHeight="1.15" />
           <p className="text-medium">
             The visionaries transforming the trading landscape
           </p>

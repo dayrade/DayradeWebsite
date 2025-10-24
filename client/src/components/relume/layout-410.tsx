@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 
 export function Layout410() {
   return (
@@ -11,9 +12,7 @@ export function Layout410() {
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">Features</p>
-          <h1 className="heading-h2 mb-5 font-bold md:mb-6">
-            Everything you need to start
-          </h1>
+          <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Everything", "you need", "to", "start"]} widths={[100, 75, 50, 150]} weights={[700, 400, 300, 900]} italics={[0, 1, 0, 0]} lineHeight="1.15" />
           <p className="text-medium">
             Your complete toolkit for trading education and practice
           </p>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 
 export function Layout394() {
   return (
@@ -11,9 +12,7 @@ export function Layout394() {
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">Key strategies</p>
-          <h1 className="heading-h2 mb-5 font-bold md:mb-6">
-            Three pillars of smart trading
-          </h1>
+          <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Three", "pillars", "of", "smart", "trading"]} widths={[75, 100, 50, 75, 150]} weights={[500, 700, 300, 500, 900]} italics={[0, 0, 0, 1, 0]} lineHeight="1.15" />
           <p className="text-medium">
             Develop a robust approach to navigate complex market landscapes
           </p>

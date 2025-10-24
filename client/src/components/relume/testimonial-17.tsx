@@ -3,13 +3,14 @@
 import { Card } from "@/components/ui/card";
 import React from "react";
 import { BiSolidStar } from "react-icons/bi";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 
 export function Testimonial17() {
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <h2 className="heading-h2 mb-5 font-bold md:mb-6">Trader voices</h2>
+          <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Trader", "voices"]} widths={[100, 150]} weights={[700, 900]} italics={[1, 0]} lineHeight="1.15" />
           <p className="text-medium">
             Real stories from our most successful competitors
           </p>

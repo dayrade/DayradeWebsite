@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 
 export function Layout503() {
   return (
@@ -13,9 +14,7 @@ export function Layout503() {
         <div className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
             <p className="mb-3 font-semibold md:mb-4">Process</p>
-            <h1 className="heading-h2 mb-5 font-bold md:mb-6">
-              Three simple steps
-            </h1>
+            <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Three", "simple", "steps"]} widths={[75, 50, 150]} weights={[500, 400, 900]} italics={[0, 1, 0]} lineHeight="1.15" />
             <p className="text-medium">
               Verification is straightforward and designed for your convenience.
               We protect your information while creating a transparent trading

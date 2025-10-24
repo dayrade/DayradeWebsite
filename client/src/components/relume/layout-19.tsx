@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 
 export function Layout19() {
   return (
@@ -11,9 +12,7 @@ export function Layout19() {
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
             <p className="mb-3 font-semibold md:mb-4">Security</p>
-            <h2 className="heading-h2 mb-5 font-bold md:mb-6">
-              Bank-level protection for your data
-            </h2>
+            <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Bank-level", "protection", "for your", "data"]} widths={[100, 100, 75, 150]} weights={[700, 700, 400, 900]} italics={[0, 1, 0, 0]} lineHeight="1.15" />
             <p className="text-medium mb-5 md:mb-6">
               We use 256-bit encryption and follow international data protection
               standards. Your information remains confidential and secure.

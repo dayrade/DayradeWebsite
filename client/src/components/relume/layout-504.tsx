@@ -7,6 +7,7 @@ import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 import { MdSchool, MdAttachMoney, MdEmojiEvents, MdTrendingUp } from "react-icons/md";
 import { Link } from "wouter";
+import AnimatedVariableHeading from "@/components/AnimatedVariableHeading";
 
 export function Layout504() {
   return (
@@ -15,7 +16,7 @@ export function Layout504() {
         <div className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
             <p className="mb-3 font-semibold md:mb-4">Three Divisions</p>
-            <h1 className="heading-h2 mb-5 font-bold md:mb-6">Find Your Division</h1>
+            <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Find", "Your", "Division"]} widths={[75, 50, 150]} weights={[500, 300, 900]} italics={[0, 1, 0]} lineHeight="1.15" />
             <p className="text-medium">
               Choose the division that matches your skill level. Start in Elevator to learn, move to Crusader to compete, and reach Raider for elite prizes.
             </p>
