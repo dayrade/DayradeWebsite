@@ -104,7 +104,7 @@ function AnimatedWord({
   
   const fontVariationSettings = useTransform(
     [wdthSpring, wghtSpring, italSpring],
-    ([w, wg, it]) => `"wdth" ${Math.round(w as number)}, "wght" ${Math.round(wg as number)}, "ital" ${(it as number).toFixed(2)}`
+    ([w, wg, it]) => `"wdth" ${Math.round(w as number)}, "wght" ${Math.round(wg as number)}, "slnt" ${-(it as number * 10).toFixed(1)}`
   );
   
   useEffect(() => {
@@ -145,7 +145,7 @@ function AnimatedWord({
         >
           {useTransform(
             [wdthSpring, wghtSpring, italSpring],
-            ([w, wg, it]) => `wdth:${Math.round(w as number)} wght:${Math.round(wg as number)} ital:${(it as number).toFixed(1)}`
+            ([w, wg, it]) => `wdth:${Math.round(w as number)} wght:${Math.round(wg as number)} slnt:${-(it as number * 10).toFixed(1)}`
           )}
         </motion.span>
       )}

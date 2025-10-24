@@ -155,7 +155,7 @@ export function Layout514() {
           <div className="flex flex-col gap-y-16 md:sticky md:top-20 md:h-[calc(100vh_-10rem)] md:justify-center">
             <div className="flex flex-col">
               <p className="mb-3 font-semibold md:mb-4">Difference</p>
-              <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Why Dayrade is", "Different"]} widths={[50, 150]} weights={[600, 900]} />
+              <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Why", "Dayrade", "is", "Different"]} widths={[50, 75, 50, 150]} weights={[400, 500, 300, 900]} italics={[0, 1, 0, 0]} lineHeight="1.15" />
               <p className="text-medium">
                 We transform trading from a solitary risk into a collaborative
                 skill-building experience.

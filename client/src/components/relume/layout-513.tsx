@@ -125,7 +125,7 @@ export function Layout513() {
           <div className="flex flex-col gap-y-16 md:sticky md:top-20 md:mt-20 md:h-[calc(100vh_-10rem)] md:justify-center">
             <div className="flex flex-col">
               <p className="mb-3 font-semibold md:mb-4">Community</p>
-              <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Connect Your", "Social", "Account"]} widths={[75, 100, 125]} weights={[600, 700, 900]} />
+              <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Connect", "Your", "Social", "Account"]} widths={[75, 50, 100, 125]} weights={[500, 300, 700, 900]} italics={[0, 0, 1, 0]} lineHeight="1.15" />
               <p className="text-medium">
                 Join a global network of traders. Verification made simple and
                 secure.

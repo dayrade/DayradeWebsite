@@ -46,9 +46,11 @@ export function Header83({
                 <AnimatedVariableHeading
                   level="h1"
                   className="mb-5 text-white md:mb-6"
-                  parts={["Trade Like a", "Pro.", "Compete Like an", "Athlete."]}
-                  widths={[50, 125, 50, 125]}
-                  weights={[700, 900, 700, 900]}
+                  parts={["Trade", "Like a", "Pro.", "Compete", "Like an", "Athlete."]}
+                  widths={[75, 50, 125, 75, 50, 125]}
+                  weights={[500, 400, 900, 500, 400, 900]}
+                  italics={[0, 0, 0, 1, 0, 0]}
+                  lineHeight="1.1"
                 />
               )}
               <p className="text-medium text-white">

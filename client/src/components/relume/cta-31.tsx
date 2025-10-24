@@ -10,7 +10,7 @@ export function Cta31() {
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container flex flex-col items-center">
         <div className="mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
-          <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Your Arena", "Awaits"]} widths={[50, 150]} weights={[600, 900]} />
+          <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Your", "Arena", "Awaits"]} widths={[50, 100, 150]} weights={[400, 700, 900]} italics={[0, 1, 0]} lineHeight="1.15" />
           <p className="text-medium">
             Join a community of traders committed to skill, strategy, and
             continuous improvement.

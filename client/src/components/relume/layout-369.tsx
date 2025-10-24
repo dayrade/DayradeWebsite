@@ -13,13 +13,14 @@ export function Layout369() {
         <div className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
             <p className="mb-3 font-semibold md:mb-4">Dayrade</p>
-            <AnimatedVariableHeading 
-              level="h2" 
+            <AnimatedVariableHeading
+              level="h2"
               className="mb-5 md:mb-6"
-              parts={["Your Path to", "Trading", "Mastery"]} 
-              widths={[50, 100, 150]}
-              weights={[600, 700, 900]}
-      // debug={true}
+              parts={["Your", "Path", "to", "Trading", "Mastery"]}
+              widths={[50, 75, 50, 100, 150]}
+              weights={[400, 500, 300, 700, 900]}
+              italics={[0, 0, 0, 1, 0]}
+              lineHeight="1.15"
             />
             <p className="text-medium">
               Transform your trading journey in three powerful steps.

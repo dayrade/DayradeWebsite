@@ -155,7 +155,7 @@ export function Layout514_1() {
           <div className="flex flex-col gap-y-16 md:sticky md:top-20 md:h-[calc(100vh_-10rem)] md:justify-center">
             <div className="flex flex-col">
               <p className="mb-3 font-semibold md:mb-4">Education</p>
-              <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Master", "Money.", "Not Just", "Markets."]} widths={[75, 100, 75, 125]} weights={[600, 700, 600, 900]} />
+              <AnimatedVariableHeading level="h2" className="mb-5 md:mb-6" parts={["Master", "Money.", "Not Just", "Markets."]} widths={[100, 125, 75, 150]} weights={[700, 900, 400, 700]} italics={[0, 0, 0, 1]} lineHeight="1.15" />
               <p className="text-medium">
                 Understand financial dynamics beyond simple trading. Build
                 lasting wealth through knowledge.

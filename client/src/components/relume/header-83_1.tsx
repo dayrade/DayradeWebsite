@@ -25,7 +25,7 @@ export function Header83_1() {
         <div className="flex h-full items-center justify-center">
           <div className="px-[5%] py-16 md:py-24 lg:py-28">
             <div className="relative z-10 mx-auto max-w-lg text-center">
-              <AnimatedVariableHeading level="h1" className="mb-5 text-white md:mb-6" parts={["Your Journey to", "Legend", "Status"]} widths={[75, 100, 125]} weights={[600, 700, 900]} />
+              <AnimatedVariableHeading level="h1" className="mb-5 text-white md:mb-6" parts={["Your", "Journey", "to", "Legend", "Status"]} widths={[50, 75, 50, 125, 100]} weights={[400, 500, 300, 900, 700]} italics={[0, 1, 0, 0, 0]} lineHeight="1.1" />
               <p className="text-medium text-white">
                 Create your unique trading persona and enter a world of
                 competitive, skill-driven trading.
